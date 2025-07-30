@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
++<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
++  <!-- Homepage -->
++  <url>
++    <loc>https://localbasket.com/</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>daily</changefreq>
++    <priority>1.0</priority>
++  </url>
++  
++  <!-- Directory Page -->
++  <url>
++    <loc>https://localbasket.com/directory</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>daily</changefreq>
++    <priority>0.9</priority>
++  </url>
++  
++  <!-- Submit Business Page -->
++  <url>
++    <loc>https://localbasket.com/submit-business</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>weekly</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <!-- Blog Page -->
++  <url>
++    <loc>https://localbasket.com/blog</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>daily</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <!-- About Page -->
++  <url>
++    <loc>https://localbasket.com/about</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.7</priority>
++  </url>
++  
++  <!-- Individual Business Pages -->
++  <url>
++    <loc>https://localbasket.com/bangalore/food/priyas-kitchen</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>weekly</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/chennai/crafts/artisan-crafts-maya</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>weekly</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/mumbai/services/home-tutor-excellence</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>weekly</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/delhi/food/bakers-delight-home</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>weekly</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/hyderabad/crafts/handwoven-heritage</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>weekly</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/pune/services/beauty-wellness-home</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>weekly</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <!-- Blog Posts -->
++  <url>
++    <loc>https://localbasket.com/blog/top-10-homemade-pickles-chennai-2025</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.7</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/blog/start-home-bakery-business-india-2025</loc>
++    <lastmod>2025-01-12</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.7</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/blog/best-handmade-craft-businesses-bangalore-2025</loc>
++    <lastmod>2025-01-10</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.7</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/blog/quality-home-tutoring-services-mumbai-2025</loc>
++    <lastmod>2025-01-08</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.7</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/blog/legal-requirements-home-business-india-2025</loc>
++    <lastmod>2025-01-05</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.7</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/blog/marketing-home-business-social-media-2025</loc>
++    <lastmod>2025-01-03</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.7</priority>
++  </url>
++  
++  <!-- Category Pages -->
++  <url>
++    <loc>https://localbasket.com/directory?category=food</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>daily</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/directory?category=crafts</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>daily</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/directory?category=services</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>daily</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <!-- City Pages -->
++  <url>
++    <loc>https://localbasket.com/directory?city=bangalore</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>daily</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/directory?city=chennai</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>daily</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/directory?city=mumbai</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>daily</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/directory?city=delhi</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>daily</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/directory?city=hyderabad</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>daily</changefreq>
++    <priority>0.8</priority>
++  </url>
++  
++  <url>
++    <loc>https://localbasket.com/directory?city=pune</loc>
++    <lastmod>2025-01-15</lastmod>
++    <changefreq>daily</changefreq>
++    <priority>0.8</priority>
++  </url>
++</urlset>

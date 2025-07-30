@@ -1,0 +1,158 @@
+---
+---
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer-content">
+			<div class="footer-section">
+				<h3>LocalBasket</h3>
+				<p>Connecting communities through local home businesses. Discover authentic, homemade products and services in your neighborhood.</p>
+			</div>
+			
+			<div class="footer-section">
+				<h4>Quick Links</h4>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/directory">Directory</a></li>
+					<li><a href="/submit-business">List Your Business</a></li>
+					<li><a href="/blog">Blog</a></li>
+				</ul>
+			</div>
+			
+			<div class="footer-section">
+				<h4>Categories</h4>
+				<ul>
+					<li><a href="/directory?category=food">Food & Beverages</a></li>
+					<li><a href="/directory?category=crafts">Crafts & Handmade</a></li>
+					<li><a href="/directory?category=services">Services</a></li>
+				</ul>
+			</div>
+			
+			<div class="footer-section">
+				<h4>Connect</h4>
+				<p>Follow us for daily spotlights and business tips</p>
+				<div class="social-links">
+					<a href="https://www.facebook.com/localbasket" aria-label="Facebook" target="_blank" rel="noopener nofollow">📘 Facebook</a>
+					<a href="https://www.instagram.com/localbasket" aria-label="Instagram" target="_blank" rel="noopener nofollow">📷 Instagram</a>
+					<a href="https://twitter.com/localbasket" aria-label="Twitter" target="_blank" rel="noopener nofollow">🐦 Twitter</a>
+					<a href="https://wa.me/919876543210" aria-label="WhatsApp" target="_blank" rel="noopener nofollow">📱 WhatsApp</a>
+					<a href="https://www.linkedin.com/company/localbasket" aria-label="LinkedIn" target="_blank" rel="noopener nofollow">💼 LinkedIn</a>
+				</div>
+				
+				<div class="backlink-partners">
+					<h5>Our Partners</h5>
+					<div class="partner-links">
+						<a href="https://startupindia.gov.in" target="_blank" rel="noopener">Startup India</a>
+						<a href="https://www.msme.gov.in" target="_blank" rel="noopener">MSME</a>
+						<a href="https://www.indiamart.com" target="_blank" rel="noopener">IndiaMART</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<p>&copy; 2025 LocalBasket. All rights reserved. Supporting 500+ home businesses across 50+ cities in India.</p>
+		</div>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		background: var(--neutral-800);
+		color: var(--neutral-200);
+		padding: 3rem 0 1rem;
+		margin-top: 4rem;
+	}
+
+	.footer-content {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.footer-section h3 {
+		color: var(--primary-orange);
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.footer-section h4 {
+		color: var(--primary-green);
+		margin-bottom: 1rem;
+	}
+
+	.footer-section ul {
+		list-style: none;
+	}
+
+	.footer-section ul li {
+		margin-bottom: 0.5rem;
+	}
+
+	.footer-section a {
+		color: var(--neutral-300);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.footer-section a:hover {
+		color: var(--primary-orange);
+	}
+
+	.social-links {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.social-links a {
+		font-size: 1.5rem;
+		text-decoration: none;
+		transition: transform 0.2s ease;
+	}
+
+	.social-links a:hover {
+		transform: scale(1.2);
+	}
+
+	.backlink-partners {
+		margin-top: 2rem;
+	}
+
+	.backlink-partners h5 {
+		color: var(--primary-green);
+		margin-bottom: 1rem;
+		font-size: 1rem;
+	}
+
+	.partner-links {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.partner-links a {
+		color: var(--neutral-300);
+		text-decoration: none;
+		font-size: 0.9rem;
+		transition: color 0.2s ease;
+	}
+
+	.partner-links a:hover {
+		color: var(--primary-orange);
+	}
+
+	.footer-bottom {
+		border-top: 1px solid var(--neutral-600);
+		padding-top: 1rem;
+		text-align: center;
+		color: var(--neutral-400);
+	}
+
+	@media (max-width: 768px) {
+		.footer-content {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+	}
+</style>

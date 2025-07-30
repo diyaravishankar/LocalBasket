@@ -1,0 +1,587 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": "LocalBasket",
+	"description": "LocalBasket is a home business discovery platform connecting local customers with verified home-based food, craft, and service businesses.",
+	"url": "https://localbasket.com",
+	"foundingDate": "2025",
+	"founder": {
+		"@type": "Person",
+		"name": "LocalBasket Team"
+	},
+	"contactPoint": {
+		"@type": "ContactPoint",
+		"telephone": "+91-98765-43210",
+		"contactType": "customer service"
+	},
+	"address": {
+		"@type": "PostalAddress",
+		"addressCountry": "IN"
+	}
+};
+---
+
+<Layout
+	title="About LocalBasket - Supporting Home Businesses & Local Communities"
+	description="Learn about LocalBasket's mission to connect local customers with verified home-based businesses. Discover how we're building stronger communities through local commerce."
+	keywords="about LocalBasket, home business platform, local community, home entrepreneurs, local commerce"
+	structuredData={structuredData}
+>
+	<Navigation />
+	
+	<main>
+		<section class="about-hero">
+			<div class="container">
+				<div class="hero-content">
+					<h1>About LocalBasket</h1>
+					<p>Connecting communities through authentic local businesses</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="about-mission">
+			<div class="container">
+				<div class="mission-grid">
+					<div class="mission-content">
+						<h2>Our Mission</h2>
+						<p>LocalBasket exists to bridge the gap between talented home entrepreneurs and local customers seeking authentic, quality products and services. We believe in the power of community-driven commerce and the unique value that home-based businesses bring to our neighborhoods.</p>
+						
+						<p>Every homemade pickle, handcrafted item, and personalized service tells a story of passion, dedication, and local pride. We're here to help these stories reach the right audience and build meaningful connections within communities.</p>
+						
+						<div class="mission-values">
+							<div class="value">
+								<h3>🌱 Community First</h3>
+								<p>We prioritize local community connections over global commerce, fostering relationships that strengthen neighborhoods.</p>
+							</div>
+							
+							<div class="value">
+								<h3>🛡️ Trust & Quality</h3>
+								<p>Every business on our platform is verified, ensuring customers connect with genuine, quality-focused entrepreneurs.</p>
+							</div>
+							
+							<div class="value">
+								<h3>🤝 Empowerment</h3>
+								<p>We empower home entrepreneurs with the tools and visibility they need to grow their businesses and achieve their dreams.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="mission-image">
+						<img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Community of local business owners" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="why-localbasket">
+			<div class="container">
+				<h2>Why LocalBasket Matters</h2>
+				<div class="reasons-grid">
+					<div class="reason">
+						<div class="reason-icon">👥</div>
+						<h3>Supporting Local Economy</h3>
+						<p>Every purchase through LocalBasket directly supports local families and keeps money within the community, creating a multiplier effect for economic growth.</p>
+					</div>
+					
+					<div class="reason">
+						<div class="reason-icon">🏠</div>
+						<h3>Authentic Home-Made Quality</h3>
+						<p>Home businesses offer a level of personal attention, quality, and authenticity that mass-produced items simply cannot match.</p>
+					</div>
+					
+					<div class="reason">
+						<div class="reason-icon">🌿</div>
+						<h3>Sustainable & Personal</h3>
+						<p>Local businesses often use sustainable practices, offer personalized service, and create products with care and attention to detail.</p>
+					</div>
+					
+					<div class="reason">
+						<div class="reason-icon">💪</div>
+						<h3>Empowering Dreams</h3>
+						<p>We help passionate individuals turn their skills and creativity into thriving businesses, creating opportunities for financial independence.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="our-story">
+			<div class="container">
+				<div class="story-content">
+					<h2>Our Story</h2>
+					<p>LocalBasket was born from a simple observation: incredible home-based businesses existed in every neighborhood, but customers struggled to find them, and entrepreneurs struggled to reach their ideal customers.</p>
+					
+					<p>We started this platform to solve a real problem we experienced ourselves - craving authentic, homemade food and unique handcrafted items but not knowing where to find them. Through conversations with home entrepreneurs, we discovered they faced similar challenges in reaching customers beyond their immediate circle.</p>
+					
+					<p>Today, LocalBasket serves as a trusted bridge between these two groups, creating a thriving ecosystem where local businesses can flourish and communities can access authentic, quality products and services.</p>
+					
+					<div class="story-stats">
+						<div class="stat">
+							<h3>500+</h3>
+							<p>Verified Businesses</p>
+						</div>
+						<div class="stat">
+							<h3>50+</h3>
+							<p>Cities Covered</p>
+						</div>
+						<div class="stat">
+							<h3>10,000+</h3>
+							<p>Happy Customers</p>
+						</div>
+						<div class="stat">
+							<h3>95%</h3>
+							<p>Customer Satisfaction</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="community-impact">
+			<div class="container">
+				<h2>Community Impact</h2>
+				<div class="impact-grid">
+					<div class="impact-item">
+						<h3>Economic Empowerment</h3>
+						<p>We've helped hundreds of home entrepreneurs increase their income and build sustainable businesses, contributing to local economic growth.</p>
+					</div>
+					
+					<div class="impact-item">
+						<h3>Cultural Preservation</h3>
+						<p>Many of our food vendors preserve traditional recipes and cooking methods, keeping cultural heritage alive through authentic flavors.</p>
+					</div>
+					
+					<div class="impact-item">
+						<h3>Sustainable Practices</h3>
+						<p>Home businesses often use eco-friendly practices, supporting environmental sustainability through local production and minimal packaging.</p>
+					</div>
+					
+					<div class="impact-item">
+						<h3>Community Building</h3>
+						<p>We foster stronger neighborhood connections, creating a sense of community and mutual support among local residents.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="join-movement">
+			<div class="container">
+				<div class="join-content">
+					<h2>Join the Movement</h2>
+					<p>Whether you're a home entrepreneur looking to grow your business or a customer seeking authentic local products, LocalBasket is your gateway to a vibrant community of local commerce.</p>
+					
+					<div class="join-actions">
+						<div class="action-card">
+							<h3>For Entrepreneurs</h3>
+							<p>List your home business and connect with local customers who appreciate quality and authenticity.</p>
+							<a href="/submit-business" class="btn btn-primary">List Your Business</a>
+						</div>
+						
+						<div class="action-card">
+							<h3>For Customers</h3>
+							<p>Discover amazing local businesses and support your community while getting exceptional products and services.</p>
+							<a href="/directory" class="btn btn-secondary">Explore Businesses</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Backlink Strategy Section -->
+		<section class="backlink-strategy">
+			<div class="container">
+				<h2>Our SEO & Digital Marketing Strategy</h2>
+				<div class="strategy-content">
+					<div class="strategy-section">
+						<h3>Quality Backlink Acquisition</h3>
+						<ul>
+							<li><strong>Local Business Directories:</strong> Listed on Google My Business, Justdial, and city-specific directories</li>
+							<li><strong>Government Partnerships:</strong> Collaborating with MSME and Startup India for authoritative backlinks</li>
+							<li><strong>Media Coverage:</strong> Featured in local newspapers and business magazines</li>
+							<li><strong>Community Engagement:</strong> Partnerships with local NGOs and community organizations</li>
+						</ul>
+					</div>
+					
+					<div class="strategy-section">
+						<h3>Content Marketing & Guest Posts</h3>
+						<ul>
+							<li><strong>Industry Blogs:</strong> Contributing to entrepreneurship and small business blogs</li>
+							<li><strong>Local Publications:</strong> Writing for city-based lifestyle and food blogs</li>
+							<li><strong>Expert Interviews:</strong> Featuring on business podcasts and webinars</li>
+							<li><strong>Resource Sharing:</strong> Creating valuable guides for home entrepreneurs</li>
+						</ul>
+					</div>
+					
+					<div class="strategy-section">
+						<h3>Social Media & Digital Presence</h3>
+						<ul>
+							<li><strong>Instagram:</strong> Daily business spotlights and user-generated content</li>
+							<li><strong>Facebook:</strong> Community groups and local business promotion</li>
+							<li><strong>LinkedIn:</strong> B2B networking and thought leadership content</li>
+							<li><strong>WhatsApp:</strong> Direct customer support and business communication</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<Footer />
+</Layout>
+
+<style>
+	.about-hero {
+		background: linear-gradient(135deg, var(--primary-beige) 0%, var(--primary-green) 100%);
+		padding: 4rem 0;
+		text-align: center;
+	}
+
+	.hero-content h1 {
+		font-size: 3rem;
+		color: var(--neutral-800);
+		margin-bottom: 1rem;
+	}
+
+	.hero-content p {
+		font-size: 1.5rem;
+		color: var(--neutral-600);
+	}
+
+	.about-mission {
+		padding: 4rem 0;
+	}
+
+	.mission-grid {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.mission-content h2 {
+		font-size: 2.5rem;
+		color: var(--neutral-800);
+		margin-bottom: 2rem;
+	}
+
+	.mission-content p {
+		font-size: 1.1rem;
+		color: var(--neutral-600);
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+	}
+
+	.mission-values {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.value h3 {
+		font-size: 1.25rem;
+		color: var(--neutral-800);
+		margin-bottom: 0.5rem;
+	}
+
+	.value p {
+		color: var(--neutral-600);
+		line-height: 1.6;
+	}
+
+	.mission-image {
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: var(--shadow-lg);
+	}
+
+	.mission-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.why-localbasket {
+		padding: 4rem 0;
+		background: var(--neutral-100);
+	}
+
+	.why-localbasket h2 {
+		font-size: 2.5rem;
+		color: var(--neutral-800);
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.reasons-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.reason {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: var(--shadow-sm);
+		text-align: center;
+		transition: transform 0.3s ease;
+	}
+
+	.reason:hover {
+		transform: translateY(-8px);
+		box-shadow: var(--shadow-md);
+	}
+
+	.reason-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.reason h3 {
+		font-size: 1.5rem;
+		color: var(--neutral-800);
+		margin-bottom: 1rem;
+	}
+
+	.reason p {
+		color: var(--neutral-600);
+		line-height: 1.6;
+	}
+
+	.our-story {
+		padding: 4rem 0;
+	}
+
+	.story-content {
+		max-width: 800px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.story-content h2 {
+		font-size: 2.5rem;
+		color: var(--neutral-800);
+		margin-bottom: 2rem;
+	}
+
+	.story-content p {
+		font-size: 1.1rem;
+		color: var(--neutral-600);
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+	}
+
+	.story-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.stat {
+		background: var(--primary-beige);
+		padding: 2rem;
+		border-radius: 12px;
+		text-align: center;
+	}
+
+	.stat h3 {
+		font-size: 2.5rem;
+		color: var(--primary-orange);
+		margin-bottom: 0.5rem;
+	}
+
+	.stat p {
+		color: var(--neutral-600);
+		font-weight: 500;
+		margin: 0;
+	}
+
+	.community-impact {
+		padding: 4rem 0;
+		background: var(--neutral-100);
+	}
+
+	.community-impact h2 {
+		font-size: 2.5rem;
+		color: var(--neutral-800);
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.impact-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.impact-item {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.impact-item h3 {
+		font-size: 1.5rem;
+		color: var(--neutral-800);
+		margin-bottom: 1rem;
+	}
+
+	.impact-item p {
+		color: var(--neutral-600);
+		line-height: 1.6;
+	}
+
+	.join-movement {
+		padding: 4rem 0;
+		background: var(--primary-green);
+		text-align: center;
+	}
+
+	.join-content h2 {
+		font-size: 2.5rem;
+		color: white;
+		margin-bottom: 1rem;
+	}
+
+	.join-content p {
+		font-size: 1.2rem;
+		color: white;
+		opacity: 0.9;
+		margin-bottom: 3rem;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.join-actions {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.action-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: var(--shadow-md);
+	}
+
+	.action-card h3 {
+		font-size: 1.5rem;
+		color: var(--neutral-800);
+		margin-bottom: 1rem;
+	}
+
+	.action-card p {
+		color: var(--neutral-600);
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
+	}
+
+	@media (max-width: 768px) {
+		.hero-content h1 {
+			font-size: 2.5rem;
+		}
+
+		.hero-content p {
+			font-size: 1.2rem;
+		}
+
+		.mission-grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.mission-values {
+			margin-top: 2rem;
+		}
+
+		.reasons-grid,
+		.impact-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.story-stats {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.join-actions {
+			grid-template-columns: 1fr;
+		}
+
+		.mission-content h2,
+		.why-localbasket h2,
+		.story-content h2,
+		.community-impact h2,
+		.join-content h2,
+		.backlink-strategy h2 {
+			font-size: 2rem;
+		}
+	}
+
+	.backlink-strategy {
+		padding: 4rem 0;
+		background: var(--neutral-100);
+	}
+
+	.backlink-strategy h2 {
+		font-size: 2.5rem;
+		color: var(--neutral-800);
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.strategy-content {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.strategy-section {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.strategy-section h3 {
+		color: var(--primary-orange);
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.strategy-section ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.strategy-section li {
+		margin-bottom: 1rem;
+		padding-left: 1.5rem;
+		position: relative;
+		color: var(--neutral-600);
+		line-height: 1.6;
+	}
+
+	.strategy-section li::before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: var(--primary-green);
+		font-weight: bold;
+	}
+
+	.strategy-section strong {
+		color: var(--neutral-800);
+	}
+</style>
+</Layout>

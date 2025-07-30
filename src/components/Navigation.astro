@@ -1,0 +1,126 @@
+---
+import { Astro } from 'astro';
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="nav">
+	<div class="container nav-container">
+		<a href="/" class="logo">
+			<span class="logo-icon">🏠</span>
+			LocalBasket
+		</a>
+		
+		<div class="nav-links">
+			<a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a>
+			<a href="/directory" class={currentPath === '/directory' ? 'active' : ''}>Directory</a>
+			<a href="/submit-business" class={currentPath === '/submit-business' ? 'active' : ''}>List Business</a>
+			<a href="/blog" class={currentPath === '/blog' ? 'active' : ''}>Blog</a>
+			<a href="/about" class={currentPath === '/about' ? 'active' : ''}>About</a>
+		</div>
+		
+		<button class="mobile-menu-toggle" id="mobile-menu-toggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
+</nav>
+
+<style>
+	.nav {
+		background: white;
+		box-shadow: var(--shadow-sm);
+		position: sticky;
+		top: 0;
+		z-index: 100;
+	}
+
+	.nav-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem;
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		text-decoration: none;
+		color: var(--neutral-800);
+		font-weight: 700;
+		font-size: 1.5rem;
+	}
+
+	.logo-icon {
+		font-size: 1.8rem;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.nav-links a {
+		text-decoration: none;
+		color: var(--neutral-600);
+		font-weight: 500;
+		transition: color 0.2s ease;
+		position: relative;
+	}
+
+	.nav-links a:hover,
+	.nav-links a.active {
+		color: var(--primary-orange);
+	}
+
+	.nav-links a.active::after {
+		content: '';
+		position: absolute;
+		bottom: -0.5rem;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background: var(--primary-orange);
+	}
+
+	.mobile-menu-toggle {
+		display: none;
+		flex-direction: column;
+		gap: 4px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.5rem;
+	}
+
+	.mobile-menu-toggle span {
+		width: 25px;
+		height: 3px;
+		background: var(--neutral-600);
+		transition: all 0.3s ease;
+	}
+
+	@media (max-width: 768px) {
+		.nav-links {
+			display: none;
+		}
+		
+		.mobile-menu-toggle {
+			display: flex;
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const toggle = document.getElementById('mobile-menu-toggle');
+		const navLinks = document.querySelector('.nav-links');
+		
+		if (toggle && navLinks) {
+			toggle.addEventListener('click', () => {
+				navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+			});
+		}
+	});
+</script>

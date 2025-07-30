@@ -1,0 +1,520 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const businesses = [
+	{
+		id: 'bangalore/food/priyas-kitchen',
+		name: "Priya's Kitchen",
+		city: 'bangalore',
+		category: 'food',
+		description: 'Authentic South Indian delicacies, homemade pickles, and traditional snacks made with family recipes passed down through generations.',
+		rating: 4.8,
+		reviews: 127,
+		image: 'https://images.pexels.com/photos/4109998/pexels-photo-4109998.jpeg?auto=compress&cs=tinysrgb&w=400',
+		phone: '+91 98765 43210',
+		specialties: ['Mango Pickle', 'Murukku', 'Sambar Powder'],
+		verified: true,
+		established: '2020'
+	},
+	{
+		id: 'chennai/crafts/artisan-crafts-maya',
+		name: 'Artisan Crafts by Maya',
+		city: 'chennai',
+		category: 'crafts',
+		description: 'Exquisite handmade jewelry, decorative items, and personalized gifts crafted with meticulous attention to detail using traditional techniques.',
+		rating: 4.9,
+		reviews: 89,
+		image: 'https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=400',
+		phone: '+91 98765 43211',
+		specialties: ['Silver Jewelry', 'Wall Art', 'Custom Gifts'],
+		verified: true,
+		established: '2019'
+	},
+	{
+		id: 'mumbai/services/home-tutor-excellence',
+		name: 'Home Tutor Services',
+		city: 'mumbai',
+		category: 'services',
+		description: 'Professional home tutoring for students from grade 1-12 in Math, Science, and English with personalized learning approaches.',
+		rating: 4.7,
+		reviews: 203,
+		image: 'https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=400',
+		phone: '+91 98765 43212',
+		specialties: ['CBSE Math', 'Science Tuition', 'English Grammar'],
+		verified: true,
+		established: '2018'
+	},
+	{
+		id: 'delhi/food/bakers-delight-home',
+		name: "Baker's Delight",
+		city: 'delhi',
+		category: 'food',
+		description: 'Fresh baked goods, custom celebration cakes, and artisanal breads made daily with premium ingredients and traditional baking methods.',
+		rating: 4.6,
+		reviews: 156,
+		image: 'https://images.pexels.com/photos/1070850/pexels-photo-1070850.jpeg?auto=compress&cs=tinysrgb&w=400',
+		phone: '+91 98765 43213',
+		specialties: ['Birthday Cakes', 'Sourdough Bread', 'French Pastries'],
+		verified: true,
+		established: '2021'
+	},
+	{
+		id: 'hyderabad/crafts/handwoven-heritage',
+		name: 'Handwoven Textiles',
+		city: 'hyderabad',
+		category: 'crafts',
+		description: 'Traditional handwoven fabrics, authentic sarees, and home textiles preserving ancient weaving techniques and cultural heritage.',
+		rating: 4.8,
+		reviews: 94,
+		image: 'https://images.pexels.com/photos/6069978/pexels-photo-6069978.jpeg?auto=compress&cs=tinysrgb&w=400',
+		phone: '+91 98765 43214',
+		specialties: ['Pochampally Sarees', 'Table Runners', 'Handloom Cotton'],
+		verified: true,
+		established: '2017'
+	},
+	{
+		id: 'pune/services/beauty-wellness-home',
+		name: 'Beauty at Home',
+		city: 'pune',
+		category: 'services',
+		description: 'Professional beauty and wellness services at your doorstep - organic facials, hair care treatments, and holistic wellness therapies.',
+		rating: 4.9,
+		reviews: 176,
+		image: 'https://images.pexels.com/photos/3985359/pexels-photo-3985359.jpeg?auto=compress&cs=tinysrgb&w=400',
+		phone: '+91 98765 43215',
+		specialties: ['Organic Facials', 'Hair Spa', 'Aromatherapy'],
+		verified: true,
+		established: '2020'
+	}
+];
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "ItemList",
+	"name": "Local Home Businesses Directory",
+	"itemListElement": businesses.map((business, index) => ({
+		"@type": "LocalBusiness",
+		"@id": `https://localbasket.com/directory/${business.id}`,
+		"name": business.name,
+		"description": business.description,
+		"url": `https://localbasket.com/${business.id}`,
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": business.city.charAt(0).toUpperCase() + business.city.slice(1),
+			"addressCountry": "IN"
+		},
+		"telephone": business.phone,
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingValue": business.rating,
+			"reviewCount": business.reviews,
+			"bestRating": 5,
+			"worstRating": 1
+		},
+		"image": business.image,
+		"position": index + 1,
+		"foundingDate": business.established,
+		"priceRange": "₹₹"
+	}))
+};
+---
+
+<Layout
+	title="Verified Home Business Directory | Local Food, Crafts & Services Near You"
+	description="Browse 500+ verified home businesses in your city. Find authentic local food vendors, skilled craft makers, and trusted service providers. Support community entrepreneurs today!"
+	keywords="verified home business directory, local food businesses, handmade crafts near me, home services directory, community entrepreneurs, authentic local products"
+	structuredData={structuredData}
+>
+	<Navigation />
+	
+	<main>
+		<section class="directory-header">
+			<div class="container">
+				<h1>Verified Home Business Directory</h1>
+				<p>Discover 500+ verified home businesses across 50+ cities in India</p>
+				<div class="directory-stats">
+					<div class="stat-item">
+						<strong>500+</strong>
+						<span>Verified Businesses</span>
+					</div>
+					<div class="stat-item">
+						<strong>50+</strong>
+						<span>Cities Covered</span>
+					</div>
+					<div class="stat-item">
+						<strong>10,000+</strong>
+						<span>Happy Customers</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="directory-content">
+			<div class="container">
+				<div class="filters">
+					<h2>🔍 Find Your Perfect Local Business</h2>
+					<div class="filter-controls">
+						<select id="city-filter" class="filter-select" aria-label="Filter by city">
+							<option value="">All Cities</option>
+							<option value="bangalore">Bangalore</option>
+							<option value="chennai">Chennai</option>
+							<option value="mumbai">Mumbai</option>
+							<option value="delhi">Delhi</option>
+							<option value="hyderabad">Hyderabad</option>
+							<option value="pune">Pune</option>
+						</select>
+						
+						<select id="category-filter" class="filter-select" aria-label="Filter by category">
+							<option value="">All Categories</option>
+							<option value="food">Food & Beverages</option>
+							<option value="crafts">Crafts & Handmade</option>
+							<option value="services">Services</option>
+						</select>
+						
+						<button id="clear-filters" class="btn btn-outline">Clear Filters</button>
+					</div>
+				</div>
+
+				<div class="business-grid" id="business-grid">
+					{businesses.map(business => (
+						<div class="business-card" data-city={business.city} data-category={business.category}>
+							{business.verified && <div class="verified-badge">✓ Verified</div>}
+							<div class="business-image">
+								<img src={business.image} alt={`${business.name} - ${business.description}`} loading="lazy" />
+							</div>
+							<div class="business-info">
+								<div class="business-header">
+									<h3>{business.name}</h3>
+									<span class="established">Est. {business.established}</span>
+								</div>
+								<p class="business-location">📍 {business.city.charAt(0).toUpperCase() + business.city.slice(1)}, India</p>
+								<p class="business-description">{business.description}</p>
+								
+								<div class="business-specialties">
+									{business.specialties.map(specialty => (
+										<span class="specialty-tag">{specialty}</span>
+									))}
+								</div>
+								
+								<div class="business-rating">
+									<span class="stars">⭐⭐⭐⭐⭐</span>
+									<span class="rating-text">{business.rating}/5 ({business.reviews} reviews)</span>
+								</div>
+								
+								<div class="business-actions">
+									<a href={`/${business.id}`} class="btn btn-primary">View Full Profile</a>
+									<a href={`tel:${business.phone}`} class="btn btn-secondary">📞 Call</a>
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<Footer />
+</Layout>
+
+<style>
+	.directory-header {
+		background: var(--primary-beige);
+		padding: 3rem 0;
+		text-align: center;
+	}
+
+	.directory-header h1 {
+		font-size: 2.5rem;
+		color: var(--neutral-800);
+		margin-bottom: 1rem;
+	}
+
+	.directory-header p {
+		font-size: 1.2rem;
+		color: var(--neutral-600);
+		margin-bottom: 2rem;
+	}
+
+	.directory-stats {
+		display: flex;
+		justify-content: center;
+		gap: 3rem;
+		flex-wrap: wrap;
+	}
+
+	.stat-item {
+		text-align: center;
+	}
+
+	.stat-item strong {
+		display: block;
+		font-size: 2rem;
+		color: var(--primary-orange);
+		font-weight: 700;
+	}
+
+	.stat-item span {
+		color: var(--neutral-600);
+		font-size: 0.9rem;
+	}
+
+	.directory-content {
+		padding: 3rem 0;
+	}
+
+	.filters {
+		margin-bottom: 3rem;
+		padding: 2rem;
+		background: white;
+		border-radius: 12px;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.filters h2 {
+		color: var(--neutral-800);
+		margin-bottom: 1rem;
+	}
+
+	.filter-controls {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.filter-select {
+		padding: 0.75rem;
+		border: 2px solid var(--neutral-300);
+		border-radius: 8px;
+		font-size: 1rem;
+		min-width: 150px;
+		transition: border-color 0.2s ease;
+	}
+
+	.filter-select:focus {
+		outline: none;
+		border-color: var(--primary-orange);
+	}
+
+	.business-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+		gap: 2rem;
+	}
+
+	.business-card {
+		background: white;
+		border-radius: 12px;
+		box-shadow: var(--shadow-sm);
+		overflow: hidden;
+		transition: all 0.3s ease;
+		position: relative;
+	}
+
+	.business-card:hover {
+		transform: translateY(-8px);
+		box-shadow: var(--shadow-lg);
+	}
+
+	.verified-badge {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		background: var(--primary-green);
+		color: white;
+		padding: 0.25rem 0.75rem;
+		border-radius: 16px;
+		font-size: 0.75rem;
+		font-weight: 600;
+		z-index: 2;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.business-image {
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.business-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.business-card:hover .business-image img {
+		transform: scale(1.05);
+	}
+
+	.business-info {
+		padding: 1.5rem;
+	}
+
+	.business-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		margin-bottom: 0.5rem;
+	}
+
+	.business-header h3 {
+		font-size: 1.5rem;
+		color: var(--neutral-800);
+		margin: 0;
+		line-height: 1.3;
+	}
+
+	.established {
+		font-size: 0.75rem;
+		color: var(--neutral-500);
+		background: var(--neutral-100);
+		padding: 0.25rem 0.5rem;
+		border-radius: 12px;
+		white-space: nowrap;
+	}
+
+	.business-location {
+		color: var(--neutral-600);
+		margin-bottom: 1rem;
+		font-weight: 500;
+		font-size: 0.9rem;
+	}
+
+	.business-description {
+		color: var(--neutral-600);
+		margin-bottom: 1rem;
+		line-height: 1.6;
+	}
+
+	.business-specialties {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.specialty-tag {
+		background: var(--primary-beige);
+		color: var(--neutral-700);
+		padding: 0.25rem 0.75rem;
+		border-radius: 16px;
+		font-size: 0.875rem;
+		font-weight: 500;
+	}
+
+	.business-rating {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.stars {
+		color: #ffd700;
+	}
+
+	.rating-text {
+		color: var(--neutral-600);
+		font-size: 0.9rem;
+	}
+
+	.business-actions {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.business-actions .btn {
+		flex: 1;
+		text-align: center;
+		padding: 0.75rem;
+		font-size: 0.9rem;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	@media (max-width: 768px) {
+		.business-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.filter-controls {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		.filter-select {
+			width: 100%;
+		}
+
+		.business-actions {
+			flex-direction: column;
+		}
+
+		.directory-header h1 {
+			font-size: 2rem;
+		}
+
+		.directory-stats {
+			gap: 1.5rem;
+		}
+
+		.stat-item strong {
+			font-size: 1.5rem;
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const cityFilter = document.getElementById('city-filter');
+		const categoryFilter = document.getElementById('category-filter');
+		const clearFilters = document.getElementById('clear-filters');
+		const businessCards = document.querySelectorAll('.business-card');
+
+		// Get URL parameters
+		const urlParams = new URLSearchParams(window.location.search);
+		const initialCity = urlParams.get('city');
+		const initialCategory = urlParams.get('category');
+
+		// Set initial filter values
+		if (initialCity) cityFilter.value = initialCity;
+		if (initialCategory) categoryFilter.value = initialCategory;
+
+		function filterBusinesses() {
+			const selectedCity = cityFilter.value;
+			const selectedCategory = categoryFilter.value;
+
+			businessCards.forEach(card => {
+				const cardCity = card.dataset.city;
+				const cardCategory = card.dataset.category;
+
+				const cityMatch = !selectedCity || cardCity === selectedCity;
+				const categoryMatch = !selectedCategory || cardCategory === selectedCategory;
+
+				if (cityMatch && categoryMatch) {
+					card.style.display = 'block';
+				} else {
+					card.style.display = 'none';
+				}
+			});
+		}
+
+		// Initial filter on page load
+		filterBusinesses();
+
+		// Filter event listeners
+		cityFilter.addEventListener('change', filterBusinesses);
+		categoryFilter.addEventListener('change', filterBusinesses);
+
+		clearFilters.addEventListener('click', () => {
+			cityFilter.value = '';
+			categoryFilter.value = '';
+			filterBusinesses();
+		});
+	});
+</script>
+</Layout>
