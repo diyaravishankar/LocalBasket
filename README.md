@@ -153,6 +153,15 @@ Sitemap: https://the-local-basket.vercel.app/sitemap.xml
 - **Impact**: Clean build process and proper sitemap generation
 - **Fix**: Removed `src/pages/sitemap.xml.ts` to resolve route conflict
 
+#### **Issue 5: Semantic H1/H2/H3 Structure Implementation** 
+- **Problem**: Missing proper heading hierarchy for SEO and accessibility
+- **Solution**: Implemented semantic heading structure across all pages
+- **Impact**: Better search engine understanding and featured snippet potential
+- **Implementation**: 
+  - Homepage: H1 "Discover Verified Home Businesses" → H2 categories → H3 subcategories
+  - City pages: H1 "Verified Home Businesses in [City]" → H2 category sections → H3 specific areas
+  - Business pages: H1 "[Business] - [Service] in [City]" → H2 main sections → H3 subsections
+
 ### **🎯 SEO Impact of Recent Fixes**
 
 | Fix | SEO Impact | Business Impact |
@@ -162,6 +171,7 @@ Sitemap: https://the-local-basket.vercel.app/sitemap.xml
 | **Canonical Tags** | ✅ No duplicate content | ✅ Higher rankings |
 | **Dynamic Sitemap** | ✅ Real-time updates | ✅ Faster page discovery |
 | **Build Fix** | ✅ Clean deployment | ✅ Reliable site updates |
+| **Semantic Structure** | ✅ Featured snippets potential | ✅ Better user experience |
 
 ---
 
@@ -225,6 +235,36 @@ Sitemap: https://the-local-basket.vercel.app/sitemap.xml
 - "Chennai handmade crafts"
 - "Mumbai home services"
 - "Delhi local food vendors"
+
+**Featured Snippet Optimization:**
+- "How LocalBasket Works" - structured for voice search
+- "Why Choose Local Bangalore Business?" - local authority building
+- "Customer Reviews for [Business]" - social proof optimization
+
+#### **Semantic Heading Structure for SEO**
+**Homepage Hierarchy:**
+- H1: "Discover Verified Home Businesses in Your City" (primary keyword)
+- H2: "Explore Local Business Categories" (category targeting)
+- H3: "Homemade Food & Beverages", "Handmade Crafts", "Local Home Services" (long-tail)
+- H2: "Featured Home Businesses" (authority building)
+- H2: "How LocalBasket Works" (process queries)
+- H2: "What Our Customers Say" (social proof)
+
+**City Page Hierarchy (Bangalore example):**
+- H1: "Verified Home Businesses in Bangalore" (location + service)
+- H2: "Top Rated Home Food Vendors in Bangalore" (local + quality indicators)  
+- H2: "Discover Handmade Crafts from Local Bangalore Artisans" (discovery intent)
+- H2: "Popular Home Services in Your Neighborhood" (proximity targeting)
+- H3: "Home Tutors in Koramangala", "Beauty Services in Indiranagar" (hyper-local)
+
+**Business Page Hierarchy:**
+- H1: "[Business Name] - [Service Type] in [City]" (entity + location)
+- H2: "About [Business Name]" (information intent)
+- H2: "Our Menu & Specialties" (product focus)
+- H3: "Signature Dishes", "Weekly Specials" (specific offerings)
+- H2: "Photo Gallery" (visual content)
+- H2: "Customer Reviews for [Business]" (social proof + entity)
+- H2: "Location & Contact Information" (local intent)
 
 #### **Content Structure**
 - **Header Hierarchy**: Proper H1-H6 structure

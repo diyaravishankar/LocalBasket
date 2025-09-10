@@ -21,7 +21,7 @@ const structuredData = {
 	"@type": "WebPage",
 	"name": `Home Businesses in ${cityData.name} - LocalBasket`,
 	"description": `Discover verified home-based businesses in ${cityData.name}. Find authentic homemade food, handcrafted items, and professional services.`,
-	"url": `https://localbasket.com/${cityData.name.toLowerCase()}`,
+	"url": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}`,
 	"mainEntity": {
 		"@type": "ItemList",
 		"name": `Home Businesses in ${cityData.name}`,
@@ -30,7 +30,7 @@ const structuredData = {
 			"@type": "ListItem",
 			"position": index + 1,
 			"name": cat.name,
-			"url": `https://localbasket.com/${cityData.name.toLowerCase()}/${cat.slug}`
+			"url": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}/${cat.slug}`
 		}))
 	},
 	"breadcrumb": {
@@ -40,13 +40,13 @@ const structuredData = {
 				"@type": "ListItem",
 				"position": 1,
 				"name": "Home",
-				"item": "https://localbasket.com"
+				"item": "https://the-local-basket.vercel.app"
 			},
 			{
 				"@type": "ListItem",
 				"position": 2,
 				"name": cityData.name,
-				"item": `https://localbasket.com/${cityData.name.toLowerCase()}`
+				"item": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}`
 			}
 		]
 	}
@@ -100,7 +100,7 @@ const featuredBusinesses = [
 				</nav>
 				
 				<div class="hero-content">
-					<h1>Home Businesses in {cityData.name}</h1>
+					<h1>Verified Home Businesses in Bangalore</h1>
 					<p class="lead">Discover {cityData.businessCount}+ verified home-based businesses in {cityData.name}, the {cityData.knownFor}. Connect with local entrepreneurs offering authentic homemade food, unique handcrafted items, and personalized services.</p>
 					
 					<div class="city-stats">
@@ -127,27 +127,35 @@ const featuredBusinesses = [
 
 		<section class="city-categories">
 			<div class="container">
-				<h2>Business Categories in {cityData.name}</h2>
-				<div class="categories-grid">
-					{cityData.categories.map((category) => (
-						<div class="category-card">
-							<div class="category-header">
-								<h3>{category.name}</h3>
-								<span class="business-count">{category.count} businesses</span>
-							</div>
-							<p>Find verified {category.name.toLowerCase()} businesses in {cityData.name}</p>
-							<a href={`/${cityData.name.toLowerCase()}/${category.slug}`} class="btn btn-primary">
-								Explore {category.name}
-							</a>
-						</div>
-					))}
+				<h2>Top Rated Home Food Vendors in Bangalore</h2>
+				<div class="food-category-card">
+					<p>Discover authentic homemade delicacies from verified food vendors across Bangalore. From traditional South Indian specialties to modern fusion dishes, find the perfect homemade meal for your taste.</p>
+					<a href="/bangalore/food" class="btn btn-primary">Explore Food Businesses</a>
+				</div>
+				
+				<h2>Discover Handmade Crafts from Local Bangalore Artisans</h2>
+				<div class="crafts-category-card">
+					<p>Explore unique handcrafted items made by talented Bangalore artisans. From traditional jewelry to modern home décor, find one-of-a-kind pieces that reflect Bangalore's creative spirit.</p>
+					<a href="/bangalore/crafts" class="btn btn-primary">Explore Craft Businesses</a>
+				</div>
+				
+				<h2>Popular Home Services in Your Neighborhood</h2>
+				<div class="services-overview">
+					<div class="service-area">
+						<h3>Home Tutors in Koramangala</h3>
+						<p>Professional tutoring services for students of all ages, offering personalized education in the comfort of your home.</p>
+					</div>
+					<div class="service-area">
+						<h3>Beauty Services in Indiranagar</h3>
+						<p>Expert beauty and wellness services delivered to your doorstep by certified professionals.</p>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="featured-businesses">
 			<div class="container">
-				<h2>Featured Businesses in {cityData.name}</h2>
+				<h2>Featured Home Businesses</h2>
 				<div class="businesses-grid">
 					{featuredBusinesses.map((business) => (
 						<div class="business-card">
@@ -170,7 +178,7 @@ const featuredBusinesses = [
 
 		<section class="city-info">
 			<div class="container">
-				<h2>Why Choose Home Businesses in {cityData.name}?</h2>
+				<h2>Why Choose a Local Bangalore Business?</h2>
 				<div class="info-grid">
 					<div class="info-card">
 						<h3>🏠 Authentic & Personal</h3>
@@ -419,6 +427,41 @@ h2 {
 .btn-outline:hover {
 	background: var(--primary-orange);
 	color: white;
+}
+
+/* New Category Structure Styles */
+.food-category-card, 
+.crafts-category-card {
+	background: white;
+	padding: 2rem;
+	border-radius: 12px;
+	box-shadow: var(--shadow-sm);
+	margin-bottom: 3rem;
+}
+
+.services-overview {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.service-area {
+	background: white;
+	padding: 1.5rem;
+	border-radius: 12px;
+	box-shadow: var(--shadow-sm);
+}
+
+.service-area h3 {
+	color: var(--neutral-800);
+	margin-bottom: 1rem;
+	font-size: 1.25rem;
+}
+
+.service-area p {
+	color: var(--neutral-600);
+	line-height: 1.6;
 }
 
 @media (max-width: 768px) {

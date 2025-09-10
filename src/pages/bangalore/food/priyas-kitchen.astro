@@ -31,7 +31,7 @@ const structuredData = {
 	"@type": "LocalBusiness",
 	"name": business.name,
 	"description": business.description,
-	"url": "https://localbasket.com/bangalore/food/priyas-kitchen",
+	"url": "https://the-local-basket.vercel.app/bangalore/food/priyas-kitchen",
 	"telephone": business.phone,
 	"email": business.email,
 	"image": business.image,
@@ -118,7 +118,7 @@ const structuredData = {
 					<div class="business-header">
 						<div class="business-info">
 							{business.verified && <div class="verified-badge">✓ Verified Business</div>}
-							<h1>{business.name}</h1>
+							<h1>Priya's Kitchen - Authentic Homemade Food in Bangalore</h1>
 							<p class="business-category">{business.category} • {business.city}</p>
 							<div class="business-rating">
 								<span class="stars">⭐⭐⭐⭐⭐</span>
@@ -138,21 +138,32 @@ const structuredData = {
 				<div class="details-grid">
 					<div class="main-content">
 						<div class="about-section">
-							<h2>About {business.name}</h2>
+							<h2>About Priya's Kitchen</h2>
 							<p>{business.description}</p>
 							
-							<div class="specialties-section">
-								<h3>Our Specialties</h3>
-								<div class="specialties-grid">
-									{business.specialties.map(specialty => (
-										<span class="specialty-tag">{specialty}</span>
-									))}
+							<div class="menu-section">
+								<h2>Our Menu & Specialties</h2>
+								<div class="specialties-section">
+									<h3>Signature Dishes</h3>
+									<div class="specialties-grid">
+										{business.specialties.slice(0, 3).map(specialty => (
+											<span class="specialty-tag">{specialty}</span>
+										))}
+									</div>
+								</div>
+								<div class="weekly-specials">
+									<h3>Weekly Specials</h3>
+									<div class="specialties-grid">
+										{business.specialties.slice(3).map(specialty => (
+											<span class="specialty-tag">{specialty}</span>
+										))}
+									</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="gallery-section">
-							<h3>Gallery</h3>
+							<h2>Photo Gallery</h2>
 							<div class="gallery-grid">
 								{business.gallery.map((image, index) => (
 									<img src={image} alt={`${business.name} product ${index + 1}`} loading="lazy" />
@@ -163,7 +174,7 @@ const structuredData = {
 
 					<div class="sidebar">
 						<div class="contact-card">
-							<h3>Contact Information</h3>
+							<h2>Location & Contact Information</h2>
 							<div class="contact-info">
 								<div class="contact-item">
 									<span class="contact-icon">📞</span>
@@ -229,6 +240,40 @@ const structuredData = {
 									<span>Average Rating</span>
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="customer-reviews">
+			<div class="container">
+				<h2>Customer Reviews for Priya's Kitchen</h2>
+				<div class="reviews-grid">
+					<div class="review-card">
+						<div class="review-rating">⭐⭐⭐⭐⭐</div>
+						<p>"Authentic South Indian flavors! The mango pickle reminds me of my grandmother's recipe. Highly recommended!"</p>
+						<div class="reviewer">
+							<strong>Rajesh Kumar</strong>
+							<span>Koramangala resident</span>
+						</div>
+					</div>
+					
+					<div class="review-card">
+						<div class="review-rating">⭐⭐⭐⭐⭐</div>
+						<p>"The murukku is perfectly crispy and the sambar powder has such amazing depth of flavor. Will order again!"</p>
+						<div class="reviewer">
+							<strong>Lakshmi Nair</strong>
+							<span>Regular customer</span>
+						</div>
+					</div>
+					
+					<div class="review-card">
+						<div class="review-rating">⭐⭐⭐⭐⭐</div>
+						<p>"Quick delivery and excellent packaging. The coconut chutney powder is a lifesaver for busy mornings!"</p>
+						<div class="reviewer">
+							<strong>Suresh Patel</strong>
+							<span>HSR Layout</span>
 						</div>
 					</div>
 				</div>
@@ -333,6 +378,20 @@ const structuredData = {
 		margin-bottom: 1rem;
 	}
 
+	.menu-section {
+		margin-top: 3rem;
+	}
+
+	.menu-section h2 {
+		font-size: 2rem;
+		color: var(--neutral-800);
+		margin-bottom: 1.5rem;
+	}
+
+	.weekly-specials {
+		margin-top: 2rem;
+	}
+
 	.about-section p {
 		color: var(--neutral-600);
 		line-height: 1.8;
@@ -385,6 +444,54 @@ const structuredData = {
 
 	.gallery-grid img:hover {
 		transform: scale(1.05);
+	}
+
+	.customer-reviews {
+		padding: 4rem 0;
+		background: var(--neutral-100);
+	}
+
+	.customer-reviews h2 {
+		font-size: 2.5rem;
+		color: var(--neutral-800);
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.reviews-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.review-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.review-rating {
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+	}
+
+	.review-card p {
+		font-style: italic;
+		color: var(--neutral-600);
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
+	}
+
+	.reviewer strong {
+		color: var(--neutral-800);
+		display: block;
+		margin-bottom: 0.25rem;
+	}
+
+	.reviewer span {
+		color: var(--neutral-500);
+		font-size: 0.9rem;
 	}
 
 	.sidebar {
