@@ -2,12 +2,38 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+
+// Enhanced structured data for better SEO
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": ["WebPage", "Article"],
+	"name": "LocalBasket SEO Strategy Summary - Digital Marketing Assignment",
+	"description": "Comprehensive SEO implementation documentation for LocalBasket platform, covering technical SEO, content optimization, and local search strategies.",
+	"url": "https://localbasket.com/seo-summary",
+	"mainEntity": {
+		"@type": "Article",
+		"headline": "Complete SEO Implementation Guide for LocalBasket",
+		"author": {
+			"@type": "Organization",
+			"name": "LocalBasket Team"
+		},
+		"datePublished": "2025-01-15",
+		"dateModified": new Date().toISOString().split('T')[0]
+	}
+};
+
+const breadcrumbs = [
+	{ name: "Home", url: "/" },
+	{ name: "SEO Summary", url: "/seo-summary" }
+];
 ---
 
 <Layout
-	title="SEO Strategy Summary - LocalBasket Assignment Documentation"
-	description="Comprehensive SEO strategy documentation for LocalBasket - covering on-page, technical, and off-page SEO implementation for academic assignment."
-	keywords="SEO strategy, LocalBasket documentation, on-page SEO, technical SEO, off-page SEO, assignment summary"
+	title="LocalBasket SEO Summary - Complete Digital Marketing Assignment Documentation"
+	description="Comprehensive SEO strategy documentation for LocalBasket platform. Learn about technical SEO, content optimization, local search strategies, and performance metrics implemented for academic assignment."
+	keywords="SEO strategy LocalBasket, digital marketing assignment, technical SEO implementation, local search optimization, content marketing strategy, home business SEO"
+	structuredData={structuredData}
+	breadcrumbs={breadcrumbs}
 >
 	<Navigation />
 	

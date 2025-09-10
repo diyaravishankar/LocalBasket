@@ -1,0 +1,440 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const cityData = {
+	name: 'Bangalore',
+	state: 'Karnataka',
+	population: '12.3 million',
+	knownFor: 'IT Capital of India, Garden City',
+	businessCount: 125,
+	categories: [
+		{ name: 'Food & Beverages', count: 45, slug: 'food' },
+		{ name: 'Handmade Crafts', count: 35, slug: 'crafts' },
+		{ name: 'Home Services', count: 45, slug: 'services' }
+	]
+};
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	"name": `Home Businesses in ${cityData.name} - LocalBasket`,
+	"description": `Discover verified home-based businesses in ${cityData.name}. Find authentic homemade food, handcrafted items, and professional services.`,
+	"url": `https://localbasket.com/${cityData.name.toLowerCase()}`,
+	"mainEntity": {
+		"@type": "ItemList",
+		"name": `Home Businesses in ${cityData.name}`,
+		"numberOfItems": cityData.businessCount,
+		"itemListElement": cityData.categories.map((cat, index) => ({
+			"@type": "ListItem",
+			"position": index + 1,
+			"name": cat.name,
+			"url": `https://localbasket.com/${cityData.name.toLowerCase()}/${cat.slug}`
+		}))
+	},
+	"breadcrumb": {
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://localbasket.com"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": cityData.name,
+				"item": `https://localbasket.com/${cityData.name.toLowerCase()}`
+			}
+		]
+	}
+};
+
+const breadcrumbs = [
+	{ name: "Home", url: "/" },
+	{ name: cityData.name, url: `/${cityData.name.toLowerCase()}` }
+];
+
+const featuredBusinesses = [
+	{
+		name: "Priya's Kitchen",
+		category: "Food & Beverages",
+		description: "Authentic South Indian delicacies made with traditional family recipes",
+		rating: 4.8,
+		reviews: 127,
+		image: "https://images.pexels.com/photos/4109998/pexels-photo-4109998.jpeg?auto=compress&cs=tinysrgb&w=400",
+		url: "/bangalore/food/priyas-kitchen"
+	}
+	// Add more featured businesses
+];
+---
+
+<Layout
+	title={`Home Businesses in ${cityData.name} - Verified Local Food, Crafts & Services | LocalBasket`}
+	description={`Discover ${cityData.businessCount}+ verified home-based businesses in ${cityData.name}, ${cityData.state}. Find authentic homemade food, handcrafted items, and professional services from local entrepreneurs. Support ${cityData.name}'s home business community.`}
+	keywords={`home businesses ${cityData.name}, local food vendors ${cityData.name}, handmade crafts ${cityData.name}, home services ${cityData.name}, verified businesses ${cityData.state}, ${cityData.name} entrepreneurs, local marketplace ${cityData.name}`}
+	structuredData={structuredData}
+	breadcrumbs={breadcrumbs}
+>
+	<Navigation />
+	
+	<main>
+		<section class="city-hero">
+			<div class="container">
+				<nav aria-label="Breadcrumb" class="breadcrumb">
+					<ol>
+						{breadcrumbs.map((crumb, index) => (
+							<li>
+								{index < breadcrumbs.length - 1 ? (
+									<a href={crumb.url}>{crumb.name}</a>
+								) : (
+									<span aria-current="page">{crumb.name}</span>
+								)}
+								{index < breadcrumbs.length - 1 && <span class="separator">›</span>}
+							</li>
+						))}
+					</ol>
+				</nav>
+				
+				<div class="hero-content">
+					<h1>Home Businesses in {cityData.name}</h1>
+					<p class="lead">Discover {cityData.businessCount}+ verified home-based businesses in {cityData.name}, the {cityData.knownFor}. Connect with local entrepreneurs offering authentic homemade food, unique handcrafted items, and personalized services.</p>
+					
+					<div class="city-stats">
+						<div class="stat-item">
+							<h3>{cityData.businessCount}+</h3>
+							<p>Verified Businesses</p>
+						</div>
+						<div class="stat-item">
+							<h3>{cityData.categories.length}</h3>
+							<p>Categories</p>
+						</div>
+						<div class="stat-item">
+							<h3>4.8⭐</h3>
+							<p>Average Rating</p>
+						</div>
+						<div class="stat-item">
+							<h3>1000+</h3>
+							<p>Happy Customers</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="city-categories">
+			<div class="container">
+				<h2>Business Categories in {cityData.name}</h2>
+				<div class="categories-grid">
+					{cityData.categories.map((category) => (
+						<div class="category-card">
+							<div class="category-header">
+								<h3>{category.name}</h3>
+								<span class="business-count">{category.count} businesses</span>
+							</div>
+							<p>Find verified {category.name.toLowerCase()} businesses in {cityData.name}</p>
+							<a href={`/${cityData.name.toLowerCase()}/${category.slug}`} class="btn btn-primary">
+								Explore {category.name}
+							</a>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<section class="featured-businesses">
+			<div class="container">
+				<h2>Featured Businesses in {cityData.name}</h2>
+				<div class="businesses-grid">
+					{featuredBusinesses.map((business) => (
+						<div class="business-card">
+							<img src={business.image} alt={business.name} loading="lazy" />
+							<div class="business-info">
+								<h3>{business.name}</h3>
+								<p class="category">{business.category}</p>
+								<p class="description">{business.description}</p>
+								<div class="rating">
+									<span class="stars">⭐⭐⭐⭐⭐</span>
+									<span>{business.rating}/5 ({business.reviews} reviews)</span>
+								</div>
+								<a href={business.url} class="btn btn-outline">View Details</a>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<section class="city-info">
+			<div class="container">
+				<h2>Why Choose Home Businesses in {cityData.name}?</h2>
+				<div class="info-grid">
+					<div class="info-card">
+						<h3>🏠 Authentic & Personal</h3>
+						<p>Home businesses in {cityData.name} offer authentic, personalized products and services made with care and attention to detail.</p>
+					</div>
+					<div class="info-card">
+						<h3>✅ Verified & Trusted</h3>
+						<p>All businesses are thoroughly verified to ensure quality and reliability for {cityData.name} customers.</p>
+					</div>
+					<div class="info-card">
+						<h3>🤝 Support Local Economy</h3>
+						<p>By choosing local home businesses, you're directly supporting {cityData.name}'s entrepreneurial community and local economy.</p>
+					</div>
+					<div class="info-card">
+						<h3>🚀 Fast & Convenient</h3>
+						<p>Quick delivery and personalized service within {cityData.name} neighborhoods for your convenience.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="local-seo-content">
+			<div class="container">
+				<h2>About {cityData.name}'s Home Business Community</h2>
+				<div class="content-grid">
+					<div class="content-text">
+						<p>{cityData.name}, with a population of {cityData.population}, is home to a thriving community of home-based entrepreneurs. Known as the {cityData.knownFor}, this vibrant city offers diverse opportunities for home businesses to flourish.</p>
+						
+						<p>LocalBasket connects you with verified home businesses across {cityData.name}, from traditional food vendors in Koramangala to handcraft artisans in Indiranagar. Our platform ensures quality and authenticity while supporting the local economy.</p>
+						
+						<h3>Popular Areas in {cityData.name} for Home Businesses:</h3>
+						<ul>
+							<li>Koramangala - Known for authentic South Indian food businesses</li>
+							<li>Indiranagar - Hub for handmade crafts and artisan products</li>
+							<li>Whitefield - Growing community of home service providers</li>
+							<li>Jayanagar - Traditional businesses with generational recipes</li>
+							<li>HSR Layout - Modern home businesses catering to tech professionals</li>
+						</ul>
+					</div>
+					
+					<div class="content-sidebar">
+						<div class="quick-stats">
+							<h3>Quick Stats</h3>
+							<ul>
+								<li><strong>City:</strong> {cityData.name}</li>
+								<li><strong>State:</strong> {cityData.state}</li>
+								<li><strong>Population:</strong> {cityData.population}</li>
+								<li><strong>Known For:</strong> {cityData.knownFor}</li>
+								<li><strong>Businesses:</strong> {cityData.businessCount}+</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+.city-hero {
+	background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-green) 100%);
+	color: white;
+	padding: 4rem 0;
+}
+
+.breadcrumb {
+	margin-bottom: 2rem;
+}
+
+.breadcrumb ol {
+	display: flex;
+	list-style: none;
+	gap: 0.5rem;
+	font-size: 0.9rem;
+}
+
+.breadcrumb a {
+	color: rgba(255, 255, 255, 0.8);
+	text-decoration: none;
+}
+
+.breadcrumb a:hover {
+	color: white;
+}
+
+.separator {
+	color: rgba(255, 255, 255, 0.6);
+	margin: 0 0.5rem;
+}
+
+.hero-content h1 {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	font-weight: 700;
+}
+
+.lead {
+	font-size: 1.25rem;
+	margin-bottom: 2rem;
+	opacity: 0.9;
+	line-height: 1.6;
+}
+
+.city-stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.stat-item {
+	text-align: center;
+}
+
+.stat-item h3 {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.categories-grid, .businesses-grid, .info-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.category-card, .business-card, .info-card {
+	background: white;
+	padding: 2rem;
+	border-radius: 12px;
+	box-shadow: var(--shadow-md);
+}
+
+.category-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.business-count {
+	background: var(--primary-orange);
+	color: white;
+	padding: 0.25rem 0.75rem;
+	border-radius: 20px;
+	font-size: 0.9rem;
+}
+
+.content-grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 3rem;
+	margin-top: 2rem;
+}
+
+.content-text {
+	line-height: 1.7;
+}
+
+.content-text ul {
+	margin-top: 1rem;
+	padding-left: 1.5rem;
+}
+
+.content-text li {
+	margin-bottom: 0.5rem;
+}
+
+.content-sidebar {
+	background: var(--neutral-100);
+	padding: 2rem;
+	border-radius: 12px;
+	height: fit-content;
+}
+
+.quick-stats ul {
+	list-style: none;
+	padding: 0;
+}
+
+.quick-stats li {
+	padding: 0.5rem 0;
+	border-bottom: 1px solid var(--neutral-300);
+}
+
+.business-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 8px;
+	margin-bottom: 1rem;
+}
+
+.rating {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin: 1rem 0;
+	font-size: 0.9rem;
+}
+
+section {
+	padding: 4rem 0;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+	text-align: center;
+	margin-bottom: 2rem;
+	color: var(--neutral-800);
+}
+
+.btn {
+	display: inline-block;
+	padding: 0.75rem 1.5rem;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 500;
+	text-align: center;
+	transition: all 0.3s ease;
+}
+
+.btn-primary {
+	background: var(--primary-orange);
+	color: white;
+}
+
+.btn-primary:hover {
+	background: var(--secondary-orange);
+}
+
+.btn-outline {
+	border: 2px solid var(--primary-orange);
+	color: var(--primary-orange);
+}
+
+.btn-outline:hover {
+	background: var(--primary-orange);
+	color: white;
+}
+
+@media (max-width: 768px) {
+	.hero-content h1 {
+		font-size: 2rem;
+	}
+	
+	.city-stats {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	.content-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.categories-grid, .businesses-grid, .info-grid {
+		grid-template-columns: 1fr;
+	}
+}
+</style>

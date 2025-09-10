@@ -34,12 +34,24 @@ const structuredData = {
 	"url": "https://localbasket.com/bangalore/food/priyas-kitchen",
 	"telephone": business.phone,
 	"email": business.email,
+	"image": business.image,
+	"priceRange": business.priceRange,
+	"openingHours": "Mo-Sa 09:00-19:00",
+	"foundingDate": business.established,
+	"servesCuisine": "South Indian",
+	"paymentAccepted": ["Cash", "UPI", "Bank Transfer"],
 	"address": {
 		"@type": "PostalAddress",
-		"streetAddress": business.address,
+		"streetAddress": "Koramangala",
 		"addressLocality": "Bangalore",
 		"addressRegion": "Karnataka",
+		"postalCode": "560034",
 		"addressCountry": "IN"
+	},
+	"geo": {
+		"@type": "GeoCoordinates",
+		"latitude": "12.9352",
+		"longitude": "77.6245"
 	},
 	"aggregateRating": {
 		"@type": "AggregateRating",
@@ -48,19 +60,52 @@ const structuredData = {
 		"bestRating": 5,
 		"worstRating": 1
 	},
-	"image": business.image,
-	"priceRange": business.priceRange,
-	"openingHours": "Mo-Sa 09:00-19:00",
-	"foundingDate": business.established,
-	"servesCuisine": "South Indian",
-	"paymentAccepted": "Cash, UPI, Bank Transfer"
+	"review": [
+		{
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": 5,
+				"bestRating": 5
+			},
+			"author": {
+				"@type": "Person",
+				"name": "Rajesh Kumar"
+			},
+			"reviewBody": "Authentic South Indian flavors! The mango pickle reminds me of my grandmother's recipe. Highly recommended!"
+		}
+	],
+	"hasOfferCatalog": {
+		"@type": "OfferCatalog",
+		"name": "Home-made South Indian Specialties",
+		"itemListElement": [
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Product",
+					"name": "Authentic Mango Pickle"
+				}
+			},
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Product",
+					"name": "Traditional Murukku"
+				}
+			}
+		]
+	},
+	"areaServed": {
+		"@type": "City",
+		"name": "Bangalore"
+	}
 };
 ---
 
 <Layout
-	title="Priya's Kitchen - Authentic South Indian Homemade Pickles & Snacks | Bangalore"
-	description="Order authentic South Indian homemade pickles, murukku, and traditional snacks from Priya's Kitchen in Bangalore. Made with family recipes. ⭐4.8/5 rating. Call +91 98765 43210"
-	keywords="Priya's Kitchen Bangalore, homemade pickles Bangalore, South Indian snacks, mango pickle, murukku, sambar powder, authentic South Indian food"
+	title="Priya's Kitchen Bangalore - Authentic South Indian Homemade Pickles & Traditional Snacks | Order Online"
+	description="Order authentic homemade South Indian pickles, murukku, sambar powder & traditional snacks from Priya's Kitchen in Koramangala, Bangalore. Family recipes since 2020. ⭐4.8/5 rating with 127+ reviews. Free delivery in Bangalore. Call +91 98765 43210"
+	keywords="Priya's Kitchen Bangalore, homemade pickles Bangalore, South Indian snacks online, mango pickle Koramangala, murukku delivery Bangalore, sambar powder homemade, authentic South Indian food, traditional snacks Bangalore, home business food delivery"
 	structuredData={structuredData}
 >
 	<Navigation />

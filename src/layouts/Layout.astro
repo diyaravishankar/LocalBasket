@@ -5,10 +5,43 @@ export interface Props {
 	keywords?: string;
 	ogImage?: string;
 	structuredData?: object;
+	articleData?: {
+		publishedTime?: string;
+		modifiedTime?: string;
+		author?: string;
+		section?: string;
+	};
+	breadcrumbs?: Array<{
+		name: string;
+		url: string;
+	}>;
 }
 
-const { title, description, keywords, ogImage, structuredData } = Astro.props;
+const { 
+	title, 
+	description, 
+	keywords, 
+	ogImage, 
+	structuredData, 
+	articleData,
+	breadcrumbs 
+} = Astro.props;
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const currentUrl = canonicalURL.href;
+const defaultOgImage = new URL('/og-image.jpg', Astro.site).href;
+
+// Generate breadcrumb structured data
+const breadcrumbStructuredData = breadcrumbs ? {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": breadcrumbs.map((crumb, index) => ({
+		"@type": "ListItem",
+		"position": index + 1,
+		"name": crumb.name,
+		"item": new URL(crumb.url, Astro.site).href
+	}))
+} : null;
 ---
 
 <!doctype html>
@@ -25,20 +58,37 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		{keywords && <meta name="keywords" content={keywords} />}
 		<link rel="canonical" href={canonicalURL} />
 		
-		<!-- Open Graph -->
+		<!-- Enhanced Open Graph -->
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:url" content={canonicalURL} />
-		<meta property="og:type" content="website" />
-		<meta property="og:image" content={ogImage || '/og-image.jpg'} />
+		<meta property="og:url" content={currentUrl} />
+		<meta property="og:type" content={articleData ? "article" : "website"} />
+		<meta property="og:image" content={ogImage || defaultOgImage} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content={title} />
+		<meta property="og:site_name" content="LocalBasket" />
+		<meta property="og:locale" content="en_IN" />
 		
-		<!-- Twitter Card -->
+		{articleData && (
+			<>
+				<meta property="article:published_time" content={articleData.publishedTime} />
+				<meta property="article:modified_time" content={articleData.modifiedTime} />
+				<meta property="article:author" content={articleData.author} />
+				<meta property="article:section" content={articleData.section} />
+			</>
+		)}
+		
+		<!-- Enhanced Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@localbasket" />
+		<meta name="twitter:creator" content="@localbasket" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={ogImage || '/og-image.jpg'} />
+		<meta name="twitter:image" content={ogImage || defaultOgImage} />
+		<meta name="twitter:image:alt" content={title} />
 		
-		<!-- Google Fonts -->
+		<!-- Google Fonts with performance optimization -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -48,21 +98,48 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 			<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 		)}
 		
-		<!-- Performance Optimization -->
+		{breadcrumbStructuredData && (
+			<script type="application/ld+json" set:html={JSON.stringify(breadcrumbStructuredData)} />
+		)}
+		
+		<!-- Enhanced Performance Optimization -->
 		<link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml">
+		<link rel="preload" href="https://fonts.gstatic.com" as="font" type="font/woff2" crossorigin>
 		<meta name="theme-color" content="#FF8C69">
 		
-		<!-- Additional SEO Meta Tags -->
+		<!-- Advanced SEO Meta Tags -->
 		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-		<meta name="googlebot" content="index, follow">
+		<meta name="googlebot" content="index, follow, max-image-preview:large">
+		<meta name="bingbot" content="index, follow">
 		<meta name="author" content="LocalBasket Team">
 		<meta name="language" content="English">
 		<meta name="geo.region" content="IN">
 		<meta name="geo.placename" content="India">
+		<meta name="format-detection" content="telephone=no">
+		
+		<!-- Rich Snippets Enhancement -->
+		<meta name="application-name" content="LocalBasket">
+		<meta name="apple-mobile-web-app-title" content="LocalBasket">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
 		
 		<!-- Performance and Core Web Vitals -->
 		<link rel="preconnect" href="https://images.pexels.com">
 		<link rel="dns-prefetch" href="https://images.pexels.com">
+		<link rel="dns-prefetch" href="https://www.google-analytics.com">
+		
+		<!-- Alternate hreflang for international SEO (if applicable) -->
+		<link rel="alternate" hreflang="en-in" href={currentUrl} />
+		<link rel="alternate" hreflang="x-default" href={currentUrl} />
+		
+		<!-- Google Analytics 4 (GA4) - Replace with your actual measurement ID -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'GA_MEASUREMENT_ID');
+		</script>
 	</head>
 	<body>
 		<slot />
