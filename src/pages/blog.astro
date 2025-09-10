@@ -77,12 +77,12 @@ const structuredData = {
 	"@type": "Blog",
 	"name": "LocalBasket Blog",
 	"description": "Tips, guides, and insights for home business owners and local customers",
-	"url": "https://localbasket.com/blog",
+	"url": "https://the-local-basket.vercel.app/blog",
 	"blogPost": blogPosts.map(post => ({
 		"@type": "BlogPosting",
 		"headline": post.title,
 		"description": post.excerpt,
-		"url": `https://localbasket.com/blog/${post.id}`,
+		"url": `https://the-local-basket.vercel.app/blog/${post.id}`,
 		"keywords": post.keywords,
 		"datePublished": post.date,
 		"dateModified": post.date,
@@ -96,12 +96,12 @@ const structuredData = {
 			"name": "LocalBasket",
 			"logo": {
 				"@type": "ImageObject",
-				"url": "https://localbasket.com/logo.png"
+				"url": "https://the-local-basket.vercel.app/logo.png"
 			}
 		},
 		"mainEntityOfPage": {
 			"@type": "WebPage",
-			"@id": `https://localbasket.com/blog/${post.id}`
+			"@id": `https://the-local-basket.vercel.app/blog/${post.id}`
 		}
 	}))
 };

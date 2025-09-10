@@ -1,0 +1,1247 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+
+const title = "Lucknow Chikan Embroidery Atelier - Authentic Hand Embroidered Clothing & Fabrics";
+const description = "Experience authentic Lucknowi Chikankari at our traditional atelier. Hand-embroidered clothing, fabrics, and custom designs in the heart of Lucknow's heritage district.";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Lucknow Chikan Embroidery Atelier",
+  "description": description,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "12, Chowk Market",
+    "addressLocality": "Lucknow",
+    "addressRegion": "Uttar Pradesh",
+    "postalCode": "226003",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "26.8467",
+    "longitude": "80.9462"
+  },
+  "telephone": "+91-98765-21098",
+  "email": "lucknow.chikan@gmail.com",
+  "url": "https://the-local-basket.vercel.app/lucknow/crafts/chikan-embroidery-atelier",
+  "image": "https://the-local-basket.vercel.app/assets/lucknow-chikan-hero.jpg",
+  "priceRange": "₹₹₹",
+  "serviceArea": {
+    "@type": "Place",
+    "name": "Lucknow, Uttar Pradesh, India"
+  },
+  "openingHours": "Mo-Sa 10:00-20:00, Su 11:00-18:00",
+  "paymentAccepted": "Cash, UPI, Card",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "198"
+  }
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/lucknow">Lucknow</a></li>
+        <li><a href="/lucknow/crafts">Crafts</a></li>
+        <li aria-current="page">Chikan Embroidery Atelier</li>
+      </ol>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Lucknow Chikan Embroidery Atelier</h1>
+          <p class="hero-subtitle">Authentic Chikankari • Hand Embroidery • Heritage Craftsmanship</p>
+          <p class="hero-description">
+            Immerse yourself in the elegance of traditional Lucknowi Chikankari. Our master artisans create exquisite 
+            hand-embroidered garments and fabrics using techniques passed down through seven generations.
+          </p>
+          <div class="hero-features">
+            <span class="feature-tag">🧵 Hand Embroidered</span>
+            <span class="feature-tag">🎨 Traditional Patterns</span>
+            <span class="feature-tag">⭐ 4.8/5 Rating</span>
+            <span class="feature-tag">👑 Heritage Craft</span>
+          </div>
+          <div class="hero-actions">
+            <a href="tel:+919876521098" class="btn btn-primary">Visit Atelier</a>
+            <a href="#collections" class="btn btn-secondary">View Collections</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/assets/lucknow-chikan-embroidery.jpg" alt="Traditional Chikankari Embroidery in Lucknow" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="about-content">
+        <h2>About Lucknow Chikan Embroidery Atelier</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Established in 1952 by <strong>Ustad Nazir Ahmed</strong>, the <strong>Lucknow Chikan Embroidery Atelier</strong> 
+              has been the custodian of authentic <strong>Chikankari craftsmanship</strong> for over seven decades. Located in 
+              the historic Chowk district, our atelier represents the finest tradition of <strong>Lucknowi needlework</strong> 
+              that has adorned the wardrobes of royalty and connoisseurs worldwide.
+            </p>
+            <p>
+              <strong>Chikankari</strong>, literally meaning "delicate embroidery," is a <strong>400-year-old art form</strong> 
+              that originated in the royal courts of the Mughal era. Our artisans are masters of over <strong>32 traditional stitches</strong> 
+              including <strong>murri</strong>, <strong>phanda</strong>, <strong>keel kangan</strong>, <strong>bakhiya</strong>, 
+              and <strong>jaali work</strong>, each requiring years of training to perfect.
+            </p>
+            <p>
+              We specialize in creating <strong>authentic Chikan garments</strong> on finest cotton, muslin, georgette, and silk fabrics. 
+              Our collection ranges from <strong>traditional kurtas</strong> and <strong>dupattas</strong> to 
+              <strong>contemporary fusion wear</strong>, <strong>home furnishings</strong>, and <strong>bridal ensembles</strong> 
+              that celebrate the timeless beauty of this heritage craft.
+            </p>
+            <p>
+              What distinguishes our work is our commitment to <strong>hand embroidery exclusively</strong> – we never use machines. 
+              Every piece is meticulously crafted by skilled <strong>karigars</strong> (artisans) who have inherited this art 
+              through generations, ensuring each creation is a unique masterpiece bearing the soul of traditional craftsmanship.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">70+</span>
+              <span class="stat-label">Years of Legacy</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Master Artisans</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">32</span>
+              <span class="stat-label">Traditional Stitches</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">7</span>
+              <span class="stat-label">Generations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="collections" id="collections">
+      <div class="collections-content">
+        <h2>Our Chikankari Collections</h2>
+        
+        <div class="collections-grid">
+          <div class="collection-card">
+            <h3>Traditional Women's Wear</h3>
+            <div class="collection-details">
+              <p><strong>Cotton Chikan Kurtas:</strong> ₹2,500 - ₹8,500</p>
+              <p><strong>Silk Chikan Suits:</strong> ₹12,000 - ₹35,000</p>
+              <p><strong>Georgette Chikan Sarees:</strong> ₹15,000 - ₹45,000</p>
+              <p><strong>Chikan Dupattas:</strong> ₹1,800 - ₹12,000</p>
+            </div>
+            <div class="collection-features">
+              <ul>
+                <li>Authentic white-on-white embroidery</li>
+                <li>Traditional floral and paisley motifs</li>
+                <li>Hand-picked fine cotton and silk fabrics</li>
+                <li>Various neckline and sleeve options</li>
+                <li>Custom fitting and sizing available</li>
+                <li>Heirloom quality craftsmanship</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="collection-card">
+            <h3>Men's Chikankari Collection</h3>
+            <div class="collection-details">
+              <p><strong>Cotton Chikan Kurtas:</strong> ₹2,200 - ₹6,500</p>
+              <p><strong>Linen Chikan Shirts:</strong> ₹3,500 - ₹9,000</p>
+              <p><strong>Silk Chikan Sherwanis:</strong> ₹18,000 - ₹45,000</p>
+              <p><strong>Chikan Nehru Jackets:</strong> ₹8,000 - ₹18,000</p>
+            </div>
+            <div class="collection-features">
+              <ul>
+                <li>Masculine geometric patterns</li>
+                <li>Subtle embroidery placements</li>
+                <li>Contemporary and traditional cuts</li>
+                <li>Festival and formal wear options</li>
+                <li>Wedding and ceremony collections</li>
+                <li>Coordinated family sets available</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="collection-card">
+            <h3>Bridal & Wedding Collection</h3>
+            <div class="collection-details">
+              <p><strong>Bridal Lehenga Sets:</strong> ₹85,000 - ₹2,50,000</p>
+              <p><strong>Wedding Sharara Sets:</strong> ₹45,000 - ₹1,20,000</p>
+              <p><strong>Bridal Chikan Sarees:</strong> ₹35,000 - ₹85,000</p>
+              <p><strong>Groom's Sherwani Sets:</strong> ₹35,000 - ₹75,000</p>
+            </div>
+            <div class="collection-features">
+              <ul>
+                <li>Heavy intricate embroidery work</li>
+                <li>Gold and silver thread combinations</li>
+                <li>Coordinated couple ensembles</li>
+                <li>Multiple ceremony outfit options</li>
+                <li>Custom family color coordination</li>
+                <li>Bridal trousseau consultation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="collection-card">
+            <h3>Contemporary Fusion Wear</h3>
+            <div class="collection-details">
+              <p><strong>Chikan Tunics:</strong> ₹2,800 - ₹7,500</p>
+              <p><strong>Indo-Western Dresses:</strong> ₹4,500 - ₹12,000</p>
+              <p><strong>Chikan Jackets:</strong> ₹6,000 - ₹15,000</p>
+              <p><strong>Fusion Palazzo Sets:</strong> ₹5,500 - ₹14,000</p>
+            </div>
+            <div class="collection-features">
+              <ul>
+                <li>Modern silhouettes with traditional embroidery</li>
+                <li>Office and casual wear adaptations</li>
+                <li>International fashion integration</li>
+                <li>Young designer collaborations</li>
+                <li>Contemporary color variations</li>
+                <li>Ready-to-wear and custom options</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Embroidery Techniques -->
+    <section class="techniques">
+      <div class="techniques-content">
+        <h2>Traditional Chikan Embroidery Stitches</h2>
+        <div class="techniques-grid">
+          <div class="technique-item">
+            <h3>Murri (French Knot)</h3>
+            <p>Small, round stitches resembling rice grains, used to create textured floral centers and filling work. This fundamental stitch requires precise tension control and is often the first technique taught to apprentices.</p>
+          </div>
+
+          <div class="technique-item">
+            <h3>Phanda (Button Hole)</h3>
+            <p>Solid raised stitches creating dimensional flower petals and leaves. This technique adds depth and texture to the design, making elements appear to rise from the fabric surface.</p>
+          </div>
+
+          <div class="technique-item">
+            <h3>Jaali Work (Open Mesh)</h3>
+            <p>Intricate drawn-thread work creating transparent, lace-like patterns. This advanced technique involves carefully pulling fabric threads and embroidering over the resulting mesh to create geometric openwork designs.</p>
+          </div>
+
+          <div class="technique-item">
+            <h3>Bakhiya (Shadow Work)</h3>
+            <p>Herringbone stitch worked from the reverse side, creating a shadow effect on the front. This technique is particularly beautiful on fine muslins where the reverse stitching shows through as delicate shadows.</p>
+          </div>
+
+          <div class="technique-item">
+            <h3>Keel Kangan (Paisley Chain)</h3>
+            <p>Chain stitches forming paisley and curved motifs. This flowing technique is used for outlining larger design elements and creating the characteristic Chikan paisley patterns.</p>
+          </div>
+
+          <div class="technique-item">
+            <h3>Taj Mahal (Crown Pattern)</h3>
+            <p>Complex combination stitches creating architectural motifs inspired by Mughal monuments. This advanced technique combines multiple basic stitches to create elaborate patterns reminiscent of palace architecture.</p>
+          </div>
+        </techniques-grid>
+      </div>
+    </section>
+
+    <!-- Artisan Profiles -->
+    <section class="artisans">
+      <div class="artisans-content">
+        <h2>Meet Our Master Embroiderers</h2>
+        <div class="artisans-grid">
+          <div class="artisan-card">
+            <div class="artisan-info">
+              <h3>Ustad Rashid Ahmed</h3>
+              <p class="artisan-title">Master Craftsman & Head Designer</p>
+              <p class="artisan-experience">45+ years experience • 3rd Generation Chikan Artist</p>
+              <div class="artisan-specialties">
+                <p><strong>Specializes in:</strong> Jaali work, complex geometric patterns, bridal ensemble design</p>
+                <p><strong>Master of:</strong> All 32 traditional stitches, pattern development, quality assessment</p>
+                <p><strong>Recognition:</strong> National Award for Traditional Crafts (2019), UNESCO recognition</p>
+                <p><strong>Mentorship:</strong> Trained over 200 artisans in authentic Chikankari techniques</p>
+              </div>
+              <div class="artisan-achievements">
+                <p><strong>Legacy:</strong> Work displayed in museums worldwide, royal family commissions</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="artisan-card">
+            <div class="artisan-info">
+              <h3>Begum Fatima Khatoon</h3>
+              <p class="artisan-title">Senior Embroidery Specialist</p>
+              <p class="artisan-experience">35+ years experience • Women's Craft Leader</p>
+              <div class="artisan-specialties">
+                <p><strong>Specializes in:</strong> Delicate murri work, floral motifs, fine fabric embroidery</p>
+                <p><strong>Expert in:</strong> Shadow work techniques, miniature detailing, color coordination</p>
+                <p><strong>Leadership:</strong> Heads women artisan training program, quality control</p>
+                <p><strong>Innovation:</strong> Developed contemporary adaptations while preserving authenticity</p>
+              </div>
+              <div class="artisan-achievements">
+                <p><strong>Impact:</strong> Empowered 150+ women through Chikan craft training programs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="artisan-card">
+            <div class="artisan-info">
+              <h3>Mohammad Salim</h3>
+              <p class="artisan-title">Pattern Designer & Technique Specialist</p>
+              <p class="artisan-experience">25+ years experience • Traditional Pattern Expert</p>
+              <div class="artisan-specialties">
+                <p><strong>Specializes in:</strong> Historical pattern recreation, custom design development</p>
+                <p><strong>Skills:</strong> Hand-drawing traditional motifs, pattern scaling, design adaptation</p>
+                <p><strong>Research:</strong> Studies historical Chikankari pieces for pattern authenticity</p>
+                <p><strong>Innovation:</strong> Creates bespoke patterns while maintaining traditional elements</p>
+              </div>
+              <div class="artisan-achievements">
+                <p><strong>Contribution:</strong> Documented over 500 traditional Chikan patterns and motifs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Services -->
+    <section class="services">
+      <div class="services-content">
+        <h2>Specialized Services</h2>
+        <div class="services-grid">
+          <div class="service-item">
+            <h3>Custom Chikankari Design</h3>
+            <p>Create unique, personalized Chikan pieces tailored to your vision. Our designers work with you to develop custom patterns, select appropriate fabrics, and ensure perfect fit and finish.</p>
+            <div class="service-features">
+              <ul>
+                <li>Personal design consultation</li>
+                <li>Custom pattern development</li>
+                <li>Fabric selection guidance</li>
+                <li>Multiple fitting sessions</li>
+                <li>Timeline: 4-8 weeks</li>
+                <li>Progress updates with photos</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <h3>Chikankari Learning Workshops</h3>
+            <p>Learn authentic Chikan embroidery techniques from our master artisans. Workshops range from beginner introductions to advanced masterclasses in specific stitching techniques.</p>
+            <div class="service-features">
+              <ul>
+                <li>Basic to advanced level courses</li>
+                <li>Traditional stitch instruction</li>
+                <li>Historical context and cultural significance</li>
+                <li>Hands-on practice with guidance</li>
+                <li>Take-home embroidery pieces</li>
+                <li>Certificate of completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <h3>Heritage Restoration Services</h3>
+            <p>Expert restoration of antique and damaged Chikan pieces using traditional techniques and materials. We specialize in bringing family heirlooms back to their original beauty.</p>
+            <div class="service-features">
+              <ul>
+                <li>Damage assessment and documentation</li>
+                <li>Historical technique matching</li>
+                <li>Thread and fabric compatibility</li>
+                <li>Photography before and after</li>
+                <li>Preservation recommendations</li>
+                <li>Care and maintenance guidance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="process">
+      <div class="process-content">
+        <h2>Our Chikankari Creation Process</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker">1</div>
+            <div class="timeline-content">
+              <h3>Design Selection & Fabric Preparation</h3>
+              <p>Choose from traditional patterns or create custom designs. Fine fabrics are carefully selected, pre-washed, and prepared with proper tension for embroidery work.</p>
+              <span class="timeline-duration">Days 1-2</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">2</div>
+            <div class="timeline-content">
+              <h3>Pattern Transfer & Block Printing</h3>
+              <p>Traditional wooden blocks are used to transfer intricate patterns onto the fabric. This delicate process requires precision to ensure proper alignment and symmetry.</p>
+              <span class="timeline-duration">Days 3-4</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">3</div>
+            <div class="timeline-content">
+              <h3>Hand Embroidery Work</h3>
+              <p>Master artisans begin the meticulous hand embroidery process, employing various traditional stitches. Each section requires different techniques and attention to detail.</p>
+              <span class="timeline-duration">Days 5-25</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">4</div>
+            <div class="timeline-content">
+              <h3>Quality Assessment & Finishing</h3>
+              <p>Completed embroidery undergoes thorough quality checks. Final touches include trimming, pressing, and ensuring every stitch meets our exacting standards.</p>
+              <span class="timeline-duration">Days 26-28</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">5</div>
+            <div class="timeline-content">
+              <h3>Garment Construction</h3>
+              <p>Expert tailors construct the garment with precision fitting. Traditional cutting methods ensure the embroidery is properly showcased while maintaining comfort.</p>
+              <span class="timeline-duration">Days 29-32</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">6</div>
+            <div class="timeline-content">
+              <h3>Final Presentation</h3>
+              <p>The completed piece undergoes final inspection, professional pressing, and careful packaging. Each garment is presented with care instructions and authenticity certificate.</p>
+              <span class="timeline-duration">Days 33-35</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <h2>Client Experiences</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"My wedding lehenga from this atelier was absolutely breathtaking. The intricate Chikan work was so detailed and beautiful that even my guests from abroad were amazed. Truly heirloom quality!"</p>
+          <div class="client-info">
+            <strong>Priya Srivastava</strong>
+            <span>Kanpur • Bridal Lehenga</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"I learned Chikankari basics in their workshop. The master craftsmen are so patient and knowledgeable. Now I can appreciate the incredible skill that goes into each piece!"</p>
+          <div class="client-info">
+            <strong>Sarah Williams</strong>
+            <span>USA • Workshop Participant</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"They restored my grandmother's 60-year-old Chikan dupatta perfectly. The color matching and stitch replication was so precise, you can't tell which parts were restored!"</p>
+          <div class="client-info">
+            <strong>Dr. Anita Gupta</strong>
+            <span>Lucknow • Heritage Restoration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3>What makes authentic Chikankari different from machine embroidery?</h3>
+          <p>Authentic Chikankari is entirely hand-embroidered using traditional stitches that create unique textures and patterns impossible to replicate by machine. Hand embroidery has slight natural variations, irregular stitch spacing, and dimensional quality that gives each piece character and authenticity.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>How long does it take to complete a custom Chikankari garment?</h3>
+          <p>Depending on the complexity and embroidery density, custom garments typically take 4-8 weeks to complete. Simple kurtas may be ready in 3-4 weeks, while heavily embroidered bridal pieces can take 8-12 weeks. We provide regular progress updates throughout the process.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Do you provide care instructions for Chikankari garments?</h3>
+          <p>Yes! Each garment comes with detailed care instructions. Generally, Chikankari should be hand-washed or dry-cleaned, stored properly to prevent creasing of embroidery, and ironed with care using a pressing cloth to protect the embroidered areas.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Can you create Chikankari work on fabrics I provide?</h3>
+          <p>Yes, we can work on customer-provided fabrics, though we need to assess the fabric quality and suitability first. The fabric must be appropriate for hand embroidery - not too thick, stretchy, or delicate. Pure cotton, cotton blends, and silk work best for Chikankari.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Do you offer international shipping for your Chikankari pieces?</h3>
+          <p>Yes, we ship worldwide! We use specialized packaging to protect delicate embroidery during transit. International orders require advance payment and typically take 10-15 business days for delivery. Custom duties may apply depending on the destination country.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <div class="contact-content">
+        <h2>Visit Our Traditional Atelier</h2>
+        <p>Experience the timeless art of Chikankari in the historic heart of Lucknow where this royal craft has flourished for centuries.</p>
+        
+        <div class="contact-methods">
+          <div class="contact-method">
+            <h3>📞 Phone & WhatsApp</h3>
+            <p><a href="tel:+919876521098">+91-98765-21098</a></p>
+            <p>Available 10:00 AM - 8:00 PM daily</p>
+          </div>
+          
+          <div class="contact-method">
+            <h3>📧 Email</h3>
+            <p><a href="mailto:lucknow.chikan@gmail.com">lucknow.chikan@gmail.com</a></p>
+            <p>Response within 4 hours</p>
+          </div>
+          
+          <div class="contact-method">
+            <h3>📍 Atelier Address</h3>
+            <p>12, Chowk Market<br>Lucknow - 226003<br>Uttar Pradesh, India</p>
+          </div>
+        </div>
+
+        <div class="visit-info">
+          <h3>Atelier Visit Information</h3>
+          <div class="visit-details">
+            <div class="visit-option">
+              <h4>Workshop Tours</h4>
+              <p>See artisans at work</p>
+              <p>Learn about techniques</p>
+              <p>Daily: 11 AM, 2 PM, 5 PM</p>
+            </div>
+            <div class="visit-option">
+              <h4>Custom Consultations</h4>
+              <p>Personal design meetings</p>
+              <p>Fabric and pattern selection</p>
+              <p>Appointment preferred</p>
+            </div>
+            <div class="visit-option">
+              <h4>Learning Workshops</h4>
+              <p>Hands-on embroidery classes</p>
+              <p>Weekend intensive courses</p>
+              <p>Advance registration required</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .breadcrumb {
+      padding: 1rem 0;
+    }
+
+    .breadcrumb ol {
+      list-style: none;
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+      padding: 0;
+    }
+
+    .breadcrumb li:not(:last-child):after {
+      content: " / ";
+      margin-left: 0.5rem;
+    }
+
+    .breadcrumb a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+      color: white;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+
+    .hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-tag {
+      background: rgba(255,255,255,0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    .about {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .about-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .about h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+    }
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+      color: #4b5563;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 2rem 1.5rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #7c3aed;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .collections {
+      padding: 4rem 0;
+    }
+
+    .collections-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .collections h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .collections-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .collection-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 2rem;
+    }
+
+    .collection-card h3 {
+      color: #7c3aed;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .collection-details p {
+      color: #374151;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .collection-details {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .collection-features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .collection-features li {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .collection-features li:before {
+      content: "✓";
+      color: #7c3aed;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    .techniques {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .techniques-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .techniques h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .techniques-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .technique-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .technique-item h3 {
+      color: #7c3aed;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .technique-item p {
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    .artisans {
+      padding: 4rem 0;
+    }
+
+    .artisans-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .artisans h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .artisans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .artisan-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .artisan-card h3 {
+      color: #1f2937;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .artisan-title {
+      color: #7c3aed;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .artisan-experience {
+      color: #6b7280;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .artisan-specialties p,
+    .artisan-achievements p {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .services {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .services-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .services h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .service-item h3 {
+      color: #7c3aed;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-item p {
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .service-features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-features li {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .service-features li:before {
+      content: "•";
+      color: #7c3aed;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    .process {
+      padding: 4rem 0;
+    }
+
+    .process-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .process h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline:before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #e5e7eb;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      padding-left: 4rem;
+    }
+
+    .timeline-marker {
+      position: absolute;
+      left: -4rem;
+      top: 0;
+      width: 60px;
+      height: 60px;
+      background: #7c3aed;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .timeline-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .timeline-content h3 {
+      color: #1f2937;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-content p {
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-duration {
+      color: #7c3aed;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .testimonials {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .rating {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-card p {
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .client-info strong {
+      color: #1f2937;
+    }
+
+    .client-info span {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .faq {
+      padding: 4rem 0;
+    }
+
+    .faq h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .faq-item h3 {
+      color: #1f2937;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .faq-item p {
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    .contact {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+      color: white;
+    }
+
+    .contact-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+    }
+
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-method {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .contact-method h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .contact-method a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-method a:hover {
+      text-decoration: underline;
+    }
+
+    .visit-info {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .visit-info h3 {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+
+    .visit-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .visit-option {
+      text-align: center;
+    }
+
+    .visit-option h4 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .visit-option p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      opacity: 0.9;
+    }
+
+    .btn {
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #7c3aed;
+    }
+
+    .btn-primary:hover {
+      background: #f3f4f6;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #7c3aed;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .timeline {
+        padding-left: 0;
+      }
+
+      .timeline:before {
+        display: none;
+      }
+
+      .timeline-item {
+        padding-left: 0;
+      }
+
+      .timeline-marker {
+        position: relative;
+        left: 0;
+        margin-bottom: 1rem;
+      }
+
+      .contact-methods {
+        grid-template-columns: 1fr;
+      }
+
+      .visit-details {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</Layout>

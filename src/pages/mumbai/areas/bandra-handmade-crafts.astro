@@ -1,0 +1,867 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const title = "Handmade Crafts in Bandra, Mumbai - Unique Artisan Creations & Custom Gifts";
+const description = "Discover beautiful handmade crafts in Bandra, Mumbai. From traditional Indian art to modern designs, find unique artisan creations, custom gifts, and home decor items made by local artists.";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Handmade Crafts in Bandra",
+  "description": description,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bandra",
+    "addressRegion": "Mumbai, Maharashtra",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "19.0596",
+    "longitude": "72.8295"
+  },
+  "url": "https://the-local-basket.vercel.app/mumbai/areas/bandra-handmade-crafts",
+  "serviceArea": {
+    "@type": "Place",
+    "name": "Bandra, Mumbai, Maharashtra, India"
+  }
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  
+  <main>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/mumbai">Mumbai</a></li>
+        <li><a href="/mumbai/crafts">Crafts</a></li>
+        <li aria-current="page">Handmade Crafts in Bandra</li>
+      </ol>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Handmade Crafts in Bandra, Mumbai</h1>
+        <p class="hero-description">
+          Explore Bandra's vibrant artisan community and discover unique handmade crafts, custom artwork, 
+          traditional Indian art pieces, and personalized gifts created by talented local artists and craftspeople.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">75+</span>
+            <span class="stat-label">Local Artisans</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Craft Categories</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Handmade Quality</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Craft Categories -->
+    <section class="craft-categories">
+      <h2>Popular Craft Categories in Bandra</h2>
+      <div class="categories-grid">
+        <div class="category-card">
+          <h3>Traditional Indian Art</h3>
+          <ul>
+            <li><strong>Madhubani Paintings:</strong> Intricate folk art from Bihar</li>
+            <li><strong>Warli Art:</strong> Traditional tribal art from Maharashtra</li>
+            <li><strong>Mandala Art:</strong> Sacred geometry designs</li>
+            <li><strong>Tanjore Paintings:</strong> South Indian classical art</li>
+            <li><strong>Kalamkari:</strong> Hand-painted textiles</li>
+          </ul>
+        </div>
+        
+        <div class="category-card">
+          <h3>Home Decor & Furnishings</h3>
+          <ul>
+            <li><strong>Handwoven Textiles:</strong> Cushions, curtains, table runners</li>
+            <li><strong>Ceramic Pottery:</strong> Vases, bowls, decorative pieces</li>
+            <li><strong>Macrame Art:</strong> Wall hangings, plant holders</li>
+            <li><strong>Wooden Crafts:</strong> Carved figurines, furniture accents</li>
+            <li><strong>Metal Work:</strong> Brass items, copper vessels</li>
+          </ul>
+        </div>
+        
+        <div class="category-card">
+          <h3>Jewelry & Accessories</h3>
+          <ul>
+            <li><strong>Handmade Jewelry:</strong> Silver, beaded, wire-wrapped</li>
+            <li><strong>Traditional Ornaments:</strong> Gajra, maang tikka, bangles</li>
+            <li><strong>Fashion Accessories:</strong> Handbags, scarves, headbands</li>
+            <li><strong>Custom Pieces:</strong> Personalized name jewelry</li>
+            <li><strong>Vintage Style:</strong> Antique-inspired designs</li>
+          </ul>
+        </div>
+        
+        <div class="category-card">
+          <h3>Gifts & Personalized Items</h3>
+          <ul>
+            <li><strong>Custom Portraits:</strong> Hand-painted or sketched</li>
+            <li><strong>Wedding Favors:</strong> Handmade soaps, candles, potli bags</li>
+            <li><strong>Baby Gifts:</strong> Knitted items, wooden toys, albums</li>
+            <li><strong>Corporate Gifts:</strong> Engraved items, custom packaging</li>
+            <li><strong>Festival Specials:</strong> Diwali diyas, Christmas ornaments</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Artisans -->
+    <section class="featured-artisans">
+      <h2>Featured Artisans in Bandra</h2>
+      <div class="artisans-grid">
+        <div class="artisan-card">
+          <div class="artisan-info">
+            <h3>Maya's Creative Studio</h3>
+            <p class="artisan-specialty">Traditional & Contemporary Art</p>
+            <p class="artisan-experience">8+ years experience • Fine Arts Graduate</p>
+            <div class="artisan-details">
+              <p><strong>Specializes in:</strong> Madhubani paintings, custom portraits, wall murals</p>
+              <p><strong>Signature Style:</strong> Fusion of traditional motifs with modern aesthetics</p>
+              <p><strong>Popular Items:</strong> Living room art, custom family portraits, festival decorations</p>
+              <p><strong>Custom Orders:</strong> Wedding invitations, house warming gifts, corporate art</p>
+            </div>
+            <div class="artisan-portfolio">
+              <p><strong>Recent Projects:</strong> Hotel lobby mural, 50+ custom wedding cards, art exhibition at Bandra Fest</p>
+            </div>
+            <div class="artisan-contact">
+              <span class="availability">Available for commissions</span>
+              <a href="/mumbai/crafts/artisan-crafts-maya" class="btn btn-primary">View Portfolio</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="artisan-card">
+          <div class="artisan-info">
+            <h3>Preethi's Pottery Hub</h3>
+            <p class="artisan-specialty">Ceramic Art & Functional Pottery</p>
+            <p class="artisan-experience">12+ years experience • Ceramics Specialist</p>
+            <div class="artisan-details">
+              <p><strong>Specializes in:</strong> Handmade pottery, ceramic home decor, custom dinnerware</p>
+              <p><strong>Signature Style:</strong> Earthy textures with contemporary glazing techniques</p>
+              <p><strong>Popular Items:</strong> Coffee mugs, decorative vases, planters, serving bowls</p>
+              <p><strong>Custom Orders:</strong> Wedding return gifts, restaurant dinnerware sets</p>
+            </div>
+            <div class="artisan-portfolio">
+              <p><strong>Recent Projects:</strong> Custom dinnerware for boutique café, 100+ wedding favor pots, pottery workshops</p>
+            </div>
+            <div class="artisan-contact">
+              <span class="availability">Open for orders & workshops</span>
+              <a href="/contact" class="btn btn-primary">Contact Artisan</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="artisan-card">
+          <div class="artisan-info">
+            <h3>Rohit's Metalcraft</h3>
+            <p class="artisan-specialty">Traditional Metal Work & Sculptures</p>
+            <p class="artisan-experience">15+ years experience • Heritage Craftsman</p>
+            <div class="artisan-details">
+              <p><strong>Specializes in:</strong> Brass sculptures, copper vessels, metal home decor</p>
+              <p><strong>Signature Style:</strong> Traditional techniques with intricate detailing</p>
+              <p><strong>Popular Items:</strong> Religious figurines, decorative lamps, kitchen utensils</p>
+              <p><strong>Custom Orders:</strong> Temple items, corporate awards, architectural elements</p>
+            </div>
+            <div class="artisan-portfolio">
+              <p><strong>Recent Projects:</strong> Temple renovation metalwork, corporate trophy designs, heritage restoration</p>
+            </div>
+            <div class="artisan-contact">
+              <span class="availability">Custom commissions welcome</span>
+              <a href="/contact" class="btn btn-primary">Contact Artisan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Bandra Artisans -->
+    <section class="benefits">
+      <h2>Why Choose Bandra's Handmade Crafts?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3>Authentic Craftsmanship</h3>
+          <p>Every piece is handcrafted by skilled artisans using traditional techniques passed down through generations, ensuring authenticity and uniqueness.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Cultural Heritage</h3>
+          <p>Bandra's diverse community brings together various Indian craft traditions, creating a rich tapestry of artistic expressions and cultural fusion.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Customization Available</h3>
+          <p>Most artisans offer personalization services, allowing you to create bespoke pieces that reflect your style, preferences, and specific requirements.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Supporting Local Economy</h3>
+          <p>Every purchase directly supports local artisans and their families, contributing to the preservation of traditional crafts and sustainable livelihoods.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Quality Materials</h3>
+          <p>Artisans use high-quality, often eco-friendly materials sourced locally, ensuring durability and environmental consciousness in their creations.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Unique Gift Options</h3>
+          <p>Find one-of-a-kind gifts that can't be found in commercial stores, perfect for special occasions and meaningful present-giving.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shopping Areas -->
+    <section class="shopping-areas">
+      <h2>Where to Find Handmade Crafts in Bandra</h2>
+      <div class="areas-container">
+        <div class="area-section">
+          <h3>Bandra West Markets</h3>
+          <div class="area-details">
+            <p><strong>Linking Road:</strong> Street vendors selling handmade jewelry, accessories, and small craft items</p>
+            <p><strong>Hill Road:</strong> Boutique shops featuring local artisan collections and custom craft services</p>
+            <p><strong>Waterfield Road:</strong> Art galleries and studios showcasing contemporary handmade art</p>
+            <p><strong>Pali Market:</strong> Traditional crafts, religious items, and festival decorations</p>
+          </div>
+        </div>
+        
+        <div class="area-section">
+          <h3>Artisan Workshops & Studios</h3>
+          <div class="area-details">
+            <p><strong>Home Studios:</strong> Many artists work from home studios, offering personalized consultation and custom orders</p>
+            <p><strong>Community Centers:</strong> Local community halls host craft fairs and artisan showcases monthly</p>
+            <p><strong>Co-working Spaces:</strong> Several creative co-working spaces house multiple artisans and craft businesses</p>
+            <p><strong>Art Cafés:</strong> Cafés that double as galleries, featuring rotating displays of local handmade crafts</p>
+          </div>
+        </div>
+        
+        <div class="area-section">
+          <h3>Online & Social Media</h3>
+          <div class="area-details">
+            <p><strong>Instagram:</strong> Many Bandra artisans showcase their work on Instagram with delivery options</p>
+            <p><strong>Facebook Groups:</strong> Local community groups where artisans share their latest creations</p>
+            <p><strong>WhatsApp:</strong> Direct contact with artisans for custom orders and bulk purchases</p>
+            <p><strong>Local Directories:</strong> Online platforms like LocalBasket featuring verified artisan profiles</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seasonal Specialties -->
+    <section class="seasonal-crafts">
+      <h2>Seasonal Craft Specialties</h2>
+      <div class="seasonal-grid">
+        <div class="season-card">
+          <h3>Festival Season (Oct-Dec)</h3>
+          <div class="craft-list">
+            <span class="craft-tag">Diwali Diyas</span>
+            <span class="craft-tag">Rangoli Stencils</span>
+            <span class="craft-tag">Torans & Bandarwals</span>
+            <span class="craft-tag">Candle Holders</span>
+            <span class="craft-tag">Gift Hampers</span>
+            <span class="craft-tag">Decorative Lights</span>
+          </div>
+        </div>
+        
+        <div class="season-card">
+          <h3>Wedding Season (Nov-Feb)</h3>
+          <div class="craft-list">
+            <span class="craft-tag">Wedding Cards</span>
+            <span class="craft-tag">Mehendi Favors</span>
+            <span class="craft-tag">Potli Bags</span>
+            <span class="craft-tag">Customized Boxes</span>
+            <span class="craft-tag">Bridal Accessories</span>
+            <span class="craft-tag">Return Gifts</span>
+          </div>
+        </div>
+        
+        <div class="season-card">
+          <h3>Monsoon Specials (Jun-Sep)</h3>
+          <div class="craft-list">
+            <span class="craft-tag">Indoor Plants Decor</span>
+            <span class="craft-tag">Cozy Textiles</span>
+            <span class="craft-tag">Rain-themed Art</span>
+            <span class="craft-tag">Aromatherapy Items</span>
+            <span class="craft-tag">Bookmarks</span>
+            <span class="craft-tag">Tea Accessories</span>
+          </div>
+        </div>
+        
+        <div class="season-card">
+          <h3>Summer Collection (Mar-May)</h3>
+          <div class="craft-list">
+            <span class="craft-tag">Cooling Accessories</span>
+            <span class="craft-tag">Beach Bags</span>
+            <span class="craft-tag">Sun Hats</span>
+            <span class="craft-tag">Light Jewelry</span>
+            <span class="craft-tag">Cooling Mats</span>
+            <span class="craft-tag">Summer Decor</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Care & Maintenance -->
+    <section class="care-guide">
+      <h2>Caring for Your Handmade Crafts</h2>
+      <div class="care-categories">
+        <div class="care-category">
+          <h3>Textile & Fabric Items</h3>
+          <ul>
+            <li>Gentle hand washing with mild detergents</li>
+            <li>Air drying away from direct sunlight</li>
+            <li>Iron on low heat if necessary</li>
+            <li>Store in breathable cotton bags</li>
+          </ul>
+        </div>
+        
+        <div class="care-category">
+          <h3>Metal & Ceramic Pieces</h3>
+          <ul>
+            <li>Clean with soft, damp cloth</li>
+            <li>Use appropriate metal cleaners for brass/copper</li>
+            <li>Avoid abrasive cleaning materials</li>
+            <li>Store in dry, dust-free environments</li>
+          </ul>
+        </div>
+        
+        <div class="care-category">
+          <h3>Paintings & Paper Art</h3>
+          <ul>
+            <li>Frame with UV-protective glass</li>
+            <li>Keep away from direct sunlight and moisture</li>
+            <li>Dust regularly with soft brush</li>
+            <li>Handle with clean hands only</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3>How can I verify the authenticity of handmade crafts in Bandra?</h3>
+          <p>Look for slight variations in design (machine-made items are perfectly uniform), ask about the making process, check for quality materials, and buy from verified artisans with established reputations. Many authentic craftspeople are happy to explain their techniques.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>What are the typical price ranges for handmade crafts in Bandra?</h3>
+          <p>Prices vary widely based on complexity, materials, and artisan experience. Small items (keychains, earrings): ₹200-800. Medium pieces (wall art, pottery): ₹1,000-5,000. Large or intricate items (paintings, furniture): ₹5,000-50,000+. Custom work typically costs 20-30% more.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Do artisans in Bandra accept custom orders for bulk purchases?</h3>
+          <p>Yes, most established artisans welcome bulk orders for weddings, corporate events, or retail. They often offer discounts for larger quantities. It's best to discuss requirements, timelines, and pricing well in advance, especially during peak seasons.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>How long does it typically take to complete a custom craft order?</h3>
+          <p>Timeline depends on complexity and current workload. Simple customizations: 3-7 days. Medium complexity items: 1-3 weeks. Elaborate pieces or bulk orders: 4-8 weeks. Always confirm timelines when placing orders, especially for special occasions.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Are there workshops where I can learn traditional craft techniques?</h3>
+          <p>Yes, many Bandra artisans offer workshops and classes. Check community centers, art cafés, and individual artist studios for scheduled sessions. Topics include pottery, painting, jewelry making, textile crafts, and more. Workshops range from ₹500-3,000 per session.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+      <div class="cta-content">
+        <h2>Discover Bandra's Amazing Handmade Crafts Today</h2>
+        <p>Connect with talented local artisans and bring home unique, authentic handmade treasures that tell a story and support traditional craftsmanship.</p>
+        <div class="cta-buttons">
+          <a href="/mumbai/crafts" class="btn btn-primary">Browse All Crafts</a>
+          <a href="/contact" class="btn btn-secondary">Contact Artisans</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .breadcrumb {
+      padding: 1rem 0;
+    }
+
+    .breadcrumb ol {
+      list-style: none;
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+      padding: 0;
+    }
+
+    .breadcrumb li:not(:last-child):after {
+      content: " / ";
+      margin-left: 0.5rem;
+    }
+
+    .breadcrumb a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .craft-categories {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .craft-categories h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .category-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .category-card h3 {
+      color: #7c3aed;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .category-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .category-card li {
+      margin-bottom: 0.75rem;
+      color: #4b5563;
+    }
+
+    .category-card strong {
+      color: #1f2937;
+    }
+
+    .featured-artisans {
+      padding: 4rem 0;
+    }
+
+    .featured-artisans h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .artisans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .artisan-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      background: white;
+    }
+
+    .artisan-card h3 {
+      color: #1f2937;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .artisan-specialty {
+      color: #7c3aed;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .artisan-experience {
+      color: #6b7280;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .artisan-details p, .artisan-portfolio p {
+      margin-bottom: 0.5rem;
+      color: #4b5563;
+      font-size: 0.9rem;
+    }
+
+    .artisan-contact {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .availability {
+      color: #059669;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    .benefits {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .benefits h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .benefit-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .benefit-card h3 {
+      color: #7c3aed;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .benefit-card p {
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    .shopping-areas {
+      padding: 4rem 0;
+    }
+
+    .shopping-areas h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .areas-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .area-section {
+      margin-bottom: 3rem;
+    }
+
+    .area-section h3 {
+      color: #7c3aed;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .area-details p {
+      margin-bottom: 0.75rem;
+      color: #4b5563;
+    }
+
+    .seasonal-crafts {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .seasonal-crafts h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .seasonal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .season-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .season-card h3 {
+      color: #7c3aed;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .craft-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .craft-tag {
+      background: #ede9fe;
+      color: #6b46c1;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .care-guide {
+      padding: 4rem 0;
+    }
+
+    .care-guide h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .care-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .care-category {
+      background: #f9fafb;
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .care-category h3 {
+      color: #7c3aed;
+      margin-bottom: 1rem;
+    }
+
+    .care-category ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .care-category li {
+      margin-bottom: 0.5rem;
+      color: #4b5563;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .care-category li:before {
+      content: "•";
+      color: #7c3aed;
+      position: absolute;
+      left: 0;
+    }
+
+    .faq {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .faq h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .faq-item h3 {
+      color: #1f2937;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .faq-item p {
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .cta-content {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #7c3aed;
+    }
+
+    .btn-primary:hover {
+      background: #f3f4f6;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #7c3aed;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .categories-grid,
+      .artisans-grid,
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</Layout>

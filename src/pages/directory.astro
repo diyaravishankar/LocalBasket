@@ -96,10 +96,10 @@ const structuredData = {
 	"name": "Local Home Businesses Directory",
 	"itemListElement": businesses.map((business, index) => ({
 		"@type": "LocalBusiness",
-		"@id": `https://localbasket.com/directory/${business.id}`,
+		"@id": `https://the-local-basket.vercel.app/directory/${business.id}`,
 		"name": business.name,
 		"description": business.description,
-		"url": `https://localbasket.com/${business.id}`,
+		"url": `https://the-local-basket.vercel.app/${business.id}`,
 		"address": {
 			"@type": "PostalAddress",
 			"addressLocality": business.city.charAt(0).toUpperCase() + business.city.slice(1),
@@ -124,7 +124,7 @@ const structuredData = {
 <Layout
 	title="Verified Home Business Directory | Local Food, Crafts & Services Near You"
 	description="Browse 500+ verified home businesses in your city. Find authentic local food vendors, skilled craft makers, and trusted service providers. Support community entrepreneurs today!"
-	keywords="verified home business directory, local food businesses, handmade crafts near me, home services directory, community entrepreneurs, authentic local products"
+	keywords="verified home business directory, local food businesses, handmade crafts near me, home services directory, community entrepreneurs, authentic local products, home based food business listing, local artisan directory, neighborhood service providers, homemade food vendors, custom craft makers, local home chefs, verified local bakeries, handmade jewelry makers, home tutoring services, beauty services at home, organic food businesses, traditional craft artisans"
 	structuredData={structuredData}
 	canonicalUrl="/directory"
 >

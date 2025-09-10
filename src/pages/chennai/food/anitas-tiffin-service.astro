@@ -1,0 +1,942 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+
+const title = "Anita's Tiffin Service - Authentic Homemade Meals Delivered in Chennai";
+const description = "Enjoy traditional South Indian homemade meals from Anita's Tiffin Service in Chennai. Fresh, healthy, and authentic food delivered to your doorstep daily.";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Anita's Tiffin Service",
+  "description": description,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "12, Lakshmi Street, T. Nagar",
+    "@addressLocality": "Chennai",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "600017",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "13.0827",
+    "longitude": "80.2707"
+  },
+  "telephone": "+91-98765-43210",
+  "email": "anitastiffinservice@gmail.com",
+  "url": "https://the-local-basket.vercel.app/chennai/food/anitas-tiffin-service",
+  "image": "https://the-local-basket.vercel.app/assets/anitas-tiffin-hero.jpg",
+  "priceRange": "₹₹",
+  "servesCuisine": "South Indian",
+  "serviceArea": {
+    "@type": "Place",
+    "name": "Chennai, Tamil Nadu, India"
+  },
+  "openingHours": "Mo-Sa 07:00-20:00",
+  "paymentAccepted": "Cash, UPI, Card",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "156"
+  }
+};
+
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What types of meals does Anita's Tiffin Service offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer traditional South Indian meals including sambar rice, rasam, variety rice dishes, curd rice, and seasonal vegetables. Our menu changes daily with fresh, authentic preparations."
+      }
+    },
+    {
+      "@type": "Question", 
+      "name": "What are the delivery timings for tiffin service in Chennai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide lunch delivery between 12:00 PM - 1:30 PM and dinner delivery between 7:00 PM - 8:30 PM. Morning breakfast tiffin is available from 8:00 AM - 9:30 AM."
+      }
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
+  
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/chennai">Chennai</a></li>
+        <li><a href="/chennai/food">Food</a></li>
+        <li aria-current="page">Anita's Tiffin Service</li>
+      </ol>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Anita's Tiffin Service</h1>
+          <p class="hero-subtitle">Authentic South Indian Homemade Meals in Chennai</p>
+          <p class="hero-description">
+            Experience the taste of traditional home cooking with Anita's Tiffin Service. 
+            Fresh, healthy, and authentic South Indian meals delivered to your doorstep daily in Chennai.
+          </p>
+          <div class="hero-features">
+            <span class="feature-tag">🍛 Traditional Recipes</span>
+            <span class="feature-tag">🚚 Daily Delivery</span>
+            <span class="feature-tag">⭐ 4.8/5 Rating</span>
+            <span class="feature-tag">💚 Healthy & Fresh</span>
+          </div>
+          <div class="hero-actions">
+            <a href="tel:+919876543210" class="btn btn-primary">Order Now</a>
+            <a href="#menu" class="btn btn-secondary">View Menu</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/assets/anitas-tiffin-meals.jpg" alt="Anita's Traditional Tiffin Meals" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="about-content">
+        <h2>About Anita's Tiffin Service</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Started in 2018 by Mrs. Anita Krishnamurthy, <strong>Anita's Tiffin Service</strong> has become Chennai's most trusted name for 
+              <strong>authentic homemade South Indian meals</strong>. What began as a small initiative to share traditional family recipes 
+              has grown into a beloved service that brings the comfort of home-cooked food to busy families and working professionals.
+            </p>
+            <p>
+              Our kitchen follows <strong>traditional Tamil recipes</strong> passed down through generations, using only the freshest ingredients 
+              sourced from local vendors. Every meal is prepared with the same care and attention as if cooking for our own family.
+            </p>
+            <p>
+              We specialize in <strong>daily tiffin delivery</strong>, <strong>office lunch catering</strong>, and 
+              <strong>special occasion meals</strong>, serving over 200 satisfied customers across Chennai daily.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Years of Service</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">200+</span>
+              <span class="stat-label">Daily Customers</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Areas Covered</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">4.8★</span>
+              <span class="stat-label">Customer Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+      <div class="menu-content">
+        <h2>Our Daily Menu</h2>
+        <p class="menu-intro">
+          Fresh, authentic South Indian meals prepared daily with traditional recipes and premium ingredients.
+        </p>
+        
+        <div class="menu-categories">
+          <div class="menu-category">
+            <h3>Lunch Tiffin (₹120-180)</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <h4>Traditional Thali</h4>
+                <p>Sambar rice, rasam, vegetable curry, papad, pickle, curd, and sweet</p>
+                <span class="price">₹150</span>
+              </div>
+              <div class="menu-item">
+                <h4>Variety Rice Special</h4>
+                <p>Choice of lemon rice, curd rice, tamarind rice, or coconut rice with sides</p>
+                <span class="price">₹120</span>
+              </div>
+              <div class="menu-item">
+                <h4>Premium Meal</h4>
+                <p>Complete meal with ghee rice, special sambar, 2 vegetables, rasam, and dessert</p>
+                <span class="price">₹180</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-category">
+            <h3>Dinner Tiffin (₹100-160)</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <h4>Light Dinner</h4>
+                <p>Curd rice, vegetable curry, pickle, and papad</p>
+                <span class="price">₹100</span>
+              </div>
+              <div class="menu-item">
+                <h4>Regular Dinner</h4>
+                <p>Rice, sambar, vegetable, rasam, and curd</p>
+                <span class="price">₹130</span>
+              </div>
+              <div class="menu-item">
+                <h4>Full Dinner</h4>
+                <p>Complete meal similar to lunch with seasonal specialties</p>
+                <span class="price">₹160</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-category">
+            <h3>Breakfast Options (₹80-120)</h3>
+            <div class="menu-items">
+              <div class="menu-item">
+                <h4>Idli & Vada</h4>
+                <p>Fresh steamed idlis and crispy vadas with sambar and chutney</p>
+                <span class="price">₹80</span>
+              </div>
+              <div class="menu-item">
+                <h4>Dosa Varieties</h4>
+                <p>Plain, masala, or rava dosa with sambar and coconut chutney</p>
+                <span class="price">₹100</span>
+              </div>
+              <div class="menu-item">
+                <h4>Traditional Upma</h4>
+                <p>Semolina upma with vegetables and coconut chutney</p>
+                <span class="price">₹90</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="special-features">
+          <h3>Special Features</h3>
+          <div class="features-grid">
+            <div class="feature">
+              <h4>Weekly Menu Planning</h4>
+              <p>Different menu every day to ensure variety and seasonal vegetables</p>
+            </div>
+            <div class="feature">
+              <h4>Customizable Spice Level</h4>
+              <p>Adjust spice levels according to your family's preferences</p>
+            </div>
+            <div class="feature">
+              <h4>Special Dietary Requirements</h4>
+              <p>Diabetic-friendly, low-salt, and Jain food options available</p>
+            </div>
+            <div class="feature">
+              <h4>Festival Specials</h4>
+              <p>Traditional festival foods during Pongal, Diwali, and other occasions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="service-areas">
+      <h2>Delivery Areas in Chennai</h2>
+      <div class="areas-grid">
+        <div class="area-group">
+          <h3>Central Chennai</h3>
+          <ul>
+            <li>T. Nagar</li>
+            <li>Nandanam</li>
+            <li>Mylapore</li>
+            <li>Alwarpet</li>
+            <li>Teynampet</li>
+          </ul>
+        </div>
+        <div class="area-group">
+          <h3>South Chennai</h3>
+          <ul>
+            <li>Adyar</li>
+            <li>Velachery</li>
+            <li>Guindy</li>
+            <li>Saidapet</li>
+            <li>Pallikaranai</li>
+          </ul>
+        </div>
+        <div class="area-group">
+          <h3>West Chennai</h3>
+          <ul>
+            <li>Anna Nagar</li>
+            <li>Aminjikarai</li>
+            <li>Koyambedu</li>
+            <li>Vadapalani</li>
+            <li>Ashok Nagar</li>
+          </ul>
+        </div>
+      </div>
+      <p class="delivery-note">
+        <strong>Delivery Charges:</strong> Free for orders above ₹500. ₹20 delivery charge for orders below ₹500.
+      </p>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews">
+      <h2>What Our Customers Say</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"Anita aunty's food tastes exactly like my mother's cooking. The sambar and rasam are perfectly spiced, and the variety rice dishes are amazing!"</p>
+          <div class="reviewer">
+            <strong>Priya Venkatesh</strong>
+            <span>T. Nagar, Regular Customer (2 years)</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"As a working professional, Anita's tiffin service has been a lifesaver. Healthy, tasty, and always on time. Highly recommended!"</p>
+          <div class="reviewer">
+            <strong>Raj Kumar</strong>
+            <span>Adyar, Corporate Customer</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"The best part is the variety - every day feels like a new culinary experience. The pickle and papad are made fresh daily. Excellent service!"</p>
+          <div class="reviewer">
+            <strong>Lakshmi Sundaram</strong>
+            <span>Mylapore, Family Subscription</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3>What types of meals does Anita's Tiffin Service offer?</h3>
+          <p>We offer traditional South Indian meals including sambar rice, rasam, variety rice dishes, curd rice, and seasonal vegetables. Our menu changes daily with fresh, authentic preparations using traditional Tamil recipes.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>What are the delivery timings for tiffin service in Chennai?</h3>
+          <p>We provide lunch delivery between 12:00 PM - 1:30 PM and dinner delivery between 7:00 PM - 8:30 PM. Morning breakfast tiffin is available from 8:00 AM - 9:30 AM. We maintain strict timing to ensure fresh, warm meals.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Do you offer subscription packages for regular customers?</h3>
+          <p>Yes, we offer monthly and weekly subscription packages with attractive discounts. Monthly subscribers get 10% off regular prices, and we provide flexible pause options for travel or other needs.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Can you accommodate special dietary requirements?</h3>
+          <p>Absolutely! We prepare diabetic-friendly meals with controlled sugar and oil, low-salt options for blood pressure patients, and Jain food without onion and garlic. Please inform us about specific requirements when ordering.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>How do you ensure food safety and hygiene?</h3>
+          <p>We maintain strict hygiene standards with FSSAI certification. Our kitchen follows commercial hygiene practices, all ingredients are fresh, and meals are prepared in sanitized environments. Delivery personnel follow safety protocols.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Order -->
+    <section class="contact">
+      <div class="contact-content">
+        <h2>Order Your Fresh Tiffin Today</h2>
+        <p>Join hundreds of satisfied customers enjoying authentic homemade South Indian meals daily.</p>
+        
+        <div class="contact-methods">
+          <div class="contact-method">
+            <h3>📞 Phone Orders</h3>
+            <p><a href="tel:+919876543210">+91-98765-43210</a></p>
+            <p>Call between 8:00 AM - 6:00 PM</p>
+          </div>
+          
+          <div class="contact-method">
+            <h3>📧 Email</h3>
+            <p><a href="mailto:anitastiffinservice@gmail.com">anitastiffinservice@gmail.com</a></p>
+            <p>For bulk orders and catering</p>
+          </div>
+          
+          <div class="contact-method">
+            <h3>📍 Address</h3>
+            <p>12, Lakshmi Street, T. Nagar<br>Chennai - 600017</p>
+            <p>Tamil Nadu, India</p>
+          </div>
+        </div>
+
+        <div class="order-process">
+          <h3>How to Order</h3>
+          <div class="process-steps">
+            <div class="step">
+              <span class="step-number">1</span>
+              <p>Call or message to place your order</p>
+            </div>
+            <div class="step">
+              <span class="step-number">2</span>
+              <p>Choose your meal preferences</p>
+            </div>
+            <div class="step">
+              <span class="step-number">3</span>
+              <p>Confirm delivery address and timing</p>
+            </div>
+            <div class="step">
+              <span class="step-number">4</span>
+              <p>Enjoy fresh, homemade meals!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .breadcrumb {
+      padding: 1rem 0;
+    }
+
+    .breadcrumb ol {
+      list-style: none;
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+      padding: 0;
+    }
+
+    .breadcrumb li:not(:last-child):after {
+      content: " / ";
+      margin-left: 0.5rem;
+    }
+
+    .breadcrumb a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+
+    .hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-tag {
+      background: rgba(255,255,255,0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    .about {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .about-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .about h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+      color: #4b5563;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #f59e0b;
+    }
+
+    .stat-label {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .menu {
+      padding: 4rem 0;
+    }
+
+    .menu-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .menu h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+
+    .menu-intro {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #4b5563;
+      margin-bottom: 3rem;
+    }
+
+    .menu-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .menu-category {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 2rem;
+    }
+
+    .menu-category h3 {
+      color: #f59e0b;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .menu-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .menu-item {
+      border-bottom: 1px solid #f3f4f6;
+      padding-bottom: 1rem;
+    }
+
+    .menu-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .menu-item h4 {
+      color: #1f2937;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price {
+      color: #f59e0b;
+      font-weight: 700;
+    }
+
+    .menu-item p {
+      color: #4b5563;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .special-features {
+      background: #f9fafb;
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .special-features h3 {
+      color: #1f2937;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature {
+      text-align: center;
+    }
+
+    .feature h4 {
+      color: #f59e0b;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature p {
+      color: #4b5563;
+      font-size: 0.9rem;
+    }
+
+    .service-areas {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .service-areas h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .area-group {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .area-group h3 {
+      color: #f59e0b;
+      margin-bottom: 1rem;
+    }
+
+    .area-group ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .area-group li {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+    }
+
+    .delivery-note {
+      text-align: center;
+      color: #4b5563;
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+
+    .reviews {
+      padding: 4rem 0;
+    }
+
+    .reviews h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .review-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .rating {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .review-card p {
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .reviewer strong {
+      color: #1f2937;
+    }
+
+    .reviewer span {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .faq {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .faq h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .faq-item h3 {
+      color: #1f2937;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .faq-item p {
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    .contact {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+    }
+
+    .contact-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+    }
+
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-method {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .contact-method h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .contact-method a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-method a:hover {
+      text-decoration: underline;
+    }
+
+    .order-process {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    .order-process h3 {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: white;
+      color: #f59e0b;
+      border-radius: 50%;
+      line-height: 40px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #f59e0b;
+    }
+
+    .btn-primary:hover {
+      background: #f3f4f6;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #f59e0b;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .contact-methods {
+        grid-template-columns: 1fr;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</Layout>

@@ -1,0 +1,1139 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+
+const title = "Pune Fitness & Wellness Hub - Personal Training & Home Fitness Services";
+const description = "Transform your health with Pune Fitness & Wellness Hub. Personal training, nutrition coaching, yoga classes, and wellness programs delivered to your home in Pune.";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Pune Fitness & Wellness Hub",
+  "description": description,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "23, Koregaon Park Road",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411001",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "18.5204",
+    "longitude": "73.8567"
+  },
+  "telephone": "+91-98765-67890",
+  "email": "punefitnesshub@gmail.com",
+  "url": "https://the-local-basket.vercel.app/pune/services/fitness-wellness-hub",
+  "image": "https://the-local-basket.vercel.app/assets/pune-fitness-hero.jpg",
+  "priceRange": "₹₹",
+  "serviceArea": {
+    "@type": "Place",
+    "name": "Pune, Maharashtra, India"
+  },
+  "openingHours": "Mo-Su 06:00-22:00",
+  "paymentAccepted": "Cash, UPI, Card",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "142"
+  }
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pune">Pune</a></li>
+        <li><a href="/pune/services">Services</a></li>
+        <li aria-current="page">Fitness & Wellness Hub</li>
+      </ol>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Pune Fitness & Wellness Hub</h1>
+          <p class="hero-subtitle">Personal Training & Home Wellness Services</p>
+          <p class="hero-description">
+            Achieve your fitness goals with personalized training, nutrition coaching, and wellness programs 
+            delivered to your home. Expert trainers, customized workout plans, and holistic health support in Pune.
+          </p>
+          <div class="hero-features">
+            <span class="feature-tag">🏠 Home Training</span>
+            <span class="feature-tag">💪 Expert Trainers</span>
+            <span class="feature-tag">⭐ 4.9/5 Rating</span>
+            <span class="feature-tag">📱 App Support</span>
+          </div>
+          <div class="hero-actions">
+            <a href="tel:+919876567890" class="btn btn-primary">Start Your Journey</a>
+            <a href="#services" class="btn btn-secondary">Our Services</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/assets/pune-fitness-training.jpg" alt="Personal Fitness Training in Pune" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="about-content">
+        <h2>About Pune Fitness & Wellness Hub</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Founded in 2019 by certified fitness professionals, <strong>Pune Fitness & Wellness Hub</strong> has revolutionized 
+              <strong>home fitness services</strong> in Pune. We believe that everyone deserves access to quality fitness guidance, 
+              regardless of their schedule or location constraints.
+            </p>
+            <p>
+              Our team of <strong>certified personal trainers</strong>, <strong>nutrition experts</strong>, and 
+              <strong>wellness coaches</strong> brings professional gym-quality training to your doorstep. Whether you're a beginner 
+              starting your fitness journey or an advanced athlete looking to break plateaus, we have the expertise to guide you.
+            </p>
+            <p>
+              With over 500 successful transformations, we specialize in <strong>weight management</strong>, 
+              <strong>strength building</strong>, <strong>yoga and meditation</strong>, <strong>sports conditioning</strong>, 
+              and <strong>corporate wellness programs</strong> across Pune.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Successful Transformations</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Certified Trainers</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">4+ Years</span>
+              <span class="stat-label">of Excellence</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Support Available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="services-content">
+        <h2>Our Comprehensive Wellness Services</h2>
+        <p class="services-intro">
+          Tailored fitness and wellness solutions designed to meet your unique goals and lifestyle needs.
+        </p>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Personal Training</h3>
+            <div class="service-details">
+              <p><strong>One-on-One Sessions:</strong> ₹1,500 - ₹2,500 per session</p>
+              <p><strong>Couple Training:</strong> ₹2,000 - ₹3,500 per session</p>
+              <p><strong>Group Sessions (3-5 people):</strong> ₹1,000 - ₹1,500 per person</p>
+            </div>
+            <div class="service-features">
+              <ul>
+                <li>Customized workout plans</li>
+                <li>Progress tracking and analytics</li>
+                <li>Equipment provided for home sessions</li>
+                <li>Nutrition guidance included</li>
+                <li>Flexible scheduling</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <h3>Yoga & Meditation</h3>
+            <div class="service-details">
+              <p><strong>Individual Yoga Sessions:</strong> ₹1,200 - ₹2,000 per session</p>
+              <p><strong>Group Yoga Classes:</strong> ₹800 - ₹1,200 per person</p>
+              <p><strong>Meditation & Mindfulness:</strong> ₹1,000 - ₹1,800 per session</p>
+            </div>
+            <div class="service-features">
+              <ul>
+                <li>Hatha, Vinyasa, and Ashtanga styles</li>
+                <li>Prenatal and senior-friendly options</li>
+                <li>Stress management techniques</li>
+                <li>Breathing exercises and pranayama</li>
+                <li>Therapeutic yoga for pain relief</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <h3>Nutrition Coaching</h3>
+            <div class="service-details">
+              <p><strong>Initial Consultation:</strong> ₹2,000 - ₹3,000</p>
+              <p><strong>Monthly Nutrition Plans:</strong> ₹8,000 - ₹15,000</p>
+              <p><strong>Meal Planning Service:</strong> ₹5,000 - ₹10,000 per month</p>
+            </div>
+            <div class="service-features">
+              <ul>
+                <li>Personalized diet plans</li>
+                <li>Local cuisine integration</li>
+                <li>Supplement guidance</li>
+                <li>Regular monitoring and adjustments</li>
+                <li>Recipe suggestions and meal prep</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <h3>Specialized Programs</h3>
+            <div class="service-details">
+              <p><strong>Weight Loss Programs:</strong> ₹25,000 - ₹45,000 (3 months)</p>
+              <p><strong>Strength Building:</strong> ₹20,000 - ₹35,000 (3 months)</p>
+              <p><strong>Sports Conditioning:</strong> ₹30,000 - ₹50,000 (3 months)</p>
+            </div>
+            <div class="service-features">
+              <ul>
+                <li>Goal-specific training protocols</li>
+                <li>Performance enhancement techniques</li>
+                <li>Injury prevention and rehabilitation</li>
+                <li>Competition preparation</li>
+                <li>Lifestyle modification support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trainer Profiles -->
+    <section class="trainers">
+      <div class="trainers-content">
+        <h2>Meet Our Expert Trainers</h2>
+        <div class="trainers-grid">
+          <div class="trainer-card">
+            <div class="trainer-info">
+              <h3>Arjun Patil</h3>
+              <p class="trainer-title">Senior Personal Trainer & Strength Coach</p>
+              <p class="trainer-experience">8+ years experience • ACSM Certified</p>
+              <div class="trainer-specialties">
+                <p><strong>Specializes in:</strong> Weight loss, strength training, functional fitness</p>
+                <p><strong>Clients served:</strong> 200+ successful transformations</p>
+                <p><strong>Languages:</strong> English, Hindi, Marathi</p>
+                <p><strong>Available areas:</strong> Koregaon Park, Kalyani Nagar, Viman Nagar</p>
+              </div>
+              <div class="trainer-achievements">
+                <p><strong>Achievements:</strong> Former state-level powerlifter, certified nutrition coach</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="trainer-card">
+            <div class="trainer-info">
+              <h3>Priya Joshi</h3>
+              <p class="trainer-title">Yoga Instructor & Wellness Coach</p>
+              <p class="trainer-experience">10+ years experience • RYT-500 Certified</p>
+              <div class="trainer-specialties">
+                <p><strong>Specializes in:</strong> Therapeutic yoga, prenatal yoga, meditation</p>
+                <p><strong>Clients served:</strong> 300+ students across all age groups</p>
+                <p><strong>Languages:</strong> English, Hindi, Marathi, Sanskrit</p>
+                <p><strong>Available areas:</strong> Pune City, Shivaji Nagar, Camp Area</p>
+              </div>
+              <div class="trainer-achievements">
+                <p><strong>Achievements:</strong> Advanced yoga therapy certification, mindfulness expert</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="trainer-card">
+            <div class="trainer-info">
+              <h3>Rohit Kumar</h3>
+              <p class="trainer-title">Sports Performance Coach</p>
+              <p class="trainer-experience">12+ years experience • NSCA-CSCS Certified</p>
+              <div class="trainer-specialties">
+                <p><strong>Specializes in:</strong> Athletic conditioning, injury rehabilitation, sports nutrition</p>
+                <p><strong>Clients served:</strong> Professional athletes, weekend warriors, fitness enthusiasts</p>
+                <p><strong>Languages:</strong> English, Hindi</p>
+                <p><strong>Available areas:</strong> Baner, Aundh, Wakad, Hinjewadi</p>
+              </div>
+              <div class="trainer-achievements">
+                <p><strong>Achievements:</strong> Former professional cricket coach, rehabilitation specialist</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section class="programs">
+      <div class="programs-content">
+        <h2>Signature Wellness Programs</h2>
+        <div class="programs-grid">
+          <div class="program-card">
+            <h3>30-Day Transformation Challenge</h3>
+            <div class="program-price">₹15,000</div>
+            <div class="program-details">
+              <p>Kickstart your fitness journey with our intensive 30-day program combining personal training, nutrition coaching, and lifestyle guidance.</p>
+              <h4>What's Included:</h4>
+              <ul>
+                <li>12 personal training sessions</li>
+                <li>Custom nutrition plan</li>
+                <li>Daily check-ins via app</li>
+                <li>Progress measurements and photos</li>
+                <li>Supplement recommendations</li>
+                <li>24/7 support chat</li>
+              </ul>
+              <p class="program-guarantee">*Money-back guarantee if not satisfied</p>
+            </div>
+          </div>
+
+          <div class="program-card">
+            <h3>Executive Wellness Package</h3>
+            <div class="program-price">₹35,000/month</div>
+            <div class="program-details">
+              <p>Designed for busy professionals, this comprehensive program includes flexible scheduling and stress management techniques.</p>
+              <h4>What's Included:</h4>
+              <ul>
+                <li>16 flexible training sessions per month</li>
+                <li>Stress management and yoga</li>
+                <li>Office ergonomics consultation</li>
+                <li>Meal planning for busy schedules</li>
+                <li>Health tracking and analytics</li>
+                <li>Priority booking and support</li>
+              </ul>
+              <p class="program-special">*Popular among IT professionals and executives</p>
+            </div>
+          </div>
+
+          <div class="program-card">
+            <h3>Family Fitness Program</h3>
+            <div class="program-price">₹25,000/month</div>
+            <div class="program-details">
+              <p>Fun, family-oriented fitness sessions that promote healthy habits for all family members, adapted for different age groups.</p>
+              <h4>What's Included:</h4>
+              <ul>
+                <li>20 family workout sessions</li>
+                <li>Age-appropriate exercise routines</li>
+                <li>Nutritional guidance for children</li>
+                <li>Outdoor activity planning</li>
+                <li>Health education workshops</li>
+                <li>Family fitness challenges</li>
+              </ul>
+              <p class="program-note">*Suitable for families with children 8+ years</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="service-areas">
+      <h2>Service Areas in Pune</h2>
+      <div class="areas-grid">
+        <div class="area-group">
+          <h3>Central Pune</h3>
+          <ul>
+            <li>Koregaon Park</li>
+            <li>Camp</li>
+            <li>Shivaji Nagar</li>
+            <li>Deccan</li>
+            <li>JM Road</li>
+          </ul>
+        </div>
+        <div class="area-group">
+          <h3>East Pune</h3>
+          <ul>
+            <li>Kalyani Nagar</li>
+            <li>Viman Nagar</li>
+            <li>Kharadi</li>
+            <li>Wagholi</li>
+            <li>Hadapsar</li>
+          </ul>
+        </div>
+        <div class="area-group">
+          <h3>West Pune</h3>
+          <ul>
+            <li>Baner</li>
+            <li>Aundh</li>
+            <li>Wakad</li>
+            <li>Hinjewadi</li>
+            <li>Pimple Saudagar</li>
+          </ul>
+        </div>
+        <div class="area-group">
+          <h3>South Pune</h3>
+          <ul>
+            <li>Kothrud</li>
+            <li>Warje</li>
+            <li>Karve Nagar</li>
+            <li>Bavdhan</li>
+            <li>Pashan</li>
+          </ul>
+        </div>
+      </div>
+      <p class="service-note">
+        <strong>Travel Charges:</strong> Free within 5km radius. ₹100-300 for areas beyond 5km depending on distance.
+      </p>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <h2>Success Stories</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"I lost 18kg in 4 months with Arjun's guidance. The home training sessions were perfect for my busy schedule as a working mother."</p>
+          <div class="client-info">
+            <strong>Sneha Deshmukh</strong>
+            <span>Software Engineer, Baner • Lost 18kg in 4 months</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"Priya's yoga sessions helped me manage my chronic back pain better than years of medication. Her approach is truly holistic."</p>
+          <div class="client-info">
+            <strong>Rajesh Agarwal</strong>
+            <span>Business Owner, Koregaon Park • Overcame chronic pain</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"The family fitness program got all of us active. My kids now prefer outdoor games to video games. Amazing transformation!"</p>
+          <div class="client-info">
+            <strong>Kavita Sharma</strong>
+            <span>Homemaker, Viman Nagar • Family of 4</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3>What equipment do you provide for home training sessions?</h3>
+          <p>We bring all necessary equipment including resistance bands, dumbbells, yoga mats, stability balls, and other training tools. You don't need to purchase any equipment unless you want to for personal use between sessions.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>How do you customize workout plans for individual needs?</h3>
+          <p>We conduct a comprehensive fitness assessment including health history, current fitness level, goals, and any physical limitations. Based on this, we create personalized workout plans that evolve with your progress.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Can you accommodate dietary restrictions in nutrition plans?</h3>
+          <p>Absolutely! Our nutrition coaches specialize in creating meal plans for various dietary needs including vegetarian, vegan, diabetic, PCOS, thyroid conditions, and food allergies. We also incorporate local Maharashtrian cuisine preferences.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>What are your cancellation and rescheduling policies?</h3>
+          <p>We offer flexible scheduling with 24-hour notice for rescheduling. Cancellations with less than 4 hours notice are charged 50% of session fee. We understand life happens and try to accommodate genuine emergencies.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Do you offer corporate wellness programs?</h3>
+          <p>Yes! We provide on-site corporate wellness programs including group fitness classes, ergonomics workshops, stress management sessions, and health screenings. We work with many IT companies and offices in Pune.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <div class="contact-content">
+        <h2>Start Your Fitness Journey Today</h2>
+        <p>Ready to transform your health and achieve your fitness goals? Contact us for a free consultation.</p>
+        
+        <div class="contact-methods">
+          <div class="contact-method">
+            <h3>📞 Phone & WhatsApp</h3>
+            <p><a href="tel:+919876567890">+91-98765-67890</a></p>
+            <p>Available 6:00 AM - 10:00 PM daily</p>
+          </div>
+          
+          <div class="contact-method">
+            <h3>📧 Email</h3>
+            <p><a href="mailto:punefitnesshub@gmail.com">punefitnesshub@gmail.com</a></p>
+            <p>Response within 4 hours</p>
+          </div>
+          
+          <div class="contact-method">
+            <h3>📍 Office Address</h3>
+            <p>23, Koregaon Park Road<br>Pune - 411001<br>Maharashtra, India</p>
+          </div>
+        </div>
+
+        <div class="booking-process">
+          <h3>How to Get Started</h3>
+          <div class="process-steps">
+            <div class="step">
+              <span class="step-number">1</span>
+              <p>Free consultation call</p>
+            </div>
+            <div class="step">
+              <span class="step-number">2</span>
+              <p>Fitness assessment at home</p>
+            </div>
+            <div class="step">
+              <span class="step-number">3</span>
+              <p>Personalized plan creation</p>
+            </div>
+            <div class="step">
+              <span class="step-number">4</span>
+              <p>Begin your transformation!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .breadcrumb {
+      padding: 1rem 0;
+    }
+
+    .breadcrumb ol {
+      list-style: none;
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+      padding: 0;
+    }
+
+    .breadcrumb li:not(:last-child):after {
+      content: " / ";
+      margin-left: 0.5rem;
+    }
+
+    .breadcrumb a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      color: white;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+
+    .hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-tag {
+      background: rgba(255,255,255,0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    .about {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .about-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .about h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+    }
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+      color: #4b5563;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 2rem 1.5rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #059669;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .services {
+      padding: 4rem 0;
+    }
+
+    .services-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .services h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+
+    .services-intro {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #4b5563;
+      margin-bottom: 3rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 2rem;
+    }
+
+    .service-card h3 {
+      color: #059669;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .service-details p {
+      color: #374151;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .service-details {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .service-features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-features li {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .service-features li:before {
+      content: "✓";
+      color: #059669;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    .trainers {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .trainers-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .trainers h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .trainers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .trainer-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .trainer-card h3 {
+      color: #1f2937;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .trainer-title {
+      color: #059669;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .trainer-experience {
+      color: #6b7280;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .trainer-specialties p,
+    .trainer-achievements p {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .programs {
+      padding: 4rem 0;
+    }
+
+    .programs-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .programs h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .program-card {
+      background: white;
+      border: 2px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .program-card h3 {
+      color: #1f2937;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .program-price {
+      background: #059669;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .program-details p {
+      color: #4b5563;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .program-details h4 {
+      color: #1f2937;
+      margin: 1.5rem 0 1rem 0;
+    }
+
+    .program-details ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .program-details li {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .program-details li:before {
+      content: "•";
+      color: #059669;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    .program-guarantee,
+    .program-special,
+    .program-note {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: #059669;
+      margin-top: 1rem;
+    }
+
+    .service-areas {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .service-areas h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .area-group {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .area-group h3 {
+      color: #059669;
+      margin-bottom: 1rem;
+    }
+
+    .area-group ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .area-group li {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-note {
+      text-align: center;
+      color: #4b5563;
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+
+    .testimonials {
+      padding: 4rem 0;
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .rating {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-card p {
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .client-info strong {
+      color: #1f2937;
+    }
+
+    .client-info span {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .faq {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .faq h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .faq-item h3 {
+      color: #1f2937;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .faq-item p {
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    .contact {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      color: white;
+    }
+
+    .contact-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+    }
+
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-method {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .contact-method h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .contact-method a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-method a:hover {
+      text-decoration: underline;
+    }
+
+    .booking-process {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .booking-process h3 {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: white;
+      color: #059669;
+      border-radius: 50%;
+      line-height: 40px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #059669;
+    }
+
+    .btn-primary:hover {
+      background: #f3f4f6;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #059669;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-methods {
+        grid-template-columns: 1fr;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</Layout>

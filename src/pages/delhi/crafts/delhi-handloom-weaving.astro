@@ -1,0 +1,981 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+
+const title = "Delhi Handloom Weaving Studio - Traditional Indian Textiles & Custom Fabrics";
+const description = "Discover authentic handloom textiles at Delhi Handloom Weaving Studio. Custom sarees, dupattas, and fabrics woven using traditional techniques by skilled artisans.";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Delhi Handloom Weaving Studio",
+  "description": description,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "45, Karol Bagh Market",
+    "addressLocality": "New Delhi",
+    "addressRegion": "Delhi",
+    "postalCode": "110005",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "28.6139",
+    "longitude": "77.2090"
+  },
+  "telephone": "+91-98765-54321",
+  "email": "delhihandloom@gmail.com",
+  "url": "https://the-local-basket.vercel.app/delhi/crafts/delhi-handloom-weaving",
+  "image": "https://the-local-basket.vercel.app/assets/delhi-handloom-hero.jpg",
+  "priceRange": "₹₹₹",
+  "serviceArea": {
+    "@type": "Place",
+    "name": "Delhi, India"
+  },
+  "openingHours": "Mo-Sa 10:00-19:00",
+  "paymentAccepted": "Cash, UPI, Card",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "89"
+  }
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/delhi">Delhi</a></li>
+        <li><a href="/delhi/crafts">Crafts</a></li>
+        <li aria-current="page">Delhi Handloom Weaving Studio</li>
+      </ol>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Delhi Handloom Weaving Studio</h1>
+          <p class="hero-subtitle">Traditional Indian Textiles & Custom Fabrics</p>
+          <p class="hero-description">
+            Experience the art of traditional handloom weaving with authentic textiles crafted by skilled artisans. 
+            Custom sarees, dupattas, and fabrics that celebrate India's rich textile heritage.
+          </p>
+          <div class="hero-features">
+            <span class="feature-tag">🧵 Handwoven Quality</span>
+            <span class="feature-tag">🎨 Custom Designs</span>
+            <span class="feature-tag">⭐ 4.7/5 Rating</span>
+            <span class="feature-tag">🏆 Award-Winning</span>
+          </div>
+          <div class="hero-actions">
+            <a href="tel:+919876554321" class="btn btn-primary">Contact Studio</a>
+            <a href="#products" class="btn btn-secondary">View Collection</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/assets/handloom-weaving.jpg" alt="Traditional Handloom Weaving Process" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="about-content">
+        <h2>About Delhi Handloom Weaving Studio</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Established in 1995, <strong>Delhi Handloom Weaving Studio</strong> has been preserving and promoting 
+              <strong>traditional Indian handloom weaving techniques</strong> for over 25 years. Founded by Master Weaver 
+              Rajesh Kumar, our studio combines time-honored craftsmanship with contemporary design sensibilities.
+            </p>
+            <p>
+              We specialize in creating <strong>authentic handwoven textiles</strong> using traditional looms and natural fibers. 
+              Our skilled artisans, trained in various regional weaving styles, create everything from 
+              <strong>bridal sarees</strong> to <strong>contemporary home furnishings</strong>.
+            </p>
+            <p>
+              Located in the heart of <strong>Karol Bagh</strong>, our studio serves as both a workshop and showcase for 
+              India's textile heritage, offering <strong>custom weaving services</strong>, <strong>textile workshops</strong>, 
+              and a curated collection of handloom products.
+            </p>
+          </div>
+          <div class="about-highlights">
+            <div class="highlight">
+              <h4>25+ Years Experience</h4>
+              <p>Quarter-century of traditional weaving expertise</p>
+            </div>
+            <div class="highlight">
+              <h4>Master Artisans</h4>
+              <p>Skilled craftspeople preserving ancient techniques</p>
+            </div>
+            <div class="highlight">
+              <h4>Custom Creations</h4>
+              <p>Personalized designs for special occasions</p>
+            </div>
+            <div class="highlight">
+              <h4>Heritage Preservation</h4>
+              <p>Keeping traditional crafts alive for future generations</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+      <div class="products-content">
+        <h2>Our Handloom Collection</h2>
+        <p class="products-intro">
+          Each piece is meticulously handwoven using traditional techniques, ensuring unique character and exceptional quality.
+        </p>
+        
+        <div class="product-categories">
+          <div class="category-card">
+            <h3>Sarees & Traditional Wear</h3>
+            <div class="category-items">
+              <div class="item">
+                <h4>Chanderi Sarees</h4>
+                <p>Silk and cotton blend with traditional motifs</p>
+                <span class="price-range">₹8,000 - ₹25,000</span>
+              </div>
+              <div class="item">
+                <h4>Banarasi Silk Sarees</h4>
+                <p>Pure silk with gold and silver zari work</p>
+                <span class="price-range">₹15,000 - ₹50,000</span>
+              </div>
+              <div class="item">
+                <h4>Tussar Silk Collection</h4>
+                <p>Natural texture with contemporary designs</p>
+                <span class="price-range">₹6,000 - ₹18,000</span>
+              </div>
+              <div class="item">
+                <h4>Cotton Handloom Sarees</h4>
+                <p>Daily wear with comfort and elegance</p>
+                <span class="price-range">₹3,000 - ₹8,000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <h3>Dupattas & Stoles</h3>
+            <div class="category-items">
+              <div class="item">
+                <h4>Silk Dupattas</h4>
+                <p>Handwoven silk with intricate borders</p>
+                <span class="price-range">₹4,000 - ₹12,000</span>
+              </div>
+              <div class="item">
+                <h4>Cotton Dupattas</h4>
+                <p>Breathable cotton with traditional prints</p>
+                <span class="price-range">₹1,500 - ₹4,000</span>
+              </div>
+              <div class="item">
+                <h4>Pashmina Stoles</h4>
+                <p>Luxurious wool blends for winter</p>
+                <span class="price-range">₹6,000 - ₹20,000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <h3>Custom Fabrics & Home Decor</h3>
+            <div class="category-items">
+              <div class="item">
+                <h4>Fabric by the Meter</h4>
+                <p>Choose patterns, colors, and weave styles</p>
+                <span class="price-range">₹800 - ₹3,000/meter</span>
+              </div>
+              <div class="item">
+                <h4>Table Runners & Placemats</h4>
+                <p>Handwoven home accessories</p>
+                <span class="price-range">₹2,000 - ₹8,000</span>
+              </div>
+              <div class="item">
+                <h4>Cushion Covers</h4>
+                <p>Traditional patterns for modern homes</p>
+                <span class="price-range">₹1,200 - ₹3,500</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weaving Process -->
+    <section class="process">
+      <div class="process-content">
+        <h2>The Art of Handloom Weaving</h2>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Design Consultation</h3>
+            <p>Discuss your vision, preferences, colors, and intended use with our design experts.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Yarn Selection</h3>
+            <p>Choose from premium silk, cotton, or blended yarns sourced from trusted suppliers.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Pattern Creation</h3>
+            <p>Our artisans create or adapt traditional patterns to match your specific requirements.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Hand Weaving</h3>
+            <p>Skilled craftspeople meticulously weave each piece using traditional techniques.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">5</div>
+            <h3>Finishing & Quality Check</h3>
+            <p>Final touches, washing, pressing, and thorough quality inspection before delivery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specialties -->
+    <section class="specialties">
+      <h2>Our Specializations</h2>
+      <div class="specialties-grid">
+        <div class="specialty-card">
+          <h3>Bridal Collections</h3>
+          <p>Custom bridal sarees and lehengas with traditional motifs, gold work, and heirloom quality craftsmanship for your special day.</p>
+          <ul>
+            <li>Traditional wedding sarees</li>
+            <li>Lehenga fabrics</li>
+            <li>Matching accessories</li>
+            <li>Family heirloom recreations</li>
+          </ul>
+        </div>
+        
+        <div class="specialty-card">
+          <h3>Regional Styles</h3>
+          <p>Expert recreation of traditional weaving styles from different regions of India, preserving authentic techniques and patterns.</p>
+          <ul>
+            <li>Banarasi weaving</li>
+            <li>Chanderi techniques</li>
+            <li>South Indian silk</li>
+            <li>Gujarat handloom</li>
+          </ul>
+        </div>
+        
+        <div class="specialty-card">
+          <h3>Contemporary Designs</h3>
+          <p>Modern interpretations of traditional patterns, creating pieces that bridge heritage craftsmanship with contemporary aesthetics.</p>
+          <ul>
+            <li>Modern color palettes</li>
+            <li>Minimalist patterns</li>
+            <li>Fusion designs</li>
+            <li>Urban-friendly styles</li>
+          </ul>
+        </div>
+        
+        <div class="specialty-card">
+          <h3>Corporate & Bulk Orders</h3>
+          <p>Customized textile solutions for hotels, restaurants, corporate gifts, and fashion designers requiring quality handloom fabrics.</p>
+          <ul>
+            <li>Hotel furnishings</li>
+            <li>Corporate gifts</li>
+            <li>Fashion designer collaborations</li>
+            <li>Export quality textiles</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workshops & Learning -->
+    <section class="workshops">
+      <div class="workshops-content">
+        <h2>Learn the Art of Handloom Weaving</h2>
+        <p class="workshops-intro">
+          Join our workshops and classes to learn traditional weaving techniques from master artisans.
+        </p>
+        
+        <div class="workshop-types">
+          <div class="workshop-card">
+            <h3>Beginner Classes</h3>
+            <p><strong>Duration:</strong> 4 weeks (8 sessions)</p>
+            <p><strong>Fee:</strong> ₹8,000 per person</p>
+            <div class="workshop-details">
+              <p>Learn basic weaving techniques, loom operation, and create simple patterns. Perfect for hobbyists and craft enthusiasts.</p>
+              <ul>
+                <li>Introduction to handloom basics</li>
+                <li>Threading and pattern setup</li>
+                <li>Weaving simple designs</li>
+                <li>Finishing techniques</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="workshop-card">
+            <h3>Advanced Workshops</h3>
+            <p><strong>Duration:</strong> 6 weeks (12 sessions)</p>
+            <p><strong>Fee:</strong> ₹15,000 per person</p>
+            <div class="workshop-details">
+              <p>Master complex patterns, traditional motifs, and professional techniques used in high-quality textile creation.</p>
+              <ul>
+                <li>Complex pattern development</li>
+                <li>Traditional motif creation</li>
+                <li>Color blending techniques</li>
+                <li>Quality control and finishing</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="workshop-card">
+            <h3>Corporate Team Building</h3>
+            <p><strong>Duration:</strong> 1-day workshops</p>
+            <p><strong>Fee:</strong> ₹3,500 per person (minimum 10)</p>
+            <div class="workshop-details">
+              <p>Team building activities centered around traditional crafts, promoting creativity and collaboration.</p>
+              <ul>
+                <li>Introduction to handloom history</li>
+                <li>Hands-on weaving experience</li>
+                <li>Team project creation</li>
+                <li>Cultural appreciation session</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+      <h2>Customer Testimonials</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"The bridal saree created for my daughter's wedding was absolutely stunning. The attention to detail and quality of workmanship exceeded our expectations."</p>
+          <div class="reviewer">
+            <strong>Mrs. Meera Sharma</strong>
+            <span>South Delhi • Bridal Collection</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"As a fashion designer, I appreciate the consistent quality and authentic techniques. Delhi Handloom has become my go-to for premium fabrics."</p>
+          <div class="reviewer">
+            <strong>Anita Khanna</strong>
+            <span>Fashion Designer • Regular Client</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"The weaving workshop was an incredible experience. Learning from master artisans helped me appreciate the skill and patience required for each piece."</p>
+          <div class="reviewer">
+            <strong>Rahul Gupta</strong>
+            <span>Karol Bagh • Workshop Participant</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <div class="contact-content">
+        <h2>Visit Delhi Handloom Weaving Studio</h2>
+        <p>Experience traditional Indian textiles and discuss custom weaving projects with our master artisans.</p>
+        
+        <div class="contact-info">
+          <div class="contact-item">
+            <h3>📍 Studio Address</h3>
+            <p>45, Karol Bagh Market<br>New Delhi - 110005<br>Delhi, India</p>
+          </div>
+          
+          <div class="contact-item">
+            <h3>📞 Contact Details</h3>
+            <p><a href="tel:+919876554321">+91-98765-54321</a><br>
+            <a href="mailto:delhihandloom@gmail.com">delhihandloom@gmail.com</a></p>
+          </div>
+          
+          <div class="contact-item">
+            <h3>🕒 Studio Hours</h3>
+            <p>Monday - Saturday: 10:00 AM - 7:00 PM<br>Sunday: Closed<br>Custom appointments available</p>
+          </div>
+        </div>
+
+        <div class="visit-note">
+          <h3>Planning a Visit?</h3>
+          <p>We recommend calling ahead to schedule a consultation, especially for custom orders or workshop enrollment. Our master weavers are available for detailed discussions about your textile needs.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .breadcrumb {
+      padding: 1rem 0;
+    }
+
+    .breadcrumb ol {
+      list-style: none;
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+      padding: 0;
+    }
+
+    .breadcrumb li:not(:last-child):after {
+      content: " / ";
+      margin-left: 0.5rem;
+    }
+
+    .breadcrumb a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      color: white;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+
+    .hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-tag {
+      background: rgba(255,255,255,0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    .about {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .about-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .about h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+    }
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+      color: #4b5563;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .highlight {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .highlight h4 {
+      color: #dc2626;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight p {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .products {
+      padding: 4rem 0;
+    }
+
+    .products-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .products h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+
+    .products-intro {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #4b5563;
+      margin-bottom: 3rem;
+    }
+
+    .product-categories {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .category-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 2rem;
+    }
+
+    .category-card h3 {
+      color: #dc2626;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .category-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .item {
+      border: 1px solid #f3f4f6;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+
+    .item h4 {
+      color: #1f2937;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .item p {
+      color: #4b5563;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .price-range {
+      color: #dc2626;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .process {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .process-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .process h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .step {
+      text-align: center;
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: #dc2626;
+      color: white;
+      border-radius: 50%;
+      line-height: 50px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .step h3 {
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+
+    .step p {
+      color: #4b5563;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .specialties {
+      padding: 4rem 0;
+    }
+
+    .specialties h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .specialties-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .specialty-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 2rem;
+    }
+
+    .specialty-card h3 {
+      color: #dc2626;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .specialty-card p {
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .specialty-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .specialty-card li {
+      color: #6b7280;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .specialty-card li:before {
+      content: "•";
+      color: #dc2626;
+      position: absolute;
+      left: 0;
+    }
+
+    .workshops {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .workshops-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .workshops h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+
+    .workshops-intro {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #4b5563;
+      margin-bottom: 3rem;
+    }
+
+    .workshop-types {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .workshop-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .workshop-card h3 {
+      color: #dc2626;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .workshop-card p {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+    }
+
+    .workshop-details {
+      margin-top: 1rem;
+    }
+
+    .workshop-details p {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .workshop-details ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .workshop-details li {
+      color: #6b7280;
+      margin-bottom: 0.25rem;
+      padding-left: 1rem;
+      position: relative;
+      font-size: 0.9rem;
+    }
+
+    .workshop-details li:before {
+      content: "▪";
+      color: #dc2626;
+      position: absolute;
+      left: 0;
+    }
+
+    .reviews {
+      padding: 4rem 0;
+    }
+
+    .reviews h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .review-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .rating {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .review-card p {
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .reviewer strong {
+      color: #1f2937;
+    }
+
+    .reviewer span {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .contact {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      color: white;
+    }
+
+    .contact-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-item {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .contact-item h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .contact-item a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .visit-note {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      text-align: left;
+    }
+
+    .visit-note h3 {
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #dc2626;
+    }
+
+    .btn-primary:hover {
+      background: #f3f4f6;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #dc2626;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-items {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</Layout>

@@ -21,7 +21,7 @@ const structuredData = {
 	"@type": "WebPage",
 	"name": `Home Businesses in ${cityData.name} - LocalBasket`,
 	"description": `Discover verified home-based businesses in ${cityData.name}. Find authentic homemade food, handcrafted items, and professional services.`,
-	"url": `https://localbasket.com/${cityData.name.toLowerCase()}`,
+	"url": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}`,
 	"mainEntity": {
 		"@type": "ItemList",
 		"name": `Home Businesses in ${cityData.name}`,
@@ -30,7 +30,7 @@ const structuredData = {
 			"@type": "ListItem",
 			"position": index + 1,
 			"name": cat.name,
-			"url": `https://localbasket.com/${cityData.name.toLowerCase()}/${cat.slug}`
+			"url": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}/${cat.slug}`
 		}))
 	}
 };
@@ -44,7 +44,7 @@ const breadcrumbs = [
 <Layout
 	title={`Home Businesses in ${cityData.name} - Verified Local Food, Crafts & Services | LocalBasket`}
 	description={`Discover ${cityData.businessCount}+ verified home-based businesses in ${cityData.name}, ${cityData.state}. Find authentic homemade food, handcrafted items, and professional services from local entrepreneurs. Support ${cityData.name}'s home business community.`}
-	keywords={`home businesses ${cityData.name}, local food vendors ${cityData.name}, handmade crafts ${cityData.name}, home services ${cityData.name}, verified businesses ${cityData.state}, ${cityData.name} entrepreneurs, local marketplace ${cityData.name}`}
+	keywords={`home businesses ${cityData.name}, local food vendors ${cityData.name}, handmade crafts ${cityData.name}, home services ${cityData.name}, verified businesses ${cityData.state}, ${cityData.name} entrepreneurs, local marketplace ${cityData.name}, authentic Tamil food ${cityData.name}, traditional crafts ${cityData.name}, handmade jewelry ${cityData.name}, local artisan crafts ${cityData.name}, home based food business ${cityData.name}, neighborhood vendors ${cityData.name}, handloom products ${cityData.name}`}
 	structuredData={structuredData}
 	breadcrumbs={breadcrumbs}
 	canonicalUrl="/chennai"

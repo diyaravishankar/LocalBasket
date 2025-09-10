@@ -1,0 +1,1106 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+
+const title = "Jaipur Heritage Jewelry Workshop - Handmade Kundan & Traditional Rajasthani Jewelry";
+const description = "Discover authentic Rajasthani jewelry craftsmanship at Jaipur Heritage Jewelry Workshop. Handcrafted Kundan, Meenakari, silver jewelry, and custom wedding sets in Jaipur.";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Jaipur Heritage Jewelry Workshop",
+  "description": description,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "23, Johari Bazaar",
+    "addressLocality": "Jaipur",
+    "addressRegion": "Rajasthan",
+    "postalCode": "302003",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "26.9124",
+    "longitude": "75.7873"
+  },
+  "telephone": "+91-98765-32109",
+  "email": "jaipur.heritage.jewelry@gmail.com",
+  "url": "https://the-local-basket.vercel.app/jaipur/crafts/heritage-jewelry-workshop",
+  "image": "https://the-local-basket.vercel.app/assets/jaipur-jewelry-hero.jpg",
+  "priceRange": "₹₹₹",
+  "serviceArea": {
+    "@type": "Place",
+    "name": "Jaipur, Rajasthan, India"
+  },
+  "openingHours": "Mo-Sa 10:00-19:00, Su 11:00-17:00",
+  "paymentAccepted": "Cash, UPI, Card",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "156"
+  }
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/jaipur">Jaipur</a></li>
+        <li><a href="/jaipur/crafts">Crafts</a></li>
+        <li aria-current="page">Heritage Jewelry Workshop</li>
+      </ol>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Jaipur Heritage Jewelry Workshop</h1>
+          <p class="hero-subtitle">Handcrafted Kundan • Meenakari • Traditional Rajasthani Jewelry</p>
+          <p class="hero-description">
+            Experience the royal heritage of Rajasthani jewelry craftsmanship. From exquisite Kundan sets to intricate 
+            Meenakari work, we create timeless pieces that celebrate India's rich cultural legacy.
+          </p>
+          <div class="hero-features">
+            <span class="feature-tag">👑 Royal Heritage</span>
+            <span class="feature-tag">🎨 Handcrafted</span>
+            <span class="feature-tag">⭐ 4.9/5 Rating</span>
+            <span class="feature-tag">💎 Custom Orders</span>
+          </div>
+          <div class="hero-actions">
+            <a href="tel:+919876532109" class="btn btn-primary">Visit Workshop</a>
+            <a href="#collections" class="btn btn-secondary">View Collections</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/assets/jaipur-heritage-jewelry.jpg" alt="Traditional Rajasthani Jewelry in Jaipur" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="about-content">
+        <h2>About Jaipur Heritage Jewelry Workshop</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Established in 1995 in the heart of Johari Bazaar, <strong>Jaipur Heritage Jewelry Workshop</strong> 
+              represents four generations of <strong>traditional Rajasthani jewelry craftsmanship</strong>. Founded by 
+              Master Craftsman <strong>Shri Ramesh Soni</strong>, our workshop continues the ancient art of 
+              <strong>Kundan jewelry making</strong> that has been the pride of Jaipur for centuries.
+            </p>
+            <p>
+              We specialize in authentic <strong>handcrafted jewelry</strong> using time-honored techniques passed down 
+              through generations. Our expertise spans <strong>Kundan jewelry</strong>, <strong>Meenakari work</strong>, 
+              <strong>traditional silver jewelry</strong>, <strong>temple jewelry</strong>, and 
+              <strong>contemporary Rajasthani designs</strong> that blend classical aesthetics with modern sensibilities.
+            </p>
+            <p>
+              What sets us apart is our commitment to <strong>authentic craftsmanship</strong> – each piece is meticulously 
+              handcrafted by skilled artisans who have dedicated their lives to preserving these traditional art forms. 
+              We use genuine materials including <strong>22k gold</strong>, <strong>uncut diamonds</strong>, 
+              <strong>precious gemstones</strong>, and <strong>natural pearls</strong> sourced from trusted suppliers.
+            </p>
+            <p>
+              From <strong>bridal jewelry sets</strong> to <strong>statement necklaces</strong>, <strong>traditional earrings</strong> 
+              to <strong>contemporary rings</strong>, we create pieces that celebrate both heritage and individuality. 
+              Our custom design service allows clients to create unique pieces that reflect their personal style while 
+              honoring traditional craftsmanship.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">30+</span>
+              <span class="stat-label">Years of Excellence</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">15</span>
+              <span class="stat-label">Master Craftsmen</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">5000+</span>
+              <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Generations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="collections" id="collections">
+      <div class="collections-content">
+        <h2>Our Heritage Collections</h2>
+        
+        <div class="collections-grid">
+          <div class="collection-card">
+            <h3>Kundan Jewelry Collection</h3>
+            <div class="collection-details">
+              <p><strong>Bridal Necklace Sets:</strong> ₹85,000 - ₹3,50,000</p>
+              <p><strong>Kundan Earrings:</strong> ₹15,000 - ₹75,000</p>
+              <p><strong>Kundan Maang Tikka:</strong> ₹12,000 - ₹45,000</p>
+              <p><strong>Complete Bridal Set:</strong> ₹1,50,000 - ₹8,00,000</p>
+            </div>
+            <div class="collection-features">
+              <ul>
+                <li>Authentic uncut diamond setting</li>
+                <li>22k gold base with traditional techniques</li>
+                <li>Intricate jadau work and setting</li>
+                <li>Customizable designs and sizes</li>
+                <li>Certificate of authenticity included</li>
+                <li>Lifetime craftsmanship warranty</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="collection-card">
+            <h3>Meenakari Jewelry</h3>
+            <div class="collection-details">
+              <p><strong>Meenakari Bangles:</strong> ₹8,000 - ₹35,000 per pair</p>
+              <p><strong>Meenakari Necklace:</strong> ₹25,000 - ₹1,20,000</p>
+              <p><strong>Traditional Choker:</strong> ₹18,000 - ₹65,000</p>
+              <p><strong>Meenakari Ring Collection:</strong> ₹5,000 - ₹25,000</p>
+            </div>
+            <div class="collection-features">
+              <ul>
+                <li>Hand-painted enamel work</li>
+                <li>Traditional Persian-influenced designs</li>
+                <li>Vibrant color combinations</li>
+                <li>Gold and silver base options</li>
+                <li>Floral and geometric patterns</li>
+                <li>Expert restoration services available</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="collection-card">
+            <h3>Silver Heritage Collection</h3>
+            <div class="collection-details">
+              <p><strong>Oxidized Silver Jewelry:</strong> ₹2,000 - ₹15,000</p>
+              <p><strong>Temple Jewelry Sets:</strong> ₹8,000 - ₹45,000</p>
+              <p><strong>Traditional Tribal Jewelry:</strong> ₹3,000 - ₹20,000</p>
+              <p><strong>Contemporary Silver Designs:</strong> ₹1,500 - ₹12,000</p>
+            </div>
+            <div class="collection-features">
+              <ul>
+                <li>Pure 925 sterling silver</li>
+                <li>Traditional oxidization techniques</li>
+                <li>Rajasthani motifs and patterns</li>
+                <li>Lightweight daily wear options</li>
+                <li>Hypoallergenic materials</li>
+                <li>Easy maintenance and care</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="collection-card">
+            <h3>Custom Bridal Jewelry</h3>
+            <div class="collection-details">
+              <p><strong>Complete Bridal Sets:</strong> ₹2,00,000 - ₹12,00,000</p>
+              <p><strong>Engagement Ring Design:</strong> ₹25,000 - ₹1,50,000</p>
+              <p><strong>Wedding Necklace Sets:</strong> ₹75,000 - ₹5,00,000</p>
+              <p><strong>Coordinated Jewelry Suite:</strong> ₹1,50,000 - ₹8,00,000</p>
+            </div>
+            <div class="collection-features">
+              <ul>
+                <li>Personalized design consultation</li>
+                <li>Family heirloom incorporation</li>
+                <li>Multiple fittings and adjustments</li>
+                <li>Photography-ready designs</li>
+                <li>Matching accessories coordination</li>
+                <li>Post-wedding jewelry care service</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Craftsmanship Process -->
+    <section class="craftsmanship">
+      <div class="craftsmanship-content">
+        <h2>Traditional Craftsmanship Process</h2>
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Design Consultation</h3>
+            <p>Understanding your vision, preferences, and requirements through detailed consultation. We discuss traditional motifs, contemporary adaptations, and personal preferences to create the perfect design blueprint.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Gold Framework Creation</h3>
+            <p>Crafting the base structure using 22k gold, carefully shaped and prepared for stone setting. Our master goldsmiths use traditional techniques to ensure durability and perfect proportions.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Kundan Setting (Jadau Work)</h3>
+            <p>The intricate process of setting uncut diamonds and precious stones using traditional jadau technique. Each stone is carefully placed using pure gold foil and lac for secure, invisible settings.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Meenakari Application</h3>
+            <p>Hand-painting intricate enamel designs on the reverse side of jewelry pieces. This traditional art form requires multiple firing processes to achieve vibrant, lasting colors and patterns.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">5</div>
+            <h3>Final Polish & Quality Check</h3>
+            <p>Meticulous finishing work including polishing, cleaning, and comprehensive quality assessment. Each piece undergoes rigorous testing to ensure it meets our exacting standards.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">6</div>
+            <h3>Presentation & Certification</h3>
+            <p>Professional packaging with authenticity certificates, care instructions, and warranty documentation. We provide detailed information about materials, craftsmanship, and maintenance guidelines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artisan Profiles -->
+    <section class="artisans">
+      <div class="artisans-content">
+        <h2>Meet Our Master Craftsmen</h2>
+        <div class="artisans-grid">
+          <div class="artisan-card">
+            <div class="artisan-info">
+              <h3>Master Ramesh Soni</h3>
+              <p class="artisan-title">Founder & Senior Kundan Specialist</p>
+              <p class="artisan-experience">35+ years experience • 4th Generation Craftsman</p>
+              <div class="artisan-specialties">
+                <p><strong>Specializes in:</strong> Traditional Kundan setting, Bridal jewelry design, Heritage restoration</p>
+                <p><strong>Master of:</strong> Jadau technique, uncut diamond setting, antique jewelry recreation</p>
+                <p><strong>Recognition:</strong> Rajasthan State Award for Traditional Crafts (2018)</p>
+                <p><strong>Teaching:</strong> Mentors 12 apprentices in traditional Kundan techniques</p>
+              </div>
+              <div class="artisan-achievements">
+                <p><strong>Legacy:</strong> Created jewelry for 500+ brides, museum-quality restoration work</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="artisan-card">
+            <div class="artisan-info">
+              <h3>Master Suresh Meena</h3>
+              <p class="artisan-title">Meenakari Specialist & Color Expert</p>
+              <p class="artisan-experience">25+ years experience • Traditional Meenakari Artist</p>
+              <div class="artisan-specialties">
+                <p><strong>Specializes in:</strong> Hand-painted enamel work, color mixing, traditional motifs</p>
+                <p><strong>Expert in:</strong> Persian-style Meenakari, floral designs, geometric patterns</p>
+                <p><strong>Innovation:</strong> Developed color-fast techniques for modern climate conditions</p>
+                <p><strong>Clientele:</strong> Museums, collectors, and heritage enthusiasts worldwide</p>
+              </div>
+              <div class="artisan-achievements">
+                <p><strong>Distinction:</strong> Only craftsman in Jaipur certified in historical Meenakari restoration</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="artisan-card">
+            <div class="artisan-info">
+              <h3>Master Gopal Sharma</h3>
+              <p class="artisan-title">Silver Work Specialist & Contemporary Designer</p>
+              <p class="artisan-experience">20+ years experience • Modern Traditional Fusion Expert</p>
+              <div class="artisan-specialties">
+                <p><strong>Specializes in:</strong> Silver jewelry, contemporary adaptations, custom design</p>
+                <p><strong>Skills:</strong> Oxidization techniques, tribal patterns, modern interpretations</p>
+                <p><strong>Innovation:</strong> Bridges traditional crafts with contemporary fashion trends</p>
+                <p><strong>Collaboration:</strong> Works with fashion designers and jewelry brands</p>
+              </div>
+              <div class="artisan-achievements">
+                <p><strong>Featured:</strong> Work displayed in National Handicrafts Museum, New Delhi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+      <div class="services-content">
+        <h2>Specialized Services</h2>
+        <div class="services-grid">
+          <div class="service-item">
+            <h3>Custom Jewelry Design</h3>
+            <p>Create unique pieces tailored to your vision and preferences. Our design team works closely with you from concept to completion, ensuring every detail matches your expectations.</p>
+            <div class="service-features">
+              <ul>
+                <li>Personalized design consultation</li>
+                <li>3D modeling and visualization</li>
+                <li>Multiple revision rounds included</li>
+                <li>Traditional and contemporary options</li>
+                <li>Timeline: 4-8 weeks for complex pieces</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <h3>Jewelry Restoration</h3>
+            <p>Expert restoration of antique and heritage jewelry pieces using traditional techniques and authentic materials. We specialize in bringing family heirlooms back to their original glory.</p>
+            <div class="service-features">
+              <ul>
+                <li>Historical accuracy in restoration</li>
+                <li>Documentation of restoration process</li>
+                <li>Authentication and certification</li>
+                <li>Insurance appraisal services</li>
+                <li>Consultation with heritage experts</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <h3>Jewelry Workshops & Training</h3>
+            <p>Learn traditional Rajasthani jewelry making techniques through our hands-on workshops. Perfect for jewelry enthusiasts, students, and professionals looking to expand their skills.</p>
+            <div class="service-features">
+              <ul>
+                <li>Basic to advanced level courses</li>
+                <li>Traditional technique instruction</li>
+                <li>Small batch personalized teaching</li>
+                <li>Take-home jewelry pieces</li>
+                <li>Certificate of completion provided</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <h2>Customer Experiences</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"Ramesh ji created the most beautiful bridal set for my daughter's wedding. The Kundan work is absolutely exquisite, and the attention to detail is remarkable. Three generations of brides will treasure these pieces!"</p>
+          <div class="client-info">
+            <strong>Mrs. Kavita Agarwal</strong>
+            <span>Delhi • Bridal Jewelry Set</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"I inherited my great-grandmother's Meenakari necklace that was damaged. The restoration work here is phenomenal - they brought it back to its original beauty while maintaining its authenticity."</p>
+          <div class="client-info">
+            <strong>Priya Rajput</strong>
+            <span>Mumbai • Heritage Restoration</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"The custom engagement ring designed here perfectly captured our love story. The craftsmanship is unmatched, and the personal attention from the artisans made the experience truly special."</p>
+          <div class="client-info">
+            <strong>Arjun & Meera Singh</strong>
+            <span>Jaipur • Custom Engagement Ring</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3>What makes authentic Kundan jewelry different from imitations?</h3>
+          <p>Authentic Kundan jewelry uses uncut diamonds, 22k gold, and traditional jadau setting techniques. The stones are set using pure gold foil and lac, creating invisible settings. Imitations use glass stones, lower karat gold, and machine settings that lack the intricate handwork.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>How long does it take to create a custom bridal jewelry set?</h3>
+          <p>A complete bridal set typically takes 6-12 weeks depending on complexity and design intricacy. This includes consultation, design finalization, crafting, and quality checks. We recommend starting the process at least 3 months before your wedding for a stress-free experience.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Do you provide certificates of authenticity for your jewelry?</h3>
+          <p>Yes, every piece comes with a detailed certificate of authenticity that includes information about materials used, craftsmanship techniques, and care instructions. For precious stone jewelry, we also provide gemological certificates from recognized institutes.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Can you work with family gold or existing jewelry pieces?</h3>
+          <p>Absolutely! We specialize in transforming existing jewelry or using family gold to create new pieces. This is particularly popular for creating modern designs while preserving sentimental value. We assess the gold purity and provide transparent pricing for additional materials needed.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>What after-sales services do you provide?</h3>
+          <p>We offer lifetime craftsmanship warranty, periodic cleaning and maintenance, minor repairs, stone tightening, and size adjustments. We also provide insurance appraisal services and can create matching pieces to complement existing jewelry.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <div class="contact-content">
+        <h2>Visit Our Heritage Workshop</h2>
+        <p>Experience the magic of traditional Rajasthani jewelry craftsmanship in the heart of Jaipur's historic Johari Bazaar.</p>
+        
+        <div class="contact-methods">
+          <div class="contact-method">
+            <h3>📞 Phone & WhatsApp</h3>
+            <p><a href="tel:+919876532109">+91-98765-32109</a></p>
+            <p>Available 10:00 AM - 7:00 PM (Mon-Sat)</p>
+          </div>
+          
+          <div class="contact-method">
+            <h3>📧 Email</h3>
+            <p><a href="mailto:jaipur.heritage.jewelry@gmail.com">jaipur.heritage.jewelry@gmail.com</a></p>
+            <p>Response within 4 hours</p>
+          </div>
+          
+          <div class="contact-method">
+            <h3>📍 Workshop Address</h3>
+            <p>23, Johari Bazaar<br>Jaipur - 302003<br>Rajasthan, India</p>
+          </div>
+        </div>
+
+        <div class="workshop-info">
+          <h3>Workshop Visit Information</h3>
+          <div class="visit-details">
+            <div class="visit-option">
+              <h4>Walk-in Visits</h4>
+              <p>Mon-Sat: 10:00 AM - 7:00 PM</p>
+              <p>Sunday: 11:00 AM - 5:00 PM</p>
+              <p>See craftsmen at work</p>
+            </div>
+            <div class="visit-option">
+              <h4>Scheduled Consultations</h4>
+              <p>Personalized design meetings</p>
+              <p>Advanced booking preferred</p>
+              <p>Private consultation room available</p>
+            </div>
+            <div class="visit-option">
+              <h4>Group Workshop Tours</h4>
+              <p>Educational visits for groups</p>
+              <p>Traditional craft demonstrations</p>
+              <p>Advance booking required</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .breadcrumb {
+      padding: 1rem 0;
+    }
+
+    .breadcrumb ol {
+      list-style: none;
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+      padding: 0;
+    }
+
+    .breadcrumb li:not(:last-child):after {
+      content: " / ";
+      margin-left: 0.5rem;
+    }
+
+    .breadcrumb a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%);
+      color: white;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+
+    .hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-tag {
+      background: rgba(255,255,255,0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    .about {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .about-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .about h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+    }
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+      color: #4b5563;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 2rem 1.5rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #c2410c;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .collections {
+      padding: 4rem 0;
+    }
+
+    .collections-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .collections h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .collections-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .collection-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 2rem;
+    }
+
+    .collection-card h3 {
+      color: #c2410c;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .collection-details p {
+      color: #374151;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .collection-details {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .collection-features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .collection-features li {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .collection-features li:before {
+      content: "✓";
+      color: #c2410c;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    .craftsmanship {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .craftsmanship-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .craftsmanship h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .process-step {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background: #c2410c;
+      color: white;
+      border-radius: 50%;
+      line-height: 60px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .process-step h3 {
+      color: #1f2937;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .process-step p {
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    .artisans {
+      padding: 4rem 0;
+    }
+
+    .artisans-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .artisans h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .artisans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .artisan-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .artisan-card h3 {
+      color: #1f2937;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .artisan-title {
+      color: #c2410c;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .artisan-experience {
+      color: #6b7280;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .artisan-specialties p,
+    .artisan-achievements p {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .services {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .services-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .services h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .service-item h3 {
+      color: #c2410c;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-item p {
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .service-features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-features li {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .service-features li:before {
+      content: "•";
+      color: #c2410c;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    .testimonials {
+      padding: 4rem 0;
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .rating {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-card p {
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .client-info strong {
+      color: #1f2937;
+    }
+
+    .client-info span {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .faq {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .faq h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .faq-item h3 {
+      color: #1f2937;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .faq-item p {
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    .contact {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%);
+      color: white;
+    }
+
+    .contact-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+    }
+
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-method {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .contact-method h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .contact-method a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-method a:hover {
+      text-decoration: underline;
+    }
+
+    .workshop-info {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .workshop-info h3 {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+
+    .visit-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .visit-option {
+      text-align: center;
+    }
+
+    .visit-option h4 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .visit-option p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      opacity: 0.9;
+    }
+
+    .btn {
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #c2410c;
+    }
+
+    .btn-primary:hover {
+      background: #f3f4f6;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #c2410c;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-methods {
+        grid-template-columns: 1fr;
+      }
+
+      .visit-details {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</Layout>

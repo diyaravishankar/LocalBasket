@@ -1,0 +1,1279 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+
+const title = "Mumbai Home Chef Services - Professional Catering & Personal Chef";
+const description = "Experience gourmet home dining with Mumbai Home Chef Services. Professional chefs, customized menus, dinner parties, and daily meal prep delivered to your home in Mumbai.";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Mumbai Home Chef Services",
+  "description": description,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "15, Carter Road",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "postalCode": "400050",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "19.0760",
+    "longitude": "72.8777"
+  },
+  "telephone": "+91-98765-54321",
+  "email": "mumbai.homechef@gmail.com",
+  "url": "https://the-local-basket.vercel.app/mumbai/services/home-chef-services",
+  "image": "https://the-local-basket.vercel.app/assets/mumbai-chef-hero.jpg",
+  "priceRange": "₹₹₹",
+  "serviceArea": {
+    "@type": "Place",
+    "name": "Mumbai, Maharashtra, India"
+  },
+  "openingHours": "Mo-Su 08:00-23:00",
+  "paymentAccepted": "Cash, UPI, Card",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "187"
+  }
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/mumbai">Mumbai</a></li>
+        <li><a href="/mumbai/services">Services</a></li>
+        <li aria-current="page">Home Chef Services</li>
+      </ol>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Mumbai Home Chef Services</h1>
+          <p class="hero-subtitle">Professional Chefs • Gourmet Experiences • Your Home</p>
+          <p class="hero-description">
+            Transform your dining experience with our professional home chef services. From intimate dinner parties 
+            to daily meal preparations, our certified chefs bring restaurant-quality cuisine to your doorstep across Mumbai.
+          </p>
+          <div class="hero-features">
+            <span class="feature-tag">👨‍🍳 Professional Chefs</span>
+            <span class="feature-tag">🏠 Home Service</span>
+            <span class="feature-tag">⭐ 4.8/5 Rating</span>
+            <span class="feature-tag">🍽️ Custom Menus</span>
+          </div>
+          <div class="hero-actions">
+            <a href="tel:+919876554321" class="btn btn-primary">Book a Chef</a>
+            <a href="#services" class="btn btn-secondary">View Services</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/assets/mumbai-home-chef.jpg" alt="Professional Home Chef in Mumbai" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="about-content">
+        <h2>About Mumbai Home Chef Services</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Established in 2020, <strong>Mumbai Home Chef Services</strong> has revolutionized the way Mumbai residents 
+              experience <strong>fine dining at home</strong>. Founded by culinary professionals from top Mumbai restaurants, 
+              we bring <strong>gourmet experiences</strong> directly to your dining table.
+            </p>
+            <p>
+              Our team consists of <strong>certified professional chefs</strong> with experience from 5-star hotels, 
+              fine dining establishments, and culinary institutes. Each chef specializes in different cuisines, ensuring 
+              we can cater to diverse palates and dietary requirements across Mumbai's multicultural landscape.
+            </p>
+            <p>
+              Whether it's a <strong>romantic dinner for two</strong>, a <strong>family celebration</strong>, 
+              <strong>corporate entertainment</strong>, or <strong>daily meal preparation</strong>, we customize our services 
+              to match your specific needs, dietary preferences, and budget requirements.
+            </p>
+            <p>
+              We pride ourselves on using only the <strong>freshest ingredients</strong> sourced from premium suppliers, 
+              combined with <strong>impeccable presentation</strong> and <strong>professional service standards</strong> 
+              that rival the best restaurants in Mumbai.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Events Catered</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">25+</span>
+              <span class="stat-label">Professional Chefs</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">4+ Years</span>
+              <span class="stat-label">of Excellence</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Cuisines Mastered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="services-content">
+        <h2>Our Culinary Services</h2>
+        <p class="services-intro">
+          From intimate dinners to grand celebrations, we offer comprehensive culinary solutions tailored to your needs.
+        </p>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Personal Chef Services</h3>
+            <div class="service-details">
+              <p><strong>Daily Meal Prep:</strong> ₹3,000 - ₹6,000 per day</p>
+              <p><strong>Weekly Meal Planning:</strong> ₹18,000 - ₹35,000 per week</p>
+              <p><strong>Monthly Chef Services:</strong> ₹65,000 - ₹1,20,000 per month</p>
+            </div>
+            <div class="service-features">
+              <ul>
+                <li>Personalized menu planning</li>
+                <li>Fresh ingredient sourcing</li>
+                <li>Dietary restriction accommodations</li>
+                <li>Kitchen equipment provided</li>
+                <li>Meal prep and storage guidance</li>
+                <li>Nutritional consultation included</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <h3>Dinner Party Catering</h3>
+            <div class="service-details">
+              <p><strong>Intimate Dinners (2-6 people):</strong> ₹8,000 - ₹15,000</p>
+              <p><strong>Small Parties (8-12 people):</strong> ₹15,000 - ₹30,000</p>
+              <p><strong>Large Gatherings (15-30 people):</strong> ₹35,000 - ₹75,000</p>
+            </div>
+            <div class="service-features">
+              <ul>
+                <li>Multi-course menu design</li>
+                <li>Professional table service</li>
+                <li>Wine pairing recommendations</li>
+                <li>Elegant presentation and plating</li>
+                <li>Complete event coordination</li>
+                <li>Post-event cleanup included</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <h3>Special Occasion Catering</h3>
+            <div class="service-details">
+              <p><strong>Birthday Celebrations:</strong> ₹12,000 - ₹25,000</p>
+              <p><strong>Anniversary Dinners:</strong> ₹10,000 - ₹20,000</p>
+              <p><strong>Festival Feasts:</strong> ₹15,000 - ₹40,000</p>
+            </div>
+            <div class="service-features">
+              <ul>
+                <li>Theme-based menu creation</li>
+                <li>Traditional and fusion options</li>
+                <li>Custom cake and dessert preparation</li>
+                <li>Decorative food presentation</li>
+                <li>Cultural cuisine expertise</li>
+                <li>Photography-ready presentations</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <h3>Corporate & Business Catering</h3>
+            <div class="service-details">
+              <p><strong>Business Lunches:</strong> ₹1,500 - ₹3,000 per person</p>
+              <p><strong>Office Parties:</strong> ₹25,000 - ₹60,000 per event</p>
+              <p><strong>Corporate Events:</strong> ₹50,000 - ₹1,50,000 per event</p>
+            </div>
+            <div class="service-features">
+              <ul>
+                <li>Professional presentation standards</li>
+                <li>Flexible timing and setup</li>
+                <li>Dietary preference surveys</li>
+                <li>Office-friendly menu options</li>
+                <li>Branded presentation options</li>
+                <li>Multiple service locations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chef Profiles -->
+    <section class="chefs">
+      <div class="chefs-content">
+        <h2>Meet Our Master Chefs</h2>
+        <div class="chefs-grid">
+          <div class="chef-card">
+            <div class="chef-info">
+              <h3>Chef Vikram Mehta</h3>
+              <p class="chef-title">Executive Chef & Founder</p>
+              <p class="chef-experience">15+ years • Le Cordon Bleu Certified</p>
+              <div class="chef-specialties">
+                <p><strong>Specializes in:</strong> Modern Indian, French cuisine, molecular gastronomy</p>
+                <p><strong>Experience:</strong> Former head chef at Taj Mahal Palace, Mumbai</p>
+                <p><strong>Signature dishes:</strong> Deconstructed biryani, truffle risotto, chocolate sphere</p>
+                <p><strong>Languages:</strong> English, Hindi, French</p>
+              </div>
+              <div class="chef-achievements">
+                <p><strong>Awards:</strong> Mumbai's Best Chef 2022, Culinary Excellence Award 2021</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="chef-card">
+            <div class="chef-info">
+              <h3>Chef Priya Sharma</h3>
+              <p class="chef-title">Pastry Chef & Dessert Specialist</p>
+              <p class="chef-experience">12+ years • Institute of Culinary Education, NYC</p>
+              <div class="chef-specialties">
+                <p><strong>Specializes in:</strong> Artisanal desserts, wedding cakes, French patisserie</p>
+                <p><strong>Experience:</strong> Former pastry chef at Oberoi Hotels, specialty cake designer</p>
+                <p><strong>Signature creations:</strong> Mango kulfi tart, chocolate ganache sculptures</p>
+                <p><strong>Languages:</strong> English, Hindi, Gujarati</p>
+              </div>
+              <div class="chef-achievements">
+                <p><strong>Recognition:</strong> Featured in Mumbai Food Guide, luxury wedding specialist</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="chef-card">
+            <div class="chef-info">
+              <h3>Chef Arjun Nair</h3>
+              <p class="chef-title">Regional Cuisine Expert</p>
+              <p class="chef-experience">10+ years • Specializes in South Indian & Coastal cuisines</p>
+              <div class="chef-specialties">
+                <p><strong>Specializes in:</strong> Kerala, Tamil, Goan, and Maharashtrian cuisines</p>
+                <p><strong>Experience:</strong> Heritage hotel chef, coastal cuisine research</p>
+                <p><strong>Signature dishes:</strong> Authentic fish curry, traditional thali presentations</p>
+                <p><strong>Languages:</strong> English, Hindi, Malayalam, Tamil</p>
+              </div>
+              <div class="chef-achievements">
+                <p><strong>Expertise:</strong> Traditional spice blending, heritage recipe reconstruction</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cuisine Specialties -->
+    <section class="cuisines">
+      <div class="cuisines-content">
+        <h2>Cuisine Specialties</h2>
+        <div class="cuisines-grid">
+          <div class="cuisine-category">
+            <h3>Indian Regional Cuisines</h3>
+            <div class="cuisine-list">
+              <div class="cuisine-item">
+                <h4>North Indian</h4>
+                <p>Punjabi, Rajasthani, Kashmiri, Mughlai classics with authentic spice blends and traditional cooking techniques.</p>
+              </div>
+              <div class="cuisine-item">
+                <h4>South Indian</h4>
+                <p>Tamil, Kerala, Karnataka, Andhra specialties including traditional filter coffee and authentic coconut-based curries.</p>
+              </div>
+              <div class="cuisine-item">
+                <h4>Western Indian</h4>
+                <p>Gujarati, Maharashtrian, Goan cuisine with emphasis on coastal flavors and street food innovations.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cuisine-category">
+            <h3>International Cuisines</h3>
+            <div class="cuisine-list">
+              <div class="cuisine-item">
+                <h4>European</h4>
+                <p>French, Italian, Mediterranean with focus on fresh ingredients and classical techniques.</p>
+              </div>
+              <div class="cuisine-item">
+                <h4>Asian</h4>
+                <p>Chinese, Thai, Japanese, Korean dishes adapted for Indian palates while maintaining authenticity.</p>
+              </div>
+              <div class="cuisine-item">
+                <h4>Fusion</h4>
+                <p>Indo-Chinese, Continental-Indian fusion creating unique flavor profiles and presentation styles.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cuisine-category">
+            <h3>Dietary Specializations</h3>
+            <div class="cuisine-list">
+              <div class="cuisine-item">
+                <h4>Health-Conscious</h4>
+                <p>Keto, Mediterranean, low-carb, diabetic-friendly meals without compromising on taste.</p>
+              </div>
+              <div class="cuisine-item">
+                <h4>Plant-Based</h4>
+                <p>Vegan, Jain, pure vegetarian with innovative protein alternatives and creative presentations.</p>
+              </div>
+              <div class="cuisine-item">
+                <h4>Specialty Diets</h4>
+                <p>Gluten-free, lactose-free, nut allergies accommodation with full ingredient transparency.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="service-areas">
+      <h2>Service Areas in Mumbai</h2>
+      <div class="areas-grid">
+        <div class="area-group">
+          <h3>South Mumbai</h3>
+          <ul>
+            <li>Bandra</li>
+            <li>Juhu</li>
+            <li>Khar</li>
+            <li>Santacruz</li>
+            <li>Vile Parle</li>
+            <li>Andheri</li>
+          </ul>
+        </div>
+        <div class="area-group">
+          <h3>Central Mumbai</h3>
+          <ul>
+            <li>Dadar</li>
+            <li>Parel</li>
+            <li>Worli</li>
+            <li>Matunga</li>
+            <li>Sion</li>
+            <li>King Circle</li>
+          </ul>
+        </div>
+        <div class="area-group">
+          <h3>Western Suburbs</h3>
+          <ul>
+            <li>Goregaon</li>
+            <li>Malad</li>
+            <li>Kandivali</li>
+            <li>Borivali</li>
+            <li>Dahisar</li>
+            <li>Mira Road</li>
+          </ul>
+        </div>
+        <div class="area-group">
+          <h3>Eastern Suburbs</h3>
+          <ul>
+            <li>Powai</li>
+            <li>Vikhroli</li>
+            <li>Ghatkopar</li>
+            <li>Mulund</li>
+            <li>Bhandup</li>
+            <li>Thane</li>
+          </ul>
+        </div>
+      </div>
+      <p class="service-note">
+        <strong>Travel Charges:</strong> Free within 10km radius. ₹300-800 for distant locations depending on distance and traffic conditions.
+      </p>
+    </section>
+
+    <!-- Sample Menus -->
+    <section class="sample-menus">
+      <div class="sample-menus-content">
+        <h2>Sample Menu Options</h2>
+        <div class="menus-grid">
+          <div class="menu-card">
+            <h3>Romantic Dinner for Two</h3>
+            <div class="menu-price">₹8,500 per couple</div>
+            <div class="menu-details">
+              <h4>Welcome Drink</h4>
+              <p>Pomegranate bellini or Virgin mojito</p>
+              
+              <h4>Appetizer</h4>
+              <p>Truffle mushroom bruschetta with herb oil drizzle</p>
+              
+              <h4>Main Course</h4>
+              <p>Pan-seared salmon with quinoa pilaf OR Stuffed chicken breast with wild mushroom sauce</p>
+              
+              <h4>Dessert</h4>
+              <p>Chocolate lava cake with vanilla bean ice cream</p>
+              
+              <h4>Inclusions</h4>
+              <ul>
+                <li>Table setup and decoration</li>
+                <li>Professional service</li>
+                <li>Background music setup</li>
+                <li>Candlelight ambiance</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <h3>Traditional Indian Feast</h3>
+            <div class="menu-price">₹2,500 per person (min 4 people)</div>
+            <div class="menu-details">
+              <h4>Welcome Drink</h4>
+              <p>Masala chai or fresh lime water</p>
+              
+              <h4>Appetizers</h4>
+              <p>Samosa chaat, paneer tikka, and seasonal pakoras</p>
+              
+              <h4>Main Course</h4>
+              <p>Dal makhani, paneer butter masala, chicken curry, lamb rogan josh, jeera rice, naan assortment</p>
+              
+              <h4>Dessert</h4>
+              <p>Gulab jamun and kulfi with rose petals</p>
+              
+              <h4>Inclusions</h4>
+              <ul>
+                <li>Traditional brass serving</li>
+                <li>Banana leaf presentations</li>
+                <li>Authentic spice preparations</li>
+                <li>Regional variations available</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <h3>Corporate Lunch</h3>
+            <div class="menu-price">₹1,800 per person</div>
+            <div class="menu-details">
+              <h4>Welcome Beverage</h4>
+              <p>Fresh fruit juice or herbal tea selection</p>
+              
+              <h4>Starter</h4>
+              <p>Garden salad with choice of dressing</p>
+              
+              <h4>Main Course Options</h4>
+              <p>Grilled chicken with herbs OR Vegetable biryani with raita OR Continental pasta selection</p>
+              
+              <h4>Dessert</h4>
+              <p>Seasonal fruit tart or Indian sweet selection</p>
+              
+              <h4>Business Features</h4>
+              <ul>
+                <li>Quick service format</li>
+                <li>Minimal mess cleanup</li>
+                <li>Professional presentation</li>
+                <li>Dietary surveys included</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <h2>Client Testimonials</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"Chef Vikram created an absolutely magical anniversary dinner for us. The presentation was restaurant-level, and the taste was exceptional. Worth every penny!"</p>
+          <div class="client-info">
+            <strong>Rahul & Meera Joshi</strong>
+            <span>Bandra West • Anniversary Dinner</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"We hired them for our son's birthday party. 30 guests, and every single person asked for the chef's contact. The kids loved the creative presentations!"</p>
+          <div class="client-info">
+            <strong>Anjali Patel</strong>
+            <span>Juhu • Birthday Celebration</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p>"As a working mother, having Chef Priya prep our weekly meals has been life-changing. Healthy, delicious, and the kids actually eat vegetables now!"</p>
+          <div class="client-info">
+            <strong>Kavya Sharma</strong>
+            <span>Powai • Weekly Meal Prep</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3>How far in advance should I book a chef?</h3>
+          <p>We recommend booking at least 48-72 hours in advance for dinner parties and special events. For daily meal prep services, a week's notice is preferred. However, we do accommodate last-minute requests based on chef availability.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Do you provide all cooking equipment and ingredients?</h3>
+          <p>Yes! Our chefs bring all necessary cooking equipment, utensils, and professional-grade ingredients. We only use your basic kitchen facilities like stove, oven, and sink. All ingredients are sourced fresh on the day of service.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Can you accommodate dietary restrictions and allergies?</h3>
+          <p>Absolutely! We specialize in customizing menus for various dietary needs including vegan, gluten-free, diabetic, heart-healthy, and allergy-specific requirements. We conduct detailed consultations to ensure complete safety and satisfaction.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>What is included in the service besides cooking?</h3>
+          <p>Our service includes menu planning, ingredient shopping, cooking, professional plating and presentation, table service (for dinner parties), and complete kitchen cleanup. We leave your kitchen cleaner than we found it!</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Do you offer cooking classes or demonstrations?</h3>
+          <p>Yes! We offer interactive cooking experiences where our chefs teach you signature dishes, knife skills, plating techniques, and spice blending. Perfect for date nights, family bonding, or learning new cuisines. Rates start from ₹5,000 for 2-hour sessions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <div class="contact-content">
+        <h2>Book Your Personal Chef Experience</h2>
+        <p>Ready to elevate your dining experience? Let our professional chefs create memorable culinary moments in your home.</p>
+        
+        <div class="contact-methods">
+          <div class="contact-method">
+            <h3>📞 Phone & WhatsApp</h3>
+            <p><a href="tel:+919876554321">+91-98765-54321</a></p>
+            <p>Available 8:00 AM - 11:00 PM daily</p>
+          </div>
+          
+          <div class="contact-method">
+            <h3>📧 Email</h3>
+            <p><a href="mailto:mumbai.homechef@gmail.com">mumbai.homechef@gmail.com</a></p>
+            <p>Response within 2 hours</p>
+          </div>
+          
+          <div class="contact-method">
+            <h3>📍 Office Address</h3>
+            <p>15, Carter Road<br>Mumbai - 400050<br>Maharashtra, India</p>
+          </div>
+        </div>
+
+        <div class="booking-process">
+          <h3>How It Works</h3>
+          <div class="process-steps">
+            <div class="step">
+              <span class="step-number">1</span>
+              <p>Menu consultation call</p>
+            </div>
+            <div class="step">
+              <span class="step-number">2</span>
+              <p>Chef assignment & confirmation</p>
+            </div>
+            <div class="step">
+              <span class="step-number">3</span>
+              <p>Fresh ingredient sourcing</p>
+            </div>
+            <div class="step">
+              <span class="step-number">4</span>
+              <p>Exceptional dining experience!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .breadcrumb {
+      padding: 1rem 0;
+    }
+
+    .breadcrumb ol {
+      list-style: none;
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+      padding: 0;
+    }
+
+    .breadcrumb li:not(:last-child):after {
+      content: " / ";
+      margin-left: 0.5rem;
+    }
+
+    .breadcrumb a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      color: white;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+
+    .hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-tag {
+      background: rgba(255,255,255,0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    .about {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .about-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .about h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+    }
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+      color: #4b5563;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 2rem 1.5rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #dc2626;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .services {
+      padding: 4rem 0;
+    }
+
+    .services-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .services h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+
+    .services-intro {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #4b5563;
+      margin-bottom: 3rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 2rem;
+    }
+
+    .service-card h3 {
+      color: #dc2626;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .service-details p {
+      color: #374151;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .service-details {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .service-features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-features li {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .service-features li:before {
+      content: "✓";
+      color: #dc2626;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    .chefs {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .chefs-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .chefs h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .chefs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .chef-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .chef-card h3 {
+      color: #1f2937;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .chef-title {
+      color: #dc2626;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .chef-experience {
+      color: #6b7280;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .chef-specialties p,
+    .chef-achievements p {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .cuisines {
+      padding: 4rem 0;
+    }
+
+    .cuisines-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .cuisines h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .cuisines-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .cuisine-category {
+      background: #f9fafb;
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .cuisine-category h3 {
+      color: #dc2626;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .cuisine-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .cuisine-item h4 {
+      color: #1f2937;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cuisine-item p {
+      color: #4b5563;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .service-areas {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .service-areas h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .area-group {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .area-group h3 {
+      color: #dc2626;
+      margin-bottom: 1rem;
+    }
+
+    .area-group ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .area-group li {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-note {
+      text-align: center;
+      color: #4b5563;
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+
+    .sample-menus {
+      padding: 4rem 0;
+    }
+
+    .sample-menus-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .sample-menus h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .menus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .menu-card {
+      background: white;
+      border: 2px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 2rem;
+    }
+
+    .menu-card h3 {
+      color: #1f2937;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .menu-price {
+      background: #dc2626;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 700;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .menu-details h4 {
+      color: #dc2626;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+
+    .menu-details p {
+      color: #4b5563;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .menu-details ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu-details li {
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .menu-details li:before {
+      content: "•";
+      color: #dc2626;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    .testimonials {
+      padding: 4rem 0;
+      background: #f9fafb;
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .rating {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-card p {
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .client-info strong {
+      color: #1f2937;
+    }
+
+    .client-info span {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .faq {
+      padding: 4rem 0;
+    }
+
+    .faq h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1f2937;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .faq-item h3 {
+      color: #1f2937;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .faq-item p {
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    .contact {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      color: white;
+    }
+
+    .contact-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+    }
+
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-method {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .contact-method h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .contact-method a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-method a:hover {
+      text-decoration: underline;
+    }
+
+    .booking-process {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .booking-process h3 {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: white;
+      color: #dc2626;
+      border-radius: 50%;
+      line-height: 40px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #dc2626;
+    }
+
+    .btn-primary:hover {
+      background: #f3f4f6;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #dc2626;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-methods {
+        grid-template-columns: 1fr;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</Layout>

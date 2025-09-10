@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://the-local-basket.vercel.app/</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Main Pages -->
+  <url>
+    <loc>https://the-local-basket.vercel.app/directory</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/blog</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/submit-business</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/about</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/seo-summary</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://the-local-basket.vercel.app/blog/home-bakeries-bangalore</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/blog/authentic-homemade-food-guide</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/blog/priya-kitchen-spotlight</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Hyperlocal Neighborhood Pages -->
+  <url>
+    <loc>https://the-local-basket.vercel.app/bangalore/services/koramangala-home-tutors</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/mumbai/crafts/bandra-handmade-crafts</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Original Business Pages -->
+  <url>
+    <loc>https://the-local-basket.vercel.app/bangalore/food/priyas-kitchen</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/chennai/crafts/artisan-crafts-maya</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/mumbai/services/home-tutor-excellence</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/delhi/food/bakers-delight-home</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/hyderabad/crafts/handwoven-heritage</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/pune/services/beauty-wellness-home</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- New Business Pages -->
+  <url>
+    <loc>https://the-local-basket.vercel.app/chennai/food/anitas-tiffin-service</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/delhi/crafts/delhi-handloom-weaving</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/pune/services/fitness-wellness-hub</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/mumbai/services/home-chef-services</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/kolkata/food/traditional-sweets-catering</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/jaipur/crafts/heritage-jewelry-workshop</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/lucknow/crafts/chikan-embroidery-atelier</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Legacy Blog Posts -->
+  <url>
+    <loc>https://the-local-basket.vercel.app/blog/top-10-homemade-pickles-chennai-2025</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/blog/start-home-bakery-business-india-2025</loc>
+    <lastmod>2025-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/blog/best-handmade-craft-businesses-bangalore-2025</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/blog/quality-home-tutoring-services-mumbai-2025</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/blog/legal-requirements-home-business-india-2025</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/blog/marketing-home-business-social-media-2025</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category Pages -->
+  <url>
+    <loc>https://the-local-basket.vercel.app/directory?category=food</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/directory?category=crafts</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/directory?category=services</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- City Pages -->
+  <url>
+    <loc>https://the-local-basket.vercel.app/directory?city=bangalore</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/directory?city=chennai</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/directory?city=mumbai</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/directory?city=delhi</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/directory?city=hyderabad</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/directory?city=pune</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/directory?city=kolkata</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/directory?city=jaipur</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://the-local-basket.vercel.app/directory?city=lucknow</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
