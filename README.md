@@ -397,7 +397,6 @@ npm run dev
 - **Social Media**: @localbasket (all platforms)
 
 ### **Developer Information**
-- **Project Owner**: diyaravishankar
 - **Repository**: https://github.com/diyaravishankar/LocalBasket
 - **Assignment**: Digital Marketing - SEO Implementation
 - **Last Updated**: September 2025

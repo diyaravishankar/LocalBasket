@@ -4,15 +4,15 @@ import Navigation from '../../components/Navigation.astro';
 import Footer from '../../components/Footer.astro';
 
 const cityData = {
-	name: 'Bangalore',
-	state: 'Karnataka',
-	population: '12.3 million',
-	knownFor: 'IT Capital of India, Garden City',
-	businessCount: 125,
+	name: 'Chennai',
+	state: 'Tamil Nadu',
+	population: '11.3 million',
+	knownFor: 'Cultural Capital of South India, Detroit of India',
+	businessCount: 95,
 	categories: [
-		{ name: 'Food & Beverages', count: 45, slug: 'food' },
-		{ name: 'Handmade Crafts', count: 35, slug: 'crafts' },
-		{ name: 'Home Services', count: 45, slug: 'services' }
+		{ name: 'Food & Beverages', count: 30, slug: 'food' },
+		{ name: 'Handmade Crafts', count: 45, slug: 'crafts' },
+		{ name: 'Home Services', count: 20, slug: 'services' }
 	]
 };
 
@@ -32,42 +32,12 @@ const structuredData = {
 			"name": cat.name,
 			"url": `https://localbasket.com/${cityData.name.toLowerCase()}/${cat.slug}`
 		}))
-	},
-	"breadcrumb": {
-		"@type": "BreadcrumbList",
-		"itemListElement": [
-			{
-				"@type": "ListItem",
-				"position": 1,
-				"name": "Home",
-				"item": "https://localbasket.com"
-			},
-			{
-				"@type": "ListItem",
-				"position": 2,
-				"name": cityData.name,
-				"item": `https://localbasket.com/${cityData.name.toLowerCase()}`
-			}
-		]
 	}
 };
 
 const breadcrumbs = [
 	{ name: "Home", url: "/" },
 	{ name: cityData.name, url: `/${cityData.name.toLowerCase()}` }
-];
-
-const featuredBusinesses = [
-	{
-		name: "Priya's Kitchen",
-		category: "Food & Beverages",
-		description: "Authentic South Indian delicacies made with traditional family recipes",
-		rating: 4.8,
-		reviews: 127,
-		image: "https://images.pexels.com/photos/4109998/pexels-photo-4109998.jpeg?auto=compress&cs=tinysrgb&w=400",
-		url: "/bangalore/food/priyas-kitchen"
-	}
-	// Add more featured businesses
 ];
 ---
 
@@ -77,7 +47,7 @@ const featuredBusinesses = [
 	keywords={`home businesses ${cityData.name}, local food vendors ${cityData.name}, handmade crafts ${cityData.name}, home services ${cityData.name}, verified businesses ${cityData.state}, ${cityData.name} entrepreneurs, local marketplace ${cityData.name}`}
 	structuredData={structuredData}
 	breadcrumbs={breadcrumbs}
-	canonicalUrl="/bangalore"
+	canonicalUrl="/chennai"
 >
 	<Navigation />
 	
@@ -113,11 +83,11 @@ const featuredBusinesses = [
 							<p>Categories</p>
 						</div>
 						<div class="stat-item">
-							<h3>4.8⭐</h3>
+							<h3>4.7⭐</h3>
 							<p>Average Rating</p>
 						</div>
 						<div class="stat-item">
-							<h3>1000+</h3>
+							<h3>800+</h3>
 							<p>Happy Customers</p>
 						</div>
 					</div>
@@ -145,36 +115,13 @@ const featuredBusinesses = [
 			</div>
 		</section>
 
-		<section class="featured-businesses">
-			<div class="container">
-				<h2>Featured Businesses in {cityData.name}</h2>
-				<div class="businesses-grid">
-					{featuredBusinesses.map((business) => (
-						<div class="business-card">
-							<img src={business.image} alt={business.name} loading="lazy" />
-							<div class="business-info">
-								<h3>{business.name}</h3>
-								<p class="category">{business.category}</p>
-								<p class="description">{business.description}</p>
-								<div class="rating">
-									<span class="stars">⭐⭐⭐⭐⭐</span>
-									<span>{business.rating}/5 ({business.reviews} reviews)</span>
-								</div>
-								<a href={business.url} class="btn btn-outline">View Details</a>
-							</div>
-						</div>
-					))}
-				</div>
-			</div>
-		</section>
-
 		<section class="city-info">
 			<div class="container">
 				<h2>Why Choose Home Businesses in {cityData.name}?</h2>
 				<div class="info-grid">
 					<div class="info-card">
-						<h3>🏠 Authentic & Personal</h3>
-						<p>Home businesses in {cityData.name} offer authentic, personalized products and services made with care and attention to detail.</p>
+						<h3>🎭 Cultural Authenticity</h3>
+						<p>Home businesses in {cityData.name} offer traditional Tamil Nadu culture through authentic products and services with deep cultural roots.</p>
 					</div>
 					<div class="info-card">
 						<h3>✅ Verified & Trusted</h3>
@@ -182,11 +129,11 @@ const featuredBusinesses = [
 					</div>
 					<div class="info-card">
 						<h3>🤝 Support Local Economy</h3>
-						<p>By choosing local home businesses, you're directly supporting {cityData.name}'s entrepreneurial community and local economy.</p>
+						<p>By choosing local home businesses, you're directly supporting {cityData.name}'s entrepreneurial community and cultural preservation.</p>
 					</div>
 					<div class="info-card">
-						<h3>🚀 Fast & Convenient</h3>
-						<p>Quick delivery and personalized service within {cityData.name} neighborhoods for your convenience.</p>
+						<h3>🚀 Traditional Excellence</h3>
+						<p>Experience the best of {cityData.name}'s traditional craftsmanship and authentic flavors from skilled home entrepreneurs.</p>
 					</div>
 				</div>
 			</div>
@@ -197,17 +144,17 @@ const featuredBusinesses = [
 				<h2>About {cityData.name}'s Home Business Community</h2>
 				<div class="content-grid">
 					<div class="content-text">
-						<p>{cityData.name}, with a population of {cityData.population}, is home to a thriving community of home-based entrepreneurs. Known as the {cityData.knownFor}, this vibrant city offers diverse opportunities for home businesses to flourish.</p>
+						<p>{cityData.name}, with a population of {cityData.population}, is renowned as the {cityData.knownFor}. This vibrant metropolitan city is home to a thriving community of home-based entrepreneurs who preserve and promote traditional Tamil culture through their businesses.</p>
 						
-						<p>LocalBasket connects you with verified home businesses across {cityData.name}, from traditional food vendors in Koramangala to handcraft artisans in Indiranagar. Our platform ensures quality and authenticity while supporting the local economy.</p>
+						<p>LocalBasket connects you with verified home businesses across {cityData.name}, from traditional food artisans in T. Nagar to skilled craft makers in Mylapore. Our platform ensures authenticity while supporting the local cultural economy.</p>
 						
 						<h3>Popular Areas in {cityData.name} for Home Businesses:</h3>
 						<ul>
-							<li>Koramangala - Known for authentic South Indian food businesses</li>
-							<li>Indiranagar - Hub for handmade crafts and artisan products</li>
-							<li>Whitefield - Growing community of home service providers</li>
-							<li>Jayanagar - Traditional businesses with generational recipes</li>
-							<li>HSR Layout - Modern home businesses catering to tech professionals</li>
+							<li>T. Nagar - Known for traditional South Indian sweets and snacks</li>
+							<li>Mylapore - Hub for handmade temple crafts and religious items</li>
+							<li>Adyar - Growing community of modern home service providers</li>
+							<li>Velachery - Traditional businesses with authentic Tamil recipes</li>
+							<li>Anna Nagar - Contemporary home businesses serving IT professionals</li>
 						</ul>
 					</div>
 					
@@ -293,14 +240,14 @@ const featuredBusinesses = [
 	margin-bottom: 0.5rem;
 }
 
-.categories-grid, .businesses-grid, .info-grid {
+.categories-grid, .info-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 2rem;
 	margin-top: 2rem;
 }
 
-.category-card, .business-card, .info-card {
+.category-card, .info-card {
 	background: white;
 	padding: 2rem;
 	border-radius: 12px;
@@ -359,22 +306,6 @@ const featuredBusinesses = [
 	border-bottom: 1px solid var(--neutral-300);
 }
 
-.business-card img {
-	width: 100%;
-	height: 200px;
-	object-fit: cover;
-	border-radius: 8px;
-	margin-bottom: 1rem;
-}
-
-.rating {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-	margin: 1rem 0;
-	font-size: 0.9rem;
-}
-
 section {
 	padding: 4rem 0;
 }
@@ -411,16 +342,6 @@ h2 {
 	background: var(--secondary-orange);
 }
 
-.btn-outline {
-	border: 2px solid var(--primary-orange);
-	color: var(--primary-orange);
-}
-
-.btn-outline:hover {
-	background: var(--primary-orange);
-	color: white;
-}
-
 @media (max-width: 768px) {
 	.hero-content h1 {
 		font-size: 2rem;
@@ -434,7 +355,7 @@ h2 {
 		grid-template-columns: 1fr;
 	}
 	
-	.categories-grid, .businesses-grid, .info-grid {
+	.categories-grid, .info-grid {
 		grid-template-columns: 1fr;
 	}
 }

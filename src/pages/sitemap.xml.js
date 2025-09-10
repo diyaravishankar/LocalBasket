@@ -1,5 +1,5 @@
 export async function GET() {
-  const baseUrl = 'https://localbasket.com';
+  const baseUrl = 'https://the-local-basket.vercel.app';
 
   // Static pages
   const staticPages = [

@@ -2,9 +2,9 @@ User-agent: *
 Allow: /
 
 # Enhanced sitemap locations
-Sitemap: https://localbasket.com/sitemap.xml
-Sitemap: https://localbasket.com/sitemap-images.xml
-Sitemap: https://localbasket.com/sitemap-news.xml
+Sitemap: https://the-local-basket.vercel.app/sitemap.xml
+Sitemap: https://the-local-basket.vercel.app/sitemap-images.xml
+Sitemap: https://the-local-basket.vercel.app/sitemap-news.xml
 
 # Optimized crawl delays for better performance
 Crawl-delay: 1
@@ -58,4 +58,4 @@ Allow: /*.svg$
 Allow: /*.webp$
 
 # Host directive for better SEO
-Host: https://localbasket.com
+Host: https://the-local-basket.vercel.app

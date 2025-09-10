@@ -15,6 +15,7 @@ export interface Props {
 		name: string;
 		url: string;
 	}>;
+	canonicalUrl?: string; // Allow explicit canonical URL override
 }
 
 const { 
@@ -24,11 +25,24 @@ const {
 	ogImage, 
 	structuredData, 
 	articleData,
-	breadcrumbs 
+	breadcrumbs,
+	canonicalUrl
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const currentUrl = canonicalURL.href;
+// Generate canonical URL - use explicit override if provided, otherwise auto-generate
+const canonicalURL = canonicalUrl ? 
+	new URL(canonicalUrl, Astro.site) : 
+	new URL(Astro.url.pathname, Astro.site);
+
+// Ensure canonical URL is clean (no trailing slash except for root, no query parameters)
+const cleanCanonicalURL = new URL(canonicalURL.href);
+cleanCanonicalURL.search = ''; // Remove query parameters
+cleanCanonicalURL.hash = ''; // Remove hash fragments
+if (cleanCanonicalURL.pathname !== '/' && cleanCanonicalURL.pathname.endsWith('/')) {
+	cleanCanonicalURL.pathname = cleanCanonicalURL.pathname.slice(0, -1); // Remove trailing slash
+}
+
+const currentUrl = cleanCanonicalURL.href;
 const defaultOgImage = new URL('/og-image.jpg', Astro.site).href;
 
 // Generate breadcrumb structured data
@@ -56,7 +70,9 @@ const breadcrumbStructuredData = breadcrumbs ? {
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		{keywords && <meta name="keywords" content={keywords} />}
-		<link rel="canonical" href={canonicalURL} />
+		
+		<!-- Canonical URL - Self-referencing canonical tag for SEO -->
+		<link rel="canonical" href={cleanCanonicalURL.href} />
 		
 		<!-- Enhanced Open Graph -->
 		<meta property="og:title" content={title} />
