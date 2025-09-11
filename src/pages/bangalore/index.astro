@@ -22,17 +22,8 @@ const structuredData = {
 	"name": `Home Businesses in ${cityData.name} - LocalBasket`,
 	"description": `Discover verified home-based businesses in ${cityData.name}. Find authentic homemade food, handcrafted items, and professional services.`,
 	"url": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}`,
-	"mainEntity": {
-		"@type": "ItemList",
-		"name": `Home Businesses in ${cityData.name}`,
-		"numberOfItems": cityData.businessCount,
-		"itemListElement": cityData.categories.map((cat, index) => ({
-			"@type": "ListItem",
-			"position": index + 1,
-			"name": cat.name,
-			"url": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}/${cat.slug}`
-		}))
-	},
+	// Remove category index links from structured data as those pages do not exist
+	// "mainEntity": ...
 	"breadcrumb": {
 		"@type": "BreadcrumbList",
 		"itemListElement": [
@@ -129,14 +120,14 @@ const featuredBusinesses = [
 			<div class="container">
 				<h2>Top Rated Home Food Vendors in Bangalore</h2>
 				<div class="food-category-card">
-					<p>Discover authentic homemade delicacies from verified food vendors across Bangalore. From traditional South Indian specialties to modern fusion dishes, find the perfect homemade meal for your taste.</p>
-					<a href="/bangalore/food" class="btn btn-primary">Explore Food Businesses</a>
+					   <p>Discover authentic homemade delicacies from verified food vendors across Bangalore. From traditional South Indian specialties to modern fusion dishes, find the perfect homemade meal for your taste.</p>
+					   <span class="btn btn-primary disabled" aria-disabled="true" style="opacity:0.6;cursor:not-allowed;">Explore Food Businesses</span>
 				</div>
 				
 				<h2>Discover Handmade Crafts from Local Bangalore Artisans</h2>
 				<div class="crafts-category-card">
-					<p>Explore unique handcrafted items made by talented Bangalore artisans. From traditional jewelry to modern home décor, find one-of-a-kind pieces that reflect Bangalore's creative spirit.</p>
-					<a href="/bangalore/crafts" class="btn btn-primary">Explore Craft Businesses</a>
+					   <p>Explore unique handcrafted items made by talented Bangalore artisans. From traditional jewelry to modern home décor, find one-of-a-kind pieces that reflect Bangalore's creative spirit.</p>
+					   <span class="btn btn-primary disabled" aria-disabled="true" style="opacity:0.6;cursor:not-allowed;">Explore Craft Businesses</span>
 				</div>
 				
 				<h2>Popular Home Services in Your Neighborhood</h2>
