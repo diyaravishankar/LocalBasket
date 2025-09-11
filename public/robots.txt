@@ -5,67 +5,10 @@ Allow: /
 Sitemap: https://the-local-basket.vercel.app/sitemap.xml
 
 # Optimized crawl delays for better performance
-Crawl-delay: 1
 
-# Allow important bot access
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 2
-
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-# Block unnecessary bots to save server resources
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-# Block AI training bots (optional for content protection)
-User-agent: GPTBot
-Disallow: /
-
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-# Clean URLs policy
-Allow: /*.css$
-Allow: /*.js$
+# Allow all crawlers access to the entire site
 User-agent: *
 Allow: /
-
-# Block specific SEO and AI bots
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: GPTBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
 
 # Sitemap locations
 Sitemap: https://the-local-basket.vercel.app/sitemap.xml
