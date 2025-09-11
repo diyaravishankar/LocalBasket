@@ -100,6 +100,53 @@ const structuredData = {
 		"name": "Bangalore"
 	}
 };
+
+const faqData = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [
+		{
+			"@type": "Question",
+			"name": "What types of South Indian specialties does Priya's Kitchen offer?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "We specialize in authentic South Indian delicacies including homemade mango pickles, traditional murukku snacks, sambar powder, rasam powder, and coconut chutney powder. All items are made using traditional family recipes passed down through generations."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "Do you deliver homemade food in Bangalore?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Yes, we provide delivery across Bangalore, especially in areas like Koramangala, Indiranagar, and HSR Layout. We ensure fresh, authentic South Indian food reaches your doorstep safely."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "Are your pickles and snacks made with preservatives?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "No, all our products are made without artificial preservatives. We use traditional methods and natural ingredients to ensure authentic taste and longer shelf life naturally."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "What is the price range for Priya's Kitchen products?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Our products range from ₹50 to ₹500, with pickles starting at ₹80, murukku at ₹120, and spice powders at ₹60. We offer bulk discounts for larger orders."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "How can I place an order with Priya's Kitchen?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "You can order by calling +91 98765 43210 or emailing priyas.kitchen@gmail.com. We're available Monday to Saturday from 9:00 AM to 7:00 PM for orders and inquiries."
+			}
+		}
+	]
+};
 ---
 
 <Layout
@@ -109,6 +156,7 @@ const structuredData = {
 	structuredData={structuredData}
 	canonicalUrl="/bangalore/food/priyas-kitchen"
 >
+	<script type="application/ld+json" set:html={JSON.stringify(faqData)} />
 	<Navigation />
 	
 	<main>

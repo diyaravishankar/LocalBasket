@@ -55,6 +55,53 @@ const structuredData = {
 	"servesCuisine": "Bakery Items",
 	"paymentAccepted": "Cash, UPI, Bank Transfer"
 };
+
+const faqData = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [
+		{
+			"@type": "Question",
+			"name": "Do you take custom cake orders for birthdays and weddings?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Yes, we specialize in custom celebration cakes for birthdays, weddings, and special occasions. We offer various flavors, designs, and sizes. Please place orders at least 48 hours in advance for custom cakes."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "What types of bread do you bake fresh daily?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "We bake fresh sourdough bread, whole wheat bread, multigrain loaves, and French baguettes daily. All our breads are made with premium ingredients and traditional baking methods."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "Do you offer delivery services in Delhi?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Yes, we provide delivery services across Delhi, especially in areas like Lajpat Nagar, South Delhi, and surrounding neighborhoods. Delivery charges may apply based on location and order size."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "Are your baked goods made with preservatives?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "No, we use only premium natural ingredients without artificial preservatives. Our products are baked fresh daily to ensure maximum flavor and quality."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "What are your operating hours?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "We're open Tuesday to Sunday from 8:00 AM to 8:00 PM. We're closed on Mondays for preparation and deep cleaning. For large custom orders, please call ahead to confirm availability."
+			}
+		}
+	]
+};
 ---
 
 <Layout
@@ -63,6 +110,7 @@ const structuredData = {
 	keywords="Baker's Delight Delhi, custom cakes Delhi, fresh bread, birthday cakes, sourdough bread, French pastries, wedding cakes"
 	structuredData={structuredData}
 >
+	<script type="application/ld+json" set:html={JSON.stringify(faqData)} />
 	<Navigation />
 	
 	<main>
@@ -184,6 +232,38 @@ const structuredData = {
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="faq-section">
+			<div class="container">
+				<h2>Frequently Asked Questions</h2>
+				<div class="faq-grid">
+					<div class="faq-item">
+						<h3>Do you take custom cake orders for birthdays and weddings?</h3>
+						<p>Yes, we specialize in custom celebration cakes for birthdays, weddings, and special occasions. We offer various flavors, designs, and sizes. Please place orders at least 48 hours in advance for custom cakes.</p>
+					</div>
+					
+					<div class="faq-item">
+						<h3>What types of bread do you bake fresh daily?</h3>
+						<p>We bake fresh sourdough bread, whole wheat bread, multigrain loaves, and French baguettes daily. All our breads are made with premium ingredients and traditional baking methods.</p>
+					</div>
+					
+					<div class="faq-item">
+						<h3>Do you offer delivery services in Delhi?</h3>
+						<p>Yes, we provide delivery services across Delhi, especially in areas like Lajpat Nagar, South Delhi, and surrounding neighborhoods. Delivery charges may apply based on location and order size.</p>
+					</div>
+					
+					<div class="faq-item">
+						<h3>Are your baked goods made with preservatives?</h3>
+						<p>No, we use only premium natural ingredients without artificial preservatives. Our products are baked fresh daily to ensure maximum flavor and quality.</p>
+					</div>
+					
+					<div class="faq-item">
+						<h3>What are your operating hours?</h3>
+						<p>We're open Tuesday to Sunday from 8:00 AM to 8:00 PM. We're closed on Mondays for preparation and deep cleaning. For large custom orders, please call ahead to confirm availability.</p>
 					</div>
 				</div>
 			</div>
@@ -505,6 +585,57 @@ const structuredData = {
 
 		.gallery-grid {
 			grid-template-columns: 1fr;
+		}
+	}
+
+	.faq-section {
+		padding: 4rem 0;
+		background: var(--neutral-50);
+	}
+
+	.faq-section h2 {
+		font-size: 2.5rem;
+		color: var(--neutral-800);
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.faq-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		gap: 2rem;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.faq-item {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: var(--shadow-sm);
+		border-left: 4px solid var(--primary-orange);
+	}
+
+	.faq-item h3 {
+		color: var(--neutral-800);
+		font-size: 1.25rem;
+		margin-bottom: 1rem;
+		font-weight: 600;
+	}
+
+	.faq-item p {
+		color: var(--neutral-600);
+		line-height: 1.6;
+	}
+
+	@media (max-width: 768px) {
+		.faq-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+		
+		.faq-item {
+			padding: 1.5rem;
 		}
 	}
 </style>

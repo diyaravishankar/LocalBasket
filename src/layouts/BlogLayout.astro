@@ -5,12 +5,13 @@ const { title, description, author, date, readTime, category, tags, featuredImag
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
+  "@type": ["BlogPosting", "Article"],
   "headline": title,
   "description": description,
   "author": {
     "@type": "Person",
-    "name": author || "LocalBasket Editorial Team"
+    "name": author || "LocalBasket Editorial Team",
+    "url": "https://the-local-basket.vercel.app/about"
   },
   "datePublished": publishDate || date,
   "dateModified": publishDate || date,
@@ -20,17 +21,55 @@ const structuredData = {
     "url": "https://the-local-basket.vercel.app",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://the-local-basket.vercel.app/favicon.svg"
-    }
+      "url": "https://the-local-basket.vercel.app/favicon.svg",
+      "width": 60,
+      "height": 60
+    },
+    "sameAs": [
+      "https://twitter.com/localbasket",
+      "https://facebook.com/localbasket"
+    ]
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": Astro.url.href
   },
-  "image": featuredImage || "https://the-local-basket.vercel.app/assets/background.svg",
+  "image": {
+    "@type": "ImageObject", 
+    "url": featuredImage || "https://the-local-basket.vercel.app/assets/background.svg",
+    "width": 1200,
+    "height": 630
+  },
   "keywords": tags?.join(", ") || "",
   "articleSection": category || "Local Business",
-  "wordCount": "1200"
+  "wordCount": "1500",
+  "timeRequired": `PT${readTime || '8'}M`,
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Local Business Owners, Food Enthusiasts, Home Business Entrepreneurs"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Home Businesses in India"
+  },
+  "mentions": [
+    {
+      "@type": "Place",
+      "name": "India",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "20.5937",
+        "longitude": "78.9629"
+      }
+    }
+  ],
+  "inLanguage": "en-IN",
+  "isAccessibleForFree": true,
+  "copyrightHolder": {
+    "@type": "Organization", 
+    "name": "LocalBasket"
+  },
+  "copyrightYear": "2025"
 };
 ---
 
