@@ -4,71 +4,82 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 
 const blogPosts = [
+	// Real blog posts with working links
+	{
+		id: 'home-bakeries-bangalore',
+		title: 'The Rise of Home Bakeries in Bangalore: A Sweet Revolution',
+		excerpt: 'Discover how home bakeries are transforming Bangalore\'s food scene with authentic, artisanal baked goods. From traditional recipes to modern treats, explore the local baking renaissance.',
+		image: 'https://images.pexels.com/photos/1070850/pexels-photo-1070850.jpeg?auto=compress&cs=tinysrgb&w=600',
+		date: '2025-09-11',
+		author: 'LocalBasket Editorial Team',
+		category: 'Food Guide',
+		readTime: '8 min read',
+		keywords: 'home bakeries Bangalore, artisanal baking, local businesses, homemade treats',
+		hasPage: true
+	},
+	{
+		id: 'authentic-homemade-food-guide',
+		title: 'The Ultimate Guide to Authentic Homemade Food in India',
+		excerpt: 'Discover the secrets behind authentic homemade food across India. Learn how to identify genuine home cooks, traditional recipes, and regional specialties that define true homemade cuisine.',
+		image: 'https://images.pexels.com/photos/4109998/pexels-photo-4109998.jpeg?auto=compress&cs=tinysrgb&w=600',
+		date: '2025-09-11',
+		author: 'LocalBasket Editorial Team',
+		category: 'Food Guide',
+		readTime: '7 min read',
+		keywords: 'authentic homemade food, traditional recipes, home cooking, Indian cuisine',
+		hasPage: true
+	},
+	{
+		id: 'priya-kitchen-spotlight',
+		title: 'Priya\'s Kitchen: From Family Recipes to Bangalore\'s Favorite Home Food Business',
+		excerpt: 'Meet Priya Sharma, the entrepreneur behind Bangalore\'s beloved Priya\'s Kitchen. Discover her journey from sharing family recipes to building a thriving home food business.',
+		image: 'https://images.pexels.com/photos/4109998/pexels-photo-4109998.jpeg?auto=compress&cs=tinysrgb&w=600',
+		date: '2025-09-11',
+		author: 'LocalBasket Editorial Team',
+		category: 'Success Stories',
+		readTime: '6 min read',
+		keywords: 'Priya Kitchen, home food business, entrepreneur story, Bangalore',
+		hasPage: true
+	}
+];
+
+// Additional informational cards (no links - coming soon content)
+const upcomingPosts = [
 	{
 		id: 'top-10-homemade-pickles-chennai-2025',
 		title: 'Top 10 Homemade Pickles in Chennai You Must Try',
 		excerpt: 'Discover the best homemade pickle makers in Chennai offering authentic South Indian varieties made with traditional recipes. From spicy mango to tangy lime pickles.',
 		image: 'https://images.pexels.com/photos/4394421/pexels-photo-4394421.jpeg?auto=compress&cs=tinysrgb&w=600',
-		date: '2025-01-15',
-		author: 'Priya Sharma',
+		date: 'Coming Soon',
+		author: 'LocalBasket Team',
 		category: 'Food Guide',
 		readTime: '8 min read',
-		keywords: 'homemade pickles Chennai, South Indian pickles, traditional pickle makers, mango pickle Chennai'
+		keywords: 'homemade pickles Chennai, South Indian pickles, traditional pickle makers',
+		hasPage: false
 	},
 	{
 		id: 'start-home-bakery-business-india-2025',
 		title: 'How to Start a Home-Based Bakery Business in India',
 		excerpt: 'Complete step-by-step guide to starting your own profitable home bakery business in India. Learn about licensing, equipment, marketing strategies, and customer acquisition.',
 		image: 'https://images.pexels.com/photos/1070850/pexels-photo-1070850.jpeg?auto=compress&cs=tinysrgb&w=600',
-		date: '2025-01-12',
-		author: 'Amit Kumar',
+		date: 'Coming Soon',
+		author: 'LocalBasket Team',
 		category: 'Business Guide',
 		readTime: '12 min read',
-		keywords: 'home bakery business India, start bakery from home, home food business license, bakery business plan'
-	},
-	{
-		id: 'best-handmade-craft-businesses-bangalore-2025',
-		title: 'Best Handmade Craft Businesses in Bangalore',
-		excerpt: 'Explore unique handmade craft businesses in Bangalore creating beautiful artwork, custom jewelry, and home décor items. Support local artisans and discover one-of-a-kind pieces.',
-		image: 'https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=600',
-		date: '2025-01-10',
-		author: 'Maya Patel',
-		category: 'Craft Guide',
-		readTime: '6 min read',
-		keywords: 'handmade crafts Bangalore, local artisans Bangalore, custom jewelry makers, handmade home decor'
-	},
-	{
-		id: 'quality-home-tutoring-services-mumbai-2025',
-		title: 'Finding Quality Home Tutoring Services in Mumbai',
-		excerpt: 'A comprehensive guide to finding the best home tutoring services in Mumbai for your child\'s academic success. Tips for choosing qualified tutors and ensuring quality education.',
-		image: 'https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=600',
-		date: '2025-01-08',
-		author: 'Rohit Mehta',
-		category: 'Service Guide',
-		readTime: '7 min read',
-		keywords: 'home tutoring Mumbai, private tutors Mumbai, home tuition services, quality education at home'
+		keywords: 'home bakery business India, start bakery from home, business license',
+		hasPage: false
 	},
 	{
 		id: 'legal-requirements-home-business-india-2025',
 		title: 'Legal Requirements for Starting a Home Business in India',
-		excerpt: 'Understanding the complete legal framework, required licenses, and regulations you need to know before starting your home business in India. Stay compliant and avoid legal issues.',
+		excerpt: 'Understanding the complete legal framework, required licenses, and regulations you need to know before starting your home business in India.',
 		image: 'https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=600',
-		date: '2025-01-05',
-		author: 'Anjali Singh',
+		date: 'Coming Soon',
+		author: 'LocalBasket Team',
 		category: 'Legal Guide',
 		readTime: '10 min read',
-		keywords: 'home business legal requirements India, business license from home, home business registration, legal compliance'
-	},
-	{
-		id: 'marketing-home-business-social-media-2025',
-		title: 'Marketing Your Home Business on Social Media',
-		excerpt: 'Effective social media marketing strategies for home businesses to reach local customers, build brand awareness, and increase sales. Learn platform-specific tactics and content ideas.',
-		image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=600',
-		date: '2025-01-03',
-		author: 'Karan Joshi',
-		category: 'Marketing Guide',
-		readTime: '9 min read',
-		keywords: 'home business social media marketing, local business marketing, Instagram for home business, Facebook marketing tips'
+		keywords: 'home business legal requirements India, business license, legal compliance',
+		hasPage: false
 	}
 ];
 
@@ -166,6 +177,7 @@ const structuredData = {
 						<div class="blog-posts">
 							<h2>📚 Latest Expert Guides</h2>
 							<div class="posts-grid">
+								<!-- Published Posts with Links -->
 								{blogPosts.slice(1).map(post => (
 									<article class="blog-post">
 										<div class="post-image">
@@ -177,6 +189,28 @@ const structuredData = {
 												<span class="date">{new Date(post.date).toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
 											</div>
 											<h3><a href={`/blog/${post.id}`}>{post.title}</a></h3>
+											<p>{post.excerpt}</p>
+											<div class="post-footer">
+												<span class="author">By {post.author}</span>
+												<span class="read-time">{post.readTime}</span>
+											</div>
+										</div>
+									</article>
+								))}
+
+								<!-- Coming Soon Posts (No Links) -->
+								{upcomingPosts.map(post => (
+									<article class="blog-post coming-soon">
+										<div class="coming-soon-badge">Coming Soon</div>
+										<div class="post-image">
+											<img src={post.image} alt={post.title} loading="lazy" />
+										</div>
+										<div class="post-content">
+											<div class="post-meta">
+												<span class="category">{post.category}</span>
+												<span class="date">{post.date}</span>
+											</div>
+											<h3>{post.title}</h3>
 											<p>{post.excerpt}</p>
 											<div class="post-footer">
 												<span class="author">By {post.author}</span>
@@ -390,11 +424,52 @@ const structuredData = {
 		box-shadow: var(--shadow-sm);
 		overflow: hidden;
 		transition: all 0.3s ease;
+		position: relative;
 	}
 
 	.blog-post:hover {
 		transform: translateY(-4px);
 		box-shadow: var(--shadow-md);
+	}
+
+	.blog-post.coming-soon {
+		opacity: 0.8;
+		background: #fafafa;
+	}
+
+	.blog-post.coming-soon:hover {
+		transform: none;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.coming-soon-badge {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		background: #fbbf24;
+		color: white;
+		padding: 0.25rem 0.75rem;
+		border-radius: 12px;
+		font-size: 0.75rem;
+		font-weight: 600;
+		z-index: 10;
+	}
+
+	.blog-post.coming-soon .post-image img {
+		filter: grayscale(30%);
+	}
+
+	.blog-post.coming-soon h3 {
+		color: var(--neutral-600);
+	}
+
+	.blog-post.coming-soon h3:hover {
+		color: var(--neutral-600);
+	}
+
+	.blog-post.coming-soon .post-content p,
+	.blog-post.coming-soon .post-footer {
+		color: var(--neutral-500);
 	}
 
 	.post-image {
