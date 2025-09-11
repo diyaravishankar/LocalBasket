@@ -1,0 +1,38 @@
+# LocalBasket - Directory for Home-Based Businesses in India
+
+LocalBasket is a comprehensive directory platform showcasing authentic home-based businesses across major Indian cities including Bangalore, Mumbai, Chennai, Delhi, Pune, Kolkata, Hyderabad, Jaipur, and Lucknow.
+
+## About LocalBasket
+
+We connect customers with talented home entrepreneurs who offer:
+- **Homemade Food & Beverages**: Fresh, authentic regional cuisine, tiffin services, and artisanal baked goods
+- **Handmade Crafts**: Traditional jewelry, embroidery, handloom textiles, and artisan creations
+- **Home Services**: Tutoring, beauty services, fitness training, and wellness consultations
+
+## Our Mission
+
+Supporting India's home-based economy by providing a trusted platform for discovering and connecting with local entrepreneurs who preserve traditional crafts, authentic flavors, and personalized services.
+
+## Website Features
+
+- City-wise business listings with detailed profiles
+- Service area coverage maps
+- Authentic customer reviews and ratings
+- Direct contact information for seamless connections
+- SEO-optimized content for easy discovery
+
+## Content Guidelines
+
+All business profiles include:
+- Verified contact details and service areas
+- High-quality images of products/services
+- Detailed descriptions with pricing information
+- Customer testimonials and business credentials
+- Service availability and booking instructions
+
+## Contact
+
+For business listings or partnership inquiries, visit our website at: https://the-local-basket.vercel.app/submit-business
+
+---
+Generated for Large Language Model consumption and understanding of LocalBasket platform.
