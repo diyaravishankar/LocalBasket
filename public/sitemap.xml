@@ -68,14 +68,14 @@
   
   <!-- Hyperlocal Neighborhood Pages -->
   <url>
-    <loc>https://the-local-basket.vercel.app/bangalore/services/koramangala-home-tutors</loc>
+    <loc>https://the-local-basket.vercel.app/bangalore/areas/koramangala-home-tutors</loc>
     <lastmod>2025-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://the-local-basket.vercel.app/mumbai/crafts/bandra-handmade-crafts</loc>
+    <loc>https://the-local-basket.vercel.app/mumbai/areas/bandra-handmade-crafts</loc>
     <lastmod>2025-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -174,49 +174,6 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- Legacy Blog Posts -->
-  <url>
-    <loc>https://the-local-basket.vercel.app/blog/top-10-homemade-pickles-chennai-2025</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://the-local-basket.vercel.app/blog/start-home-bakery-business-india-2025</loc>
-    <lastmod>2025-01-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://the-local-basket.vercel.app/blog/best-handmade-craft-businesses-bangalore-2025</loc>
-    <lastmod>2025-01-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://the-local-basket.vercel.app/blog/quality-home-tutoring-services-mumbai-2025</loc>
-    <lastmod>2025-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://the-local-basket.vercel.app/blog/legal-requirements-home-business-india-2025</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://the-local-basket.vercel.app/blog/marketing-home-business-social-media-2025</loc>
-    <lastmod>2025-01-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
   <!-- Category Pages -->
   <url>
     <loc>https://the-local-basket.vercel.app/directory?category=food</loc>
@@ -241,63 +198,14 @@
   
   <!-- City Pages -->
   <url>
-    <loc>https://the-local-basket.vercel.app/directory?city=bangalore</loc>
+    <loc>https://the-local-basket.vercel.app/bangalore</loc>
     <lastmod>2025-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://the-local-basket.vercel.app/directory?city=chennai</loc>
-    <lastmod>2025-09-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://the-local-basket.vercel.app/directory?city=mumbai</loc>
-    <lastmod>2025-09-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://the-local-basket.vercel.app/directory?city=delhi</loc>
-    <lastmod>2025-09-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://the-local-basket.vercel.app/directory?city=hyderabad</loc>
-    <lastmod>2025-09-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://the-local-basket.vercel.app/directory?city=pune</loc>
-    <lastmod>2025-09-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://the-local-basket.vercel.app/directory?city=kolkata</loc>
-    <lastmod>2025-09-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://the-local-basket.vercel.app/directory?city=jaipur</loc>
-    <lastmod>2025-09-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://the-local-basket.vercel.app/directory?city=lucknow</loc>
+    <loc>https://the-local-basket.vercel.app/chennai</loc>
     <lastmod>2025-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>

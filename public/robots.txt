@@ -50,12 +50,24 @@ Disallow: /
 # Clean URLs policy
 Allow: /*.css$
 Allow: /*.js$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.webp$
+User-agent: *
+Allow: /
 
-# Host directive for better SEO
-Host: https://the-local-basket.vercel.app
+# Block specific SEO and AI bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Sitemap locations
+Sitemap: https://the-local-basket.vercel.app/sitemap.xml
