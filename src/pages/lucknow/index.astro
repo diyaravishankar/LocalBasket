@@ -1,0 +1,471 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const cityData = {
+	name: 'Lucknow',
+	state: 'Uttar Pradesh',
+	population: '3.0 million',
+	knownFor: 'City of Nawabs, Cultural Heritage',
+	businessCount: 35,
+	categories: [
+		{ name: 'Handmade Crafts', count: 20, slug: 'crafts' },
+		{ name: 'Food & Beverages', count: 10, slug: 'food' },
+		{ name: 'Home Services', count: 5, slug: 'services' }
+	]
+};
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	"name": `Home Businesses in ${cityData.name} - LocalBasket`,
+	"description": `Discover verified home-based businesses in ${cityData.name}. Find authentic Chikan embroidery, traditional crafts, and Awadhi cuisine.`,
+	"url": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}`,
+	"breadcrumb": {
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://the-local-basket.vercel.app"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": cityData.name,
+				"item": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}`
+			}
+		]
+	}
+};
+
+const breadcrumbs = [
+	{ name: "Home", url: "/" },
+	{ name: cityData.name, url: `/${cityData.name.toLowerCase()}` }
+];
+
+const featuredBusinesses = [
+	{
+		name: "Chikan Embroidery Atelier",
+		category: "Handmade Crafts",
+		description: "Authentic Lucknowi Chikan embroidery on traditional and contemporary garments",
+		rating: 4.9,
+		reviews: 73,
+		image: "https://images.pexels.com/photos/7147663/pexels-photo-7147663.jpeg?auto=compress&cs=tinysrgb&w=400",
+		url: "/lucknow/crafts/chikan-embroidery-atelier"
+	}
+];
+---
+
+<Layout
+	title={`Home Businesses in ${cityData.name} - Verified Chikan Embroidery & Traditional Crafts | LocalBasket`}
+	description={`Discover ${cityData.businessCount}+ verified home-based businesses in ${cityData.name}, the ${cityData.knownFor}. Find authentic Chikan embroidery, traditional crafts, and Awadhi cuisine from master artisans. Experience ${cityData.name}'s rich Nawabi heritage.`}
+	keywords={`home businesses ${cityData.name}, Chikan embroidery ${cityData.name}, traditional crafts ${cityData.name}, Awadhi cuisine, handmade textiles ${cityData.name}, verified businesses ${cityData.state}, ${cityData.name} artisans, local marketplace ${cityData.name}, Nawabi culture, heritage crafts ${cityData.name}, Lucknowi embroidery, home based business ${cityData.name}`}
+	structuredData={structuredData}
+	breadcrumbs={breadcrumbs}
+	canonicalUrl="/lucknow"
+>
+	<Navigation />
+	
+	<main>
+		<section class="city-hero">
+			<div class="container">
+				<nav aria-label="Breadcrumb" class="breadcrumb">
+					<ol>
+						{breadcrumbs.map((crumb, index) => (
+							<li>
+								{index < breadcrumbs.length - 1 ? (
+									<a href={crumb.url}>{crumb.name}</a>
+								) : (
+									<span aria-current="page">{crumb.name}</span>
+								)}
+								{index < breadcrumbs.length - 1 && <span class="separator">›</span>}
+							</li>
+						))}
+					</ol>
+				</nav>
+				
+				<div class="hero-content">
+					<h1>Verified Heritage Businesses in Lucknow</h1>
+					<p class="lead">Discover ${cityData.businessCount}+ verified home-based businesses in ${cityData.name}, the ${cityData.knownFor}. Connect with master artisans preserving the legendary Chikan embroidery, traditional crafts, and authentic Awadhi cuisine that embody the refined culture of the Nawabs.</p>
+					
+					<div class="city-stats">
+						<div class="stat-item">
+							<h3>{cityData.businessCount}+</h3>
+							<p>Verified Artisans</p>
+						</div>
+						<div class="stat-item">
+							<h3>{cityData.categories.length}</h3>
+							<p>Categories</p>
+						</div>
+						<div class="stat-item">
+							<h3>4.9⭐</h3>
+							<p>Average Rating</p>
+						</div>
+						<div class="stat-item">
+							<h3>500+</h3>
+							<p>Happy Customers</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="city-categories">
+			<div class="container">
+				<h2>Authentic Chikan Embroidery & Traditional Crafts</h2>
+				<div class="crafts-category-card">
+					<p>Experience the world-renowned art of Chikan embroidery and other traditional crafts that have made Lucknow famous globally. Each piece represents centuries of artistic excellence and cultural heritage passed down through generations of skilled artisans.</p>
+					<div class="featured-craft">
+						<h3>Chikan Embroidery Atelier</h3>
+						<p>Authentic Lucknowi Chikan embroidery on traditional kurtas, sarees, and contemporary garments, crafted using time-honored techniques that create intricate patterns of unmatched beauty.</p>
+						<a href="/lucknow/crafts/chikan-embroidery-atelier" class="btn btn-primary">Explore Collection</a>
+					</div>
+					<div class="craft-specialties">
+						<div class="specialty-item">
+							<h3>Traditional Garments</h3>
+							<p>Classic Chikan work on kurtas, sarees, and formal wear with traditional patterns and motifs.</p>
+						</div>
+						<div class="specialty-item">
+							<h3>Contemporary Designs</h3>
+							<p>Modern interpretations of Chikan embroidery on fusion wear and accessories for today's fashion.</p>
+						</div>
+					</div>
+				</div>
+				
+				<h2>Authentic Awadhi Cuisine & Traditional Food</h2>
+				<div class="food-category-card">
+					<p>Savor the royal flavors of Awadhi cuisine prepared by skilled home chefs who have preserved the cooking techniques and recipes from the kitchens of the Nawabs, offering an authentic taste of Lucknow's culinary heritage.</p>
+					<div class="cuisine-highlights">
+						<div class="cuisine-item">
+							<h3>Royal Biryanis & Kebabs</h3>
+							<p>Authentic Awadhi biryanis, galouti kebabs, and other signature dishes prepared using traditional dum cooking methods.</p>
+						</div>
+						<div class="cuisine-item">
+							<h3>Traditional Sweets</h3>
+							<p>Famous Lucknowi sweets like malai paan, shahi tukda, and kulfi prepared with authentic recipes and premium ingredients.</p>
+						</div>
+					</div>
+				</div>
+				
+				<h2>Cultural Services & Heritage Experiences</h2>
+				<div class="services-overview">
+					<div class="service-area">
+						<h3>Embroidery Workshops</h3>
+						<p>Learn the traditional art of Chikan embroidery from master craftspeople in authentic workshop settings.</p>
+					</div>
+					<div class="service-area">
+						<h3>Cultural Consultations</h3>
+						<p>Expert guidance on Awadhi culture, traditional arts, and heritage practices for enthusiasts and researchers.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="featured-businesses">
+			<div class="container">
+				<h2>Featured Heritage Businesses in Lucknow</h2>
+				<div class="businesses-grid">
+					{featuredBusinesses.map((business) => (
+						<div class="business-card">
+							<img src={business.image} alt={business.name} loading="lazy" />
+							<div class="business-info">
+								<h3>{business.name}</h3>
+								<p class="category">{business.category}</p>
+								<p class="description">{business.description}</p>
+								<div class="rating">
+									<span class="stars">{"⭐".repeat(Math.floor(business.rating))}</span>
+									<span class="rating-score">{business.rating}</span>
+									<span class="reviews">({business.reviews} reviews)</span>
+								</div>
+								<a href={business.url} class="btn btn-outline">View Atelier</a>
+							</div>
+						</div>
+					))}
+				</div>
+				
+				<div class="city-cta">
+					<h3>Experience the Elegant Heritage of Lucknow</h3>
+					<p>Connect with master artisans and discover the timeless beauty of Nawabi culture and craftsmanship.</p>
+					<div class="cta-buttons">
+						<a href="/submit-business" class="btn btn-primary">List Your Craft</a>
+						<a href="/directory" class="btn btn-secondary">Browse All Cities</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.city-hero {
+		background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+		color: #333;
+		padding: 2rem 0 4rem;
+	}
+	
+	.breadcrumb {
+		margin-bottom: 2rem;
+	}
+	
+	.breadcrumb ol {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		gap: 0.5rem;
+		align-items: center;
+	}
+	
+	.breadcrumb a {
+		color: rgba(51, 51, 51, 0.8);
+		text-decoration: none;
+	}
+	
+	.breadcrumb a:hover {
+		color: #333;
+	}
+	
+	.separator {
+		color: rgba(51, 51, 51, 0.6);
+		margin: 0 0.5rem;
+	}
+	
+	.hero-content h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		line-height: 1.2;
+		color: #333;
+	}
+	
+	.lead {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+		opacity: 0.8;
+		line-height: 1.6;
+		color: #333;
+	}
+	
+	.city-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.stat-item {
+		text-align: center;
+		background: rgba(255, 255, 255, 0.3);
+		padding: 1.5rem;
+		border-radius: 10px;
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+	
+	.stat-item h3 {
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+		color: #333;
+	}
+	
+	.city-categories {
+		padding: 4rem 0;
+		background: #f8f9fa;
+	}
+	
+	.crafts-category-card, .food-category-card {
+		background: white;
+		border-radius: 15px;
+		padding: 2rem;
+		margin: 2rem 0;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+	
+	.featured-craft {
+		margin-top: 1.5rem;
+		padding: 1.5rem;
+		background: #f8f9fa;
+		border-radius: 10px;
+		border-left: 4px solid #fed6e3;
+	}
+	
+	.craft-specialties, .cuisine-highlights {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+		margin-top: 1.5rem;
+	}
+	
+	.specialty-item, .cuisine-item {
+		padding: 1.5rem;
+		background: #f8f9fa;
+		border-radius: 10px;
+		border-left: 4px solid #fed6e3;
+	}
+	
+	.services-overview {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.service-area {
+		background: white;
+		padding: 2rem;
+		border-radius: 10px;
+		box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	}
+	
+	.featured-businesses {
+		padding: 4rem 0;
+	}
+	
+	.businesses-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+	
+	.business-card {
+		background: white;
+		border-radius: 15px;
+		overflow: hidden;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+	
+	.business-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.business-card img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+	
+	.business-info {
+		padding: 1.5rem;
+	}
+	
+	.business-info h3 {
+		margin-bottom: 0.5rem;
+		color: #333;
+	}
+	
+	.category {
+		color: #d5649a;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+	
+	.description {
+		color: #666;
+		margin-bottom: 1rem;
+		line-height: 1.5;
+	}
+	
+	.rating {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	
+	.rating-score {
+		font-weight: 600;
+		color: #333;
+	}
+	
+	.reviews {
+		color: #666;
+		font-size: 0.9rem;
+	}
+	
+	.city-cta {
+		text-align: center;
+		background: white;
+		padding: 3rem;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+	
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	
+	.btn {
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		text-align: center;
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+	}
+	
+	.btn-primary {
+		background: #d5649a;
+		color: white;
+		border-color: #d5649a;
+	}
+	
+	.btn-primary:hover {
+		background: #c45689;
+		border-color: #c45689;
+	}
+	
+	.btn-secondary {
+		background: transparent;
+		color: #d5649a;
+		border-color: #d5649a;
+	}
+	
+	.btn-secondary:hover {
+		background: #d5649a;
+		color: white;
+	}
+	
+	.btn-outline {
+		background: transparent;
+		color: #d5649a;
+		border-color: #d5649a;
+	}
+	
+	.btn-outline:hover {
+		background: #d5649a;
+		color: white;
+	}
+	
+	@media (max-width: 768px) {
+		.hero-content h1 {
+			font-size: 2rem;
+		}
+		
+		.city-stats {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		.businesses-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.craft-specialties, .cuisine-highlights {
+			grid-template-columns: 1fr;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>

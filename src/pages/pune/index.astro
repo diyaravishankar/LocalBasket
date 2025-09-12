@@ -1,0 +1,466 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const cityData = {
+	name: 'Pune',
+	state: 'Maharashtra',
+	population: '3.1 million',
+	knownFor: 'Oxford of the East, IT Hub',
+	businessCount: 65,
+	categories: [
+		{ name: 'Home Services', count: 30, slug: 'services' },
+		{ name: 'Food & Beverages', count: 20, slug: 'food' },
+		{ name: 'Handmade Crafts', count: 15, slug: 'crafts' }
+	]
+};
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	"name": `Home Businesses in ${cityData.name} - LocalBasket`,
+	"description": `Discover verified home-based businesses in ${cityData.name}. Find authentic homemade food, handcrafted items, and professional services.`,
+	"url": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}`,
+	"breadcrumb": {
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://the-local-basket.vercel.app"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": cityData.name,
+				"item": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}`
+			}
+		]
+	}
+};
+
+const breadcrumbs = [
+	{ name: "Home", url: "/" },
+	{ name: cityData.name, url: `/${cityData.name.toLowerCase()}` }
+];
+
+const featuredBusinesses = [
+	{
+		name: "Beauty & Wellness Home",
+		category: "Home Services",
+		description: "Comprehensive beauty and wellness services delivered to your doorstep",
+		rating: 4.8,
+		reviews: 134,
+		image: "https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=400",
+		url: "/pune/services/beauty-wellness-home"
+	},
+	{
+		name: "Fitness & Wellness Hub",
+		category: "Home Services",
+		description: "Personal fitness training and wellness coaching in your home environment",
+		rating: 4.9,
+		reviews: 76,
+		image: "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=400",
+		url: "/pune/services/fitness-wellness-hub"
+	}
+];
+---
+
+<Layout
+	title={`Home Businesses in ${cityData.name} - Verified Local Food, Crafts & Services | LocalBasket`}
+	description={`Discover ${cityData.businessCount}+ verified home-based businesses in ${cityData.name}, the ${cityData.knownFor}. Find authentic homemade food, handcrafted items, and professional services from local entrepreneurs. Support ${cityData.name}'s growing home business community.`}
+	keywords={`home businesses ${cityData.name}, local food vendors ${cityData.name}, handmade crafts ${cityData.name}, home services ${cityData.name}, verified businesses ${cityData.state}, ${cityData.name} entrepreneurs, local marketplace ${cityData.name}, beauty services ${cityData.name}, fitness training ${cityData.name}, wellness services ${cityData.name}, ${cityData.name} artisan crafts, home based business ${cityData.name}`}
+	structuredData={structuredData}
+	breadcrumbs={breadcrumbs}
+	canonicalUrl="/pune"
+>
+	<Navigation />
+	
+	<main>
+		<section class="city-hero">
+			<div class="container">
+				<nav aria-label="Breadcrumb" class="breadcrumb">
+					<ol>
+						{breadcrumbs.map((crumb, index) => (
+							<li>
+								{index < breadcrumbs.length - 1 ? (
+									<a href={crumb.url}>{crumb.name}</a>
+								) : (
+									<span aria-current="page">{crumb.name}</span>
+								)}
+								{index < breadcrumbs.length - 1 && <span class="separator">›</span>}
+							</li>
+						))}
+					</ol>
+				</nav>
+				
+				<div class="hero-content">
+					<h1>Verified Home Businesses in Pune</h1>
+					<p class="lead">Discover {cityData.businessCount}+ verified home-based businesses in ${cityData.name}, the ${cityData.knownFor}. Connect with skilled entrepreneurs offering premium home services, authentic culinary experiences, and unique handcrafted items in this vibrant educational hub.</p>
+					
+					<div class="city-stats">
+						<div class="stat-item">
+							<h3>{cityData.businessCount}+</h3>
+							<p>Verified Businesses</p>
+						</div>
+						<div class="stat-item">
+							<h3>{cityData.categories.length}</h3>
+							<p>Categories</p>
+						</div>
+						<div class="stat-item">
+							<h3>4.8⭐</h3>
+							<p>Average Rating</p>
+						</div>
+						<div class="stat-item">
+							<h3>950+</h3>
+							<p>Happy Customers</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="city-categories">
+			<div class="container">
+				<h2>Premium Home Services in Pune</h2>
+				<div class="services-category-card">
+					<p>Experience exceptional home services delivered by certified professionals across Pune. From beauty and wellness to fitness training, discover trusted service providers who bring expertise and convenience to your doorstep.</p>
+					<div class="featured-services">
+						<div class="service-highlight">
+							<h3>Beauty & Wellness Home</h3>
+							<p>Comprehensive beauty treatments, skincare, and wellness services delivered by certified professionals in the comfort of your home.</p>
+							<a href="/pune/services/beauty-wellness-home" class="btn btn-primary">Book Service</a>
+						</div>
+						<div class="service-highlight">
+							<h3>Fitness & Wellness Hub</h3>
+							<p>Personal fitness training and wellness coaching tailored to your goals and schedule, right in your home environment.</p>
+							<a href="/pune/services/fitness-wellness-hub" class="btn btn-primary">Start Training</a>
+						</div>
+					</div>
+				</div>
+				
+				<h2>Authentic Food & Culinary Delights</h2>
+				<div class="food-category-card">
+					<p>Savor authentic Maharashtrian and diverse regional cuisines prepared by talented home chefs across Pune. From traditional recipes to modern fusion dishes, discover flavors that celebrate culinary heritage.</p>
+					<div class="cuisine-areas">
+						<div class="cuisine-highlight">
+							<h3>Traditional Maharashtrian Cuisine</h3>
+							<p>Experience authentic flavors of Maharashtra with traditional recipes passed down through generations of local families.</p>
+						</div>
+						<div class="cuisine-highlight">
+							<h3>Healthy & Organic Options</h3>
+							<p>Discover health-conscious food options prepared with organic ingredients by nutrition-aware home chefs.</p>
+						</div>
+					</div>
+				</div>
+				
+				<h2>Unique Handmade Crafts & Artisan Goods</h2>
+				<div class="crafts-overview">
+					<div class="craft-area">
+						<h3>Traditional Crafts</h3>
+						<p>Explore beautiful handcrafted items that reflect Pune's rich cultural heritage and artistic traditions.</p>
+					</div>
+					<div class="craft-area">
+						<h3>Contemporary Designs</h3>
+						<p>Discover modern handmade goods that blend traditional techniques with contemporary aesthetics.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="featured-businesses">
+			<div class="container">
+				<h2>Featured Home Businesses in Pune</h2>
+				<div class="businesses-grid">
+					{featuredBusinesses.map((business) => (
+						<div class="business-card">
+							<img src={business.image} alt={business.name} loading="lazy" />
+							<div class="business-info">
+								<h3>{business.name}</h3>
+								<p class="category">{business.category}</p>
+								<p class="description">{business.description}</p>
+								<div class="rating">
+									<span class="stars">{"⭐".repeat(Math.floor(business.rating))}</span>
+									<span class="rating-score">{business.rating}</span>
+									<span class="reviews">({business.reviews} reviews)</span>
+								</div>
+								<a href={business.url} class="btn btn-outline">View Details</a>
+							</div>
+						</div>
+					))}
+				</div>
+				
+				<div class="city-cta">
+					<h3>Ready to Discover Pune's Best Home Businesses?</h3>
+					<p>Join the LocalBasket community and explore the entrepreneurial spirit of the Oxford of the East.</p>
+					<div class="cta-buttons">
+						<a href="/submit-business" class="btn btn-primary">List Your Business</a>
+						<a href="/directory" class="btn btn-secondary">Browse All Cities</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.city-hero {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+		padding: 2rem 0 4rem;
+	}
+	
+	.breadcrumb {
+		margin-bottom: 2rem;
+	}
+	
+	.breadcrumb ol {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		gap: 0.5rem;
+		align-items: center;
+	}
+	
+	.breadcrumb a {
+		color: rgba(255, 255, 255, 0.8);
+		text-decoration: none;
+	}
+	
+	.breadcrumb a:hover {
+		color: white;
+	}
+	
+	.separator {
+		color: rgba(255, 255, 255, 0.6);
+		margin: 0 0.5rem;
+	}
+	
+	.hero-content h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		line-height: 1.2;
+	}
+	
+	.lead {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+		opacity: 0.9;
+		line-height: 1.6;
+	}
+	
+	.city-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.stat-item {
+		text-align: center;
+		background: rgba(255, 255, 255, 0.1);
+		padding: 1.5rem;
+		border-radius: 10px;
+		backdrop-filter: blur(10px);
+	}
+	
+	.stat-item h3 {
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+		color: #fff;
+	}
+	
+	.city-categories {
+		padding: 4rem 0;
+		background: #f8f9fa;
+	}
+	
+	.services-category-card, .food-category-card {
+		background: white;
+		border-radius: 15px;
+		padding: 2rem;
+		margin: 2rem 0;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+	
+	.featured-services, .cuisine-areas {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+		margin-top: 1.5rem;
+	}
+	
+	.service-highlight, .cuisine-highlight {
+		padding: 1.5rem;
+		background: #f8f9fa;
+		border-radius: 10px;
+		border-left: 4px solid #667eea;
+	}
+	
+	.crafts-overview {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.craft-area {
+		background: white;
+		padding: 2rem;
+		border-radius: 10px;
+		box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	}
+	
+	.featured-businesses {
+		padding: 4rem 0;
+	}
+	
+	.businesses-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+	
+	.business-card {
+		background: white;
+		border-radius: 15px;
+		overflow: hidden;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+	
+	.business-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.business-card img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+	
+	.business-info {
+		padding: 1.5rem;
+	}
+	
+	.business-info h3 {
+		margin-bottom: 0.5rem;
+		color: #333;
+	}
+	
+	.category {
+		color: #667eea;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+	
+	.description {
+		color: #666;
+		margin-bottom: 1rem;
+		line-height: 1.5;
+	}
+	
+	.rating {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	
+	.rating-score {
+		font-weight: 600;
+		color: #333;
+	}
+	
+	.reviews {
+		color: #666;
+		font-size: 0.9rem;
+	}
+	
+	.city-cta {
+		text-align: center;
+		background: white;
+		padding: 3rem;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+	
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	
+	.btn {
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		text-align: center;
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+	}
+	
+	.btn-primary {
+		background: #667eea;
+		color: white;
+		border-color: #667eea;
+	}
+	
+	.btn-primary:hover {
+		background: #5a67d8;
+		border-color: #5a67d8;
+	}
+	
+	.btn-secondary {
+		background: transparent;
+		color: #667eea;
+		border-color: #667eea;
+	}
+	
+	.btn-secondary:hover {
+		background: #667eea;
+		color: white;
+	}
+	
+	.btn-outline {
+		background: transparent;
+		color: #667eea;
+		border-color: #667eea;
+	}
+	
+	.btn-outline:hover {
+		background: #667eea;
+		color: white;
+	}
+	
+	@media (max-width: 768px) {
+		.hero-content h1 {
+			font-size: 2rem;
+		}
+		
+		.city-stats {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		.businesses-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.featured-services, .cuisine-areas {
+			grid-template-columns: 1fr;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>

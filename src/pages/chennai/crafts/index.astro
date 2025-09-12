@@ -1,0 +1,471 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navigation from '../../../components/Navigation.astro';
+import Footer from '../../../components/Footer.astro';
+
+const categoryData = {
+	name: 'Handmade Crafts',
+	city: 'Chennai',
+	state: 'Tamil Nadu',
+	businessCount: 25,
+	description: 'Discover authentic handmade crafts from Chennai artisans',
+	slug: 'crafts'
+};
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "CollectionPage",
+	"name": `${categoryData.name} in ${categoryData.city} - LocalBasket`,
+	"description": `Discover ${categoryData.businessCount}+ verified handmade craft businesses in ${categoryData.city}. Find authentic artisan crafts, traditional textiles, and handcrafted items.`,
+	"url": `https://the-local-basket.vercel.app/${categoryData.city.toLowerCase()}/${categoryData.slug}`,
+	"breadcrumb": {
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://the-local-basket.vercel.app"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": categoryData.city,
+				"item": `https://the-local-basket.vercel.app/${categoryData.city.toLowerCase()}`
+			},
+			{
+				"@type": "ListItem",
+				"position": 3,
+				"name": categoryData.name,
+				"item": `https://the-local-basket.vercel.app/${categoryData.city.toLowerCase()}/${categoryData.slug}`
+			}
+		]
+	}
+};
+
+const breadcrumbs = [
+	{ name: "Home", url: "/" },
+	{ name: categoryData.city, url: `/${categoryData.city.toLowerCase()}` },
+	{ name: categoryData.name, url: `/${categoryData.city.toLowerCase()}/${categoryData.slug}` }
+];
+
+const featuredBusinesses = [
+	{
+		name: "Artisan Crafts Maya",
+		description: "Traditional South Indian crafts with contemporary designs",
+		rating: 4.8,
+		reviews: 92,
+		image: "https://images.pexels.com/photos/5624984/pexels-photo-5624984.jpeg?auto=compress&cs=tinysrgb&w=400",
+		url: "/chennai/crafts/artisan-crafts-maya",
+		specialties: ["Handwoven Textiles", "Traditional Pottery", "Decorative Items"]
+	}
+];
+---
+
+<Layout
+	title={`${categoryData.name} in ${categoryData.city} - Authentic Handmade Crafts | LocalBasket`}
+	description={`Discover ${categoryData.businessCount}+ verified handmade craft businesses in ${categoryData.city}, ${categoryData.state}. Find authentic artisan crafts, traditional textiles, handwoven items, and decorative pieces from local Chennai craftspeople. Support traditional artisans preserving Tamil Nadu's rich crafting heritage.`}
+	keywords={`handmade crafts ${categoryData.city}, artisan crafts ${categoryData.city}, traditional textiles ${categoryData.city}, handwoven crafts ${categoryData.city}, Chennai pottery, Tamil Nadu crafts, verified artisans ${categoryData.city}, local crafts marketplace, authentic handmade items ${categoryData.city}, traditional crafts ${categoryData.state}, ${categoryData.city} handicrafts`}
+	structuredData={structuredData}
+	breadcrumbs={breadcrumbs}
+	canonicalUrl={`/${categoryData.city.toLowerCase()}/${categoryData.slug}`}
+>
+	<Navigation />
+	
+	<main>
+		<section class="category-hero">
+			<div class="container">
+				<nav aria-label="Breadcrumb" class="breadcrumb">
+					<ol>
+						{breadcrumbs.map((crumb, index) => (
+							<li>
+								{index < breadcrumbs.length - 1 ? (
+									<a href={crumb.url}>{crumb.name}</a>
+								) : (
+									<span aria-current="page">{crumb.name}</span>
+								)}
+								{index < breadcrumbs.length - 1 && <span class="separator">›</span>}
+							</li>
+						))}
+					</ol>
+				</nav>
+				
+				<div class="hero-content">
+					<h1>Handmade Crafts in Chennai</h1>
+					<p class="lead">Discover {categoryData.businessCount}+ verified artisan craft businesses in {categoryData.city}. Connect with skilled craftspeople creating authentic handmade textiles, traditional pottery, and unique decorative items that celebrate Tamil Nadu's rich artistic heritage.</p>
+					
+					<div class="category-stats">
+						<div class="stat-item">
+							<h3>{categoryData.businessCount}+</h3>
+							<p>Verified Artisans</p>
+						</div>
+						<div class="stat-item">
+							<h3>15+</h3>
+							<p>Craft Types</p>
+						</div>
+						<div class="stat-item">
+							<h3>4.8⭐</h3>
+							<p>Average Rating</p>
+						</div>
+						<div class="stat-item">
+							<h3>500+</h3>
+							<p>Happy Customers</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="craft-categories">
+			<div class="container">
+				<h2>Popular Craft Categories in Chennai</h2>
+				<div class="categories-grid">
+					<div class="category-card">
+						<h3>Traditional Textiles</h3>
+						<p>Handwoven sarees, fabrics, and textile art created using traditional Tamil Nadu weaving techniques.</p>
+						<div class="category-features">
+							<span class="feature">Silk Sarees</span>
+							<span class="feature">Cotton Fabrics</span>
+							<span class="feature">Traditional Patterns</span>
+						</div>
+					</div>
+					
+					<div class="category-card">
+						<h3>Pottery & Ceramics</h3>
+						<p>Handcrafted pottery, decorative ceramics, and traditional Tamil Nadu pottery styles.</p>
+						<div class="category-features">
+							<span class="feature">Traditional Pots</span>
+							<span class="feature">Decorative Items</span>
+							<span class="feature">Custom Pieces</span>
+						</div>
+					</div>
+					
+					<div class="category-card">
+						<h3>Home Décor</h3>
+						<p>Unique handcrafted decorative items, wall art, and home accessories with South Indian aesthetics.</p>
+						<div class="category-features">
+							<span class="feature">Wall Art</span>
+							<span class="feature">Decorative Pieces</span>
+							<span class="feature">Functional Art</span>
+						</div>
+					</div>
+					
+					<div class="category-card">
+						<h3>Traditional Jewelry</h3>
+						<p>Handmade jewelry inspired by Tamil traditions, including temple jewelry and contemporary designs.</p>
+						<div class="category-features">
+							<span class="feature">Temple Jewelry</span>
+							<span class="feature">Traditional Designs</span>
+							<span class="feature">Custom Work</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="featured-businesses">
+			<div class="container">
+				<h2>Featured Craft Businesses in Chennai</h2>
+				<div class="businesses-grid">
+					{featuredBusinesses.map((business) => (
+						<div class="business-card">
+							<img src={business.image} alt={business.name} loading="lazy" />
+							<div class="business-info">
+								<h3>{business.name}</h3>
+								<p class="description">{business.description}</p>
+								<div class="specialties">
+									{business.specialties.map((specialty) => (
+										<span class="specialty-tag">{specialty}</span>
+									))}
+								</div>
+								<div class="rating">
+									<span class="stars">{"⭐".repeat(Math.floor(business.rating))}</span>
+									<span class="rating-score">{business.rating}</span>
+									<span class="reviews">({business.reviews} reviews)</span>
+								</div>
+								<a href={business.url} class="btn btn-primary">View Collection</a>
+							</div>
+						</div>
+					))}
+				</div>
+				
+				<div class="category-cta">
+					<h3>Ready to Discover More Chennai Crafts?</h3>
+					<p>Connect with talented artisans and find unique handmade pieces that celebrate Tamil Nadu's artistic heritage.</p>
+					<div class="cta-buttons">
+						<a href="/submit-business" class="btn btn-primary">List Your Craft Business</a>
+						<a href="/chennai" class="btn btn-secondary">Explore More in Chennai</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.category-hero {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+		padding: 2rem 0 4rem;
+	}
+	
+	.breadcrumb {
+		margin-bottom: 2rem;
+	}
+	
+	.breadcrumb ol {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		gap: 0.5rem;
+		align-items: center;
+	}
+	
+	.breadcrumb a {
+		color: rgba(255, 255, 255, 0.8);
+		text-decoration: none;
+	}
+	
+	.breadcrumb a:hover {
+		color: white;
+	}
+	
+	.separator {
+		color: rgba(255, 255, 255, 0.6);
+		margin: 0 0.5rem;
+	}
+	
+	.hero-content h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		line-height: 1.2;
+	}
+	
+	.lead {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+		opacity: 0.9;
+		line-height: 1.6;
+	}
+	
+	.category-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.stat-item {
+		text-align: center;
+		background: rgba(255, 255, 255, 0.1);
+		padding: 1.5rem;
+		border-radius: 10px;
+		backdrop-filter: blur(10px);
+	}
+	
+	.stat-item h3 {
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+		color: #fff;
+	}
+	
+	.craft-categories {
+		padding: 4rem 0;
+		background: #f8f9fa;
+	}
+	
+	.categories-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.category-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+	
+	.category-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.category-card h3 {
+		color: #667eea;
+		margin-bottom: 1rem;
+	}
+	
+	.category-card p {
+		color: #666;
+		margin-bottom: 1.5rem;
+		line-height: 1.5;
+	}
+	
+	.category-features {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+	
+	.feature {
+		background: #f0f4ff;
+		color: #667eea;
+		padding: 0.25rem 0.75rem;
+		border-radius: 20px;
+		font-size: 0.85rem;
+		font-weight: 500;
+	}
+	
+	.featured-businesses {
+		padding: 4rem 0;
+	}
+	
+	.businesses-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+	
+	.business-card {
+		background: white;
+		border-radius: 15px;
+		overflow: hidden;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+	
+	.business-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.business-card img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+	
+	.business-info {
+		padding: 1.5rem;
+	}
+	
+	.business-info h3 {
+		margin-bottom: 0.5rem;
+		color: #333;
+	}
+	
+	.description {
+		color: #666;
+		margin-bottom: 1rem;
+		line-height: 1.5;
+	}
+	
+	.specialties {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	
+	.specialty-tag {
+		background: #f0f4ff;
+		color: #667eea;
+		padding: 0.25rem 0.75rem;
+		border-radius: 20px;
+		font-size: 0.85rem;
+		font-weight: 500;
+	}
+	
+	.rating {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	
+	.rating-score {
+		font-weight: 600;
+		color: #333;
+	}
+	
+	.reviews {
+		color: #666;
+		font-size: 0.9rem;
+	}
+	
+	.category-cta {
+		text-align: center;
+		background: white;
+		padding: 3rem;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+	
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	
+	.btn {
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		text-align: center;
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+	}
+	
+	.btn-primary {
+		background: #667eea;
+		color: white;
+		border-color: #667eea;
+	}
+	
+	.btn-primary:hover {
+		background: #5a67d8;
+		border-color: #5a67d8;
+	}
+	
+	.btn-secondary {
+		background: transparent;
+		color: #667eea;
+		border-color: #667eea;
+	}
+	
+	.btn-secondary:hover {
+		background: #667eea;
+		color: white;
+	}
+	
+	@media (max-width: 768px) {
+		.hero-content h1 {
+			font-size: 2rem;
+		}
+		
+		.category-stats {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		.categories-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.businesses-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>

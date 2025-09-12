@@ -1,0 +1,471 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navigation from '../../../components/Navigation.astro';
+import Footer from '../../../components/Footer.astro';
+
+const categoryData = {
+	name: 'Food & Beverages',
+	city: 'Chennai',
+	state: 'Tamil Nadu',
+	businessCount: 30,
+	description: 'Discover authentic South Indian food from Chennai home chefs',
+	slug: 'food'
+};
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "CollectionPage",
+	"name": `${categoryData.name} in ${categoryData.city} - LocalBasket`,
+	"description": `Discover ${categoryData.businessCount}+ verified food businesses in ${categoryData.city}. Find authentic South Indian cuisine, traditional dishes, and homemade specialties.`,
+	"url": `https://the-local-basket.vercel.app/${categoryData.city.toLowerCase()}/${categoryData.slug}`,
+	"breadcrumb": {
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://the-local-basket.vercel.app"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": categoryData.city,
+				"item": `https://the-local-basket.vercel.app/${categoryData.city.toLowerCase()}`
+			},
+			{
+				"@type": "ListItem",
+				"position": 3,
+				"name": categoryData.name,
+				"item": `https://the-local-basket.vercel.app/${categoryData.city.toLowerCase()}/${categoryData.slug}`
+			}
+		]
+	}
+};
+
+const breadcrumbs = [
+	{ name: "Home", url: "/" },
+	{ name: categoryData.city, url: `/${categoryData.city.toLowerCase()}` },
+	{ name: categoryData.name, url: `/${categoryData.city.toLowerCase()}/${categoryData.slug}` }
+];
+
+const featuredBusinesses = [
+	{
+		name: "Anita's Tiffin Service",
+		description: "Authentic South Indian breakfast and meals delivered fresh daily",
+		rating: 4.9,
+		reviews: 187,
+		image: "https://images.pexels.com/photos/5836609/pexels-photo-5836609.jpeg?auto=compress&cs=tinysrgb&w=400",
+		url: "/chennai/food/anitas-tiffin-service",
+		specialties: ["Traditional Tiffin", "South Indian Breakfast", "Home Delivery"]
+	}
+];
+---
+
+<Layout
+	title={`${categoryData.name} in ${categoryData.city} - Authentic South Indian Cuisine | LocalBasket`}
+	description={`Discover ${categoryData.businessCount}+ verified food businesses in ${categoryData.city}, ${categoryData.state}. Find authentic South Indian cuisine, traditional Tamil Nadu dishes, tiffin services, and homemade specialties from local Chennai food entrepreneurs. Experience genuine flavors of Tamil Nadu's culinary heritage.`}
+	keywords={`food businesses ${categoryData.city}, South Indian food ${categoryData.city}, Tamil Nadu cuisine, authentic food ${categoryData.city}, tiffin service ${categoryData.city}, traditional food ${categoryData.city}, verified food vendors ${categoryData.city}, homemade food ${categoryData.city}, local food marketplace, ${categoryData.city} home chefs, Tamil food delivery`}
+	structuredData={structuredData}
+	breadcrumbs={breadcrumbs}
+	canonicalUrl={`/${categoryData.city.toLowerCase()}/${categoryData.slug}`}
+>
+	<Navigation />
+	
+	<main>
+		<section class="category-hero">
+			<div class="container">
+				<nav aria-label="Breadcrumb" class="breadcrumb">
+					<ol>
+						{breadcrumbs.map((crumb, index) => (
+							<li>
+								{index < breadcrumbs.length - 1 ? (
+									<a href={crumb.url}>{crumb.name}</a>
+								) : (
+									<span aria-current="page">{crumb.name}</span>
+								)}
+								{index < breadcrumbs.length - 1 && <span class="separator">›</span>}
+							</li>
+						))}
+					</ol>
+				</nav>
+				
+				<div class="hero-content">
+					<h1>Food & Beverages in Chennai</h1>
+					<p class="lead">Discover {categoryData.businessCount}+ verified food businesses in {categoryData.city}. Connect with passionate home chefs creating authentic South Indian cuisine, traditional Tamil Nadu specialties, and fresh tiffin services that bring the genuine flavors of Chennai to your doorstep.</p>
+					
+					<div class="category-stats">
+						<div class="stat-item">
+							<h3>{categoryData.businessCount}+</h3>
+							<p>Verified Food Vendors</p>
+						</div>
+						<div class="stat-item">
+							<h3>20+</h3>
+							<p>Cuisine Types</p>
+						</div>
+						<div class="stat-item">
+							<h3>4.9⭐</h3>
+							<p>Average Rating</p>
+						</div>
+						<div class="stat-item">
+							<h3>1200+</h3>
+							<p>Happy Customers</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="food-categories">
+			<div class="container">
+				<h2>Popular Food Categories in Chennai</h2>
+				<div class="categories-grid">
+					<div class="category-card">
+						<h3>Traditional Tiffin Services</h3>
+						<p>Fresh South Indian breakfast and meals delivered daily with authentic home-cooked taste.</p>
+						<div class="category-features">
+							<span class="feature">Daily Delivery</span>
+							<span class="feature">Traditional Recipes</span>
+							<span class="feature">Fresh Ingredients</span>
+						</div>
+					</div>
+					
+					<div class="category-card">
+						<h3>South Indian Specialties</h3>
+						<p>Authentic Tamil Nadu dishes including dosas, idlis, sambars, and traditional curries.</p>
+						<div class="category-features">
+							<span class="feature">Dosas & Idlis</span>
+							<span class="feature">Traditional Sambar</span>
+							<span class="feature">Chutneys</span>
+						</div>
+					</div>
+					
+					<div class="category-card">
+						<h3>Festival & Special Occasion Food</h3>
+						<p>Traditional sweets, festival preparations, and special occasion catering services.</p>
+						<div class="category-features">
+							<span class="feature">Festival Sweets</span>
+							<span class="feature">Event Catering</span>
+							<span class="feature">Traditional Preparations</span>
+						</div>
+					</div>
+					
+					<div class="category-card">
+						<h3>Healthy & Organic Options</h3>
+						<p>Nutritious meals prepared with organic ingredients and traditional cooking methods.</p>
+						<div class="category-features">
+							<span class="feature">Organic Ingredients</span>
+							<span class="feature">Healthy Options</span>
+							<span class="feature">Traditional Methods</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="featured-businesses">
+			<div class="container">
+				<h2>Featured Food Businesses in Chennai</h2>
+				<div class="businesses-grid">
+					{featuredBusinesses.map((business) => (
+						<div class="business-card">
+							<img src={business.image} alt={business.name} loading="lazy" />
+							<div class="business-info">
+								<h3>{business.name}</h3>
+								<p class="description">{business.description}</p>
+								<div class="specialties">
+									{business.specialties.map((specialty) => (
+										<span class="specialty-tag">{specialty}</span>
+									))}
+								</div>
+								<div class="rating">
+									<span class="stars">{"⭐".repeat(Math.floor(business.rating))}</span>
+									<span class="rating-score">{business.rating}</span>
+									<span class="reviews">({business.reviews} reviews)</span>
+								</div>
+								<a href={business.url} class="btn btn-primary">View Menu</a>
+							</div>
+						</div>
+					))}
+				</div>
+				
+				<div class="category-cta">
+					<h3>Ready to Taste Authentic Chennai Flavors?</h3>
+					<p>Connect with talented home chefs and experience the rich culinary heritage of Tamil Nadu.</p>
+					<div class="cta-buttons">
+						<a href="/submit-business" class="btn btn-primary">List Your Food Business</a>
+						<a href="/chennai" class="btn btn-secondary">Explore More in Chennai</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.category-hero {
+		background: linear-gradient(135deg, #ff9a56 0%, #ff6b95 100%);
+		color: white;
+		padding: 2rem 0 4rem;
+	}
+	
+	.breadcrumb {
+		margin-bottom: 2rem;
+	}
+	
+	.breadcrumb ol {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		gap: 0.5rem;
+		align-items: center;
+	}
+	
+	.breadcrumb a {
+		color: rgba(255, 255, 255, 0.8);
+		text-decoration: none;
+	}
+	
+	.breadcrumb a:hover {
+		color: white;
+	}
+	
+	.separator {
+		color: rgba(255, 255, 255, 0.6);
+		margin: 0 0.5rem;
+	}
+	
+	.hero-content h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		line-height: 1.2;
+	}
+	
+	.lead {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+		opacity: 0.9;
+		line-height: 1.6;
+	}
+	
+	.category-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.stat-item {
+		text-align: center;
+		background: rgba(255, 255, 255, 0.1);
+		padding: 1.5rem;
+		border-radius: 10px;
+		backdrop-filter: blur(10px);
+	}
+	
+	.stat-item h3 {
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+		color: #fff;
+	}
+	
+	.food-categories {
+		padding: 4rem 0;
+		background: #f8f9fa;
+	}
+	
+	.categories-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.category-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+	
+	.category-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.category-card h3 {
+		color: #ff6b95;
+		margin-bottom: 1rem;
+	}
+	
+	.category-card p {
+		color: #666;
+		margin-bottom: 1.5rem;
+		line-height: 1.5;
+	}
+	
+	.category-features {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+	
+	.feature {
+		background: #ffebf0;
+		color: #ff6b95;
+		padding: 0.25rem 0.75rem;
+		border-radius: 20px;
+		font-size: 0.85rem;
+		font-weight: 500;
+	}
+	
+	.featured-businesses {
+		padding: 4rem 0;
+	}
+	
+	.businesses-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+	
+	.business-card {
+		background: white;
+		border-radius: 15px;
+		overflow: hidden;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+	
+	.business-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.business-card img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+	
+	.business-info {
+		padding: 1.5rem;
+	}
+	
+	.business-info h3 {
+		margin-bottom: 0.5rem;
+		color: #333;
+	}
+	
+	.description {
+		color: #666;
+		margin-bottom: 1rem;
+		line-height: 1.5;
+	}
+	
+	.specialties {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	
+	.specialty-tag {
+		background: #ffebf0;
+		color: #ff6b95;
+		padding: 0.25rem 0.75rem;
+		border-radius: 20px;
+		font-size: 0.85rem;
+		font-weight: 500;
+	}
+	
+	.rating {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	
+	.rating-score {
+		font-weight: 600;
+		color: #333;
+	}
+	
+	.reviews {
+		color: #666;
+		font-size: 0.9rem;
+	}
+	
+	.category-cta {
+		text-align: center;
+		background: white;
+		padding: 3rem;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+	
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	
+	.btn {
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		text-align: center;
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+	}
+	
+	.btn-primary {
+		background: #ff6b95;
+		color: white;
+		border-color: #ff6b95;
+	}
+	
+	.btn-primary:hover {
+		background: #ff5582;
+		border-color: #ff5582;
+	}
+	
+	.btn-secondary {
+		background: transparent;
+		color: #ff6b95;
+		border-color: #ff6b95;
+	}
+	
+	.btn-secondary:hover {
+		background: #ff6b95;
+		color: white;
+	}
+	
+	@media (max-width: 768px) {
+		.hero-content h1 {
+			font-size: 2rem;
+		}
+		
+		.category-stats {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		.categories-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.businesses-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>

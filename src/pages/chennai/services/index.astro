@@ -1,0 +1,428 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navigation from '../../../components/Navigation.astro';
+import Footer from '../../../components/Footer.astro';
+
+const categoryData = {
+	name: 'Home Services',
+	city: 'Chennai',
+	state: 'Tamil Nadu',
+	businessCount: 20,
+	description: 'Discover professional home services from Chennai service providers',
+	slug: 'services'
+};
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "CollectionPage",
+	"name": `${categoryData.name} in ${categoryData.city} - LocalBasket`,
+	"description": `Discover ${categoryData.businessCount}+ verified home service businesses in ${categoryData.city}. Find tutoring, beauty, wellness, and professional services.`,
+	"url": `https://the-local-basket.vercel.app/${categoryData.city.toLowerCase()}/${categoryData.slug}`,
+	"breadcrumb": {
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://the-local-basket.vercel.app"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": categoryData.city,
+				"item": `https://the-local-basket.vercel.app/${categoryData.city.toLowerCase()}`
+			},
+			{
+				"@type": "ListItem",
+				"position": 3,
+				"name": categoryData.name,
+				"item": `https://the-local-basket.vercel.app/${categoryData.city.toLowerCase()}/${categoryData.slug}`
+			}
+		]
+	}
+};
+
+const breadcrumbs = [
+	{ name: "Home", url: "/" },
+	{ name: categoryData.city, url: `/${categoryData.city.toLowerCase()}` },
+	{ name: categoryData.name, url: `/${categoryData.city.toLowerCase()}/${categoryData.slug}` }
+];
+
+const serviceCategories = [
+	{
+		name: "Educational Services",
+		description: "Professional tutoring, skill development, and educational support services",
+		examples: ["Home Tutoring", "Language Classes", "Skill Development", "Academic Support"]
+	},
+	{
+		name: "Beauty & Wellness",
+		description: "Certified beauty and wellness services delivered to your doorstep",
+		examples: ["Beauty Treatments", "Massage Therapy", "Wellness Coaching", "Skincare Services"]
+	},
+	{
+		name: "Fitness & Health",
+		description: "Personal fitness training and health coaching in your home environment",
+		examples: ["Personal Training", "Yoga Classes", "Physiotherapy", "Health Coaching"]
+	},
+	{
+		name: "Professional Services",
+		description: "Various professional and consultation services for home and business",
+		examples: ["Consulting", "Professional Advice", "Technical Support", "Business Services"]
+	}
+];
+---
+
+<Layout
+	title={`${categoryData.name} in ${categoryData.city} - Professional Home Services | LocalBasket`}
+	description={`Discover ${categoryData.businessCount}+ verified home service businesses in ${categoryData.city}, ${categoryData.state}. Find professional tutoring, beauty & wellness, fitness training, and consulting services delivered to your doorstep. Connect with certified service providers across Chennai.`}
+	keywords={`home services ${categoryData.city}, professional services ${categoryData.city}, tutoring services ${categoryData.city}, beauty services ${categoryData.city}, wellness services ${categoryData.city}, fitness training ${categoryData.city}, verified service providers ${categoryData.city}, ${categoryData.state} home services, personal services ${categoryData.city}, doorstep services`}
+	structuredData={structuredData}
+	breadcrumbs={breadcrumbs}
+	canonicalUrl={`/${categoryData.city.toLowerCase()}/${categoryData.slug}`}
+>
+	<Navigation />
+	
+	<main>
+		<section class="category-hero">
+			<div class="container">
+				<nav aria-label="Breadcrumb" class="breadcrumb">
+					<ol>
+						{breadcrumbs.map((crumb, index) => (
+							<li>
+								{index < breadcrumbs.length - 1 ? (
+									<a href={crumb.url}>{crumb.name}</a>
+								) : (
+									<span aria-current="page">{crumb.name}</span>
+								)}
+								{index < breadcrumbs.length - 1 && <span class="separator">›</span>}
+							</li>
+						))}
+					</ol>
+				</nav>
+				
+				<div class="hero-content">
+					<h1>Home Services in Chennai</h1>
+					<p class="lead">Discover {categoryData.businessCount}+ verified home service businesses in {categoryData.city}. Connect with certified professionals offering tutoring, beauty & wellness, fitness training, and consulting services delivered conveniently to your doorstep across Chennai.</p>
+					
+					<div class="category-stats">
+						<div class="stat-item">
+							<h3>{categoryData.businessCount}+</h3>
+							<p>Verified Service Providers</p>
+						</div>
+						<div class="stat-item">
+							<h3>10+</h3>
+							<p>Service Categories</p>
+						</div>
+						<div class="stat-item">
+							<h3>4.8⭐</h3>
+							<p>Average Rating</p>
+						</div>
+						<div class="stat-item">
+							<h3>800+</h3>
+							<p>Happy Customers</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="service-categories">
+			<div class="container">
+				<h2>Popular Service Categories in Chennai</h2>
+				<div class="categories-grid">
+					{serviceCategories.map((category) => (
+						<div class="category-card">
+							<h3>{category.name}</h3>
+							<p>{category.description}</p>
+							<div class="category-features">
+								{category.examples.map((example) => (
+									<span class="feature">{example}</span>
+								))}
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<section class="service-benefits">
+			<div class="container">
+				<h2>Why Choose Home Services in Chennai?</h2>
+				<div class="benefits-grid">
+					<div class="benefit-card">
+						<div class="benefit-icon">🏠</div>
+						<h3>Convenience at Home</h3>
+						<p>Receive professional services in the comfort and safety of your own home environment.</p>
+					</div>
+					
+					<div class="benefit-card">
+						<div class="benefit-icon">✅</div>
+						<h3>Verified Professionals</h3>
+						<p>All service providers are thoroughly verified and have proven track records of excellence.</p>
+					</div>
+					
+					<div class="benefit-card">
+						<div class="benefit-icon">⏰</div>
+						<h3>Flexible Scheduling</h3>
+						<p>Book services at times that work best for your schedule and lifestyle needs.</p>
+					</div>
+					
+					<div class="benefit-card">
+						<div class="benefit-icon">💰</div>
+						<h3>Transparent Pricing</h3>
+						<p>Clear, upfront pricing with no hidden fees or surprise charges for all services.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta-section">
+			<div class="container">
+				<div class="category-cta">
+					<h3>Ready to Book Professional Home Services?</h3>
+					<p>Connect with certified service providers and experience convenient, professional services delivered to your doorstep in Chennai.</p>
+					<div class="cta-buttons">
+						<a href="/submit-business" class="btn btn-primary">List Your Service Business</a>
+						<a href="/chennai" class="btn btn-secondary">Explore More in Chennai</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.category-hero {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+		padding: 2rem 0 4rem;
+	}
+	
+	.breadcrumb {
+		margin-bottom: 2rem;
+	}
+	
+	.breadcrumb ol {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		gap: 0.5rem;
+		align-items: center;
+	}
+	
+	.breadcrumb a {
+		color: rgba(255, 255, 255, 0.8);
+		text-decoration: none;
+	}
+	
+	.breadcrumb a:hover {
+		color: white;
+	}
+	
+	.separator {
+		color: rgba(255, 255, 255, 0.6);
+		margin: 0 0.5rem;
+	}
+	
+	.hero-content h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		line-height: 1.2;
+	}
+	
+	.lead {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+		opacity: 0.9;
+		line-height: 1.6;
+	}
+	
+	.category-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.stat-item {
+		text-align: center;
+		background: rgba(255, 255, 255, 0.1);
+		padding: 1.5rem;
+		border-radius: 10px;
+		backdrop-filter: blur(10px);
+	}
+	
+	.stat-item h3 {
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+		color: #fff;
+	}
+	
+	.service-categories {
+		padding: 4rem 0;
+		background: #f8f9fa;
+	}
+	
+	.categories-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.category-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+	
+	.category-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.category-card h3 {
+		color: #667eea;
+		margin-bottom: 1rem;
+	}
+	
+	.category-card p {
+		color: #666;
+		margin-bottom: 1.5rem;
+		line-height: 1.5;
+	}
+	
+	.category-features {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+	
+	.feature {
+		background: #f0f4ff;
+		color: #667eea;
+		padding: 0.25rem 0.75rem;
+		border-radius: 20px;
+		font-size: 0.85rem;
+		font-weight: 500;
+	}
+	
+	.service-benefits {
+		padding: 4rem 0;
+		background: white;
+	}
+	
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.benefit-card {
+		text-align: center;
+		padding: 2rem;
+		border-radius: 15px;
+		background: #f8f9fa;
+		transition: transform 0.3s ease;
+	}
+	
+	.benefit-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.benefit-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+	
+	.benefit-card h3 {
+		color: #333;
+		margin-bottom: 1rem;
+	}
+	
+	.benefit-card p {
+		color: #666;
+		line-height: 1.5;
+	}
+	
+	.cta-section {
+		padding: 4rem 0;
+		background: #f8f9fa;
+	}
+	
+	.category-cta {
+		text-align: center;
+		background: white;
+		padding: 3rem;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+	
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	
+	.btn {
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		text-align: center;
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+	}
+	
+	.btn-primary {
+		background: #667eea;
+		color: white;
+		border-color: #667eea;
+	}
+	
+	.btn-primary:hover {
+		background: #5a67d8;
+		border-color: #5a67d8;
+	}
+	
+	.btn-secondary {
+		background: transparent;
+		color: #667eea;
+		border-color: #667eea;
+	}
+	
+	.btn-secondary:hover {
+		background: #667eea;
+		color: white;
+	}
+	
+	@media (max-width: 768px) {
+		.hero-content h1 {
+			font-size: 2rem;
+		}
+		
+		.category-stats {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		.categories-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.benefits-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>

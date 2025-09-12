@@ -1,0 +1,468 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const cityData = {
+	name: 'Kolkata',
+	state: 'West Bengal',
+	population: '14.9 million',
+	knownFor: 'City of Joy, Cultural Capital',
+	businessCount: 55,
+	categories: [
+		{ name: 'Food & Beverages', count: 35, slug: 'food' },
+		{ name: 'Handmade Crafts', count: 15, slug: 'crafts' },
+		{ name: 'Home Services', count: 5, slug: 'services' }
+	]
+};
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	"name": `Home Businesses in ${cityData.name} - LocalBasket`,
+	"description": `Discover verified home-based businesses in ${cityData.name}. Find authentic Bengali food, traditional crafts, and cultural services.`,
+	"url": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}`,
+	"breadcrumb": {
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://the-local-basket.vercel.app"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": cityData.name,
+				"item": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}`
+			}
+		]
+	}
+};
+
+const breadcrumbs = [
+	{ name: "Home", url: "/" },
+	{ name: cityData.name, url: `/${cityData.name.toLowerCase()}` }
+];
+
+const featuredBusinesses = [
+	{
+		name: "Traditional Sweets & Catering",
+		category: "Food & Beverages",
+		description: "Authentic Bengali sweets and traditional catering for special occasions",
+		rating: 4.8,
+		reviews: 142,
+		image: "https://images.pexels.com/photos/4099491/pexels-photo-4099491.jpeg?auto=compress&cs=tinysrgb&w=400",
+		url: "/kolkata/food/traditional-sweets-catering"
+	}
+];
+---
+
+<Layout
+	title={`Home Businesses in ${cityData.name} - Verified Bengali Food & Traditional Crafts | LocalBasket`}
+	description={`Discover ${cityData.businessCount}+ verified home-based businesses in ${cityData.name}, the ${cityData.knownFor}. Find authentic Bengali sweets, traditional food, and cultural crafts from local entrepreneurs. Experience ${cityData.name}'s rich culinary and artistic heritage.`}
+	keywords={`home businesses ${cityData.name}, Bengali food ${cityData.name}, traditional sweets ${cityData.name}, authentic Bengali cuisine, handmade crafts ${cityData.name}, cultural services ${cityData.name}, verified businesses ${cityData.state}, ${cityData.name} entrepreneurs, local marketplace ${cityData.name}, City of Joy food, Bengali sweets catering, home based business ${cityData.name}`}
+	structuredData={structuredData}
+	breadcrumbs={breadcrumbs}
+	canonicalUrl="/kolkata"
+>
+	<Navigation />
+	
+	<main>
+		<section class="city-hero">
+			<div class="container">
+				<nav aria-label="Breadcrumb" class="breadcrumb">
+					<ol>
+						{breadcrumbs.map((crumb, index) => (
+							<li>
+								{index < breadcrumbs.length - 1 ? (
+									<a href={crumb.url}>{crumb.name}</a>
+								) : (
+									<span aria-current="page">{crumb.name}</span>
+								)}
+								{index < breadcrumbs.length - 1 && <span class="separator">›</span>}
+							</li>
+						))}
+					</ol>
+				</nav>
+				
+				<div class="hero-content">
+					<h1>Verified Cultural Businesses in Kolkata</h1>
+					<p class="lead">Discover ${cityData.businessCount}+ verified home-based businesses in ${cityData.name}, the ${cityData.knownFor}. Connect with passionate entrepreneurs preserving Bengali culinary traditions, authentic sweets, and cultural crafts that define the soul of this vibrant metropolis.</p>
+					
+					<div class="city-stats">
+						<div class="stat-item">
+							<h3>{cityData.businessCount}+</h3>
+							<p>Verified Businesses</p>
+						</div>
+						<div class="stat-item">
+							<h3>{cityData.categories.length}</h3>
+							<p>Categories</p>
+						</div>
+						<div class="stat-item">
+							<h3>4.8⭐</h3>
+							<p>Average Rating</p>
+						</div>
+						<div class="stat-item">
+							<h3>850+</h3>
+							<p>Happy Customers</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="city-categories">
+			<div class="container">
+				<h2>Authentic Bengali Food & Traditional Sweets</h2>
+				<div class="food-category-card">
+					<p>Experience the rich culinary heritage of Bengal through authentic homemade food, traditional sweets, and catering services that have been perfected over generations in the City of Joy.</p>
+					<div class="featured-food">
+						<h3>Traditional Sweets & Catering</h3>
+						<p>Authentic Bengali sweets like rasgulla, sandesh, and mishti doi, along with traditional catering services for weddings, festivals, and special occasions.</p>
+						<a href="/kolkata/food/traditional-sweets-catering" class="btn btn-primary">Order Sweets</a>
+					</div>
+					<div class="cuisine-specialties">
+						<div class="specialty-item">
+							<h3>Festival Sweets</h3>
+							<p>Special sweets prepared for Durga Puja, Kali Puja, and other Bengali festivals using traditional recipes.</p>
+						</div>
+						<div class="specialty-item">
+							<h3>Home-style Bengali Meals</h3>
+							<p>Authentic Bengali thalis with fish curry, rice, dal, and seasonal vegetables prepared with family recipes.</p>
+						</div>
+					</div>
+				</div>
+				
+				<h2>Traditional Bengali Crafts & Art</h2>
+				<div class="crafts-category-card">
+					<p>Explore the artistic heritage of Bengal through traditional crafts, textiles, and handmade items that reflect the cultural richness and artistic excellence of Kolkata's artisan community.</p>
+					<div class="craft-highlights">
+						<div class="craft-item">
+							<h3>Handwoven Textiles</h3>
+							<p>Traditional Bengali handloom sarees, dhotis, and fabrics woven using time-honored techniques.</p>
+						</div>
+						<div class="craft-item">
+							<h3>Cultural Artifacts</h3>
+							<p>Handcrafted items inspired by Bengali culture, including pottery, artwork, and decorative pieces.</p>
+						</div>
+					</div>
+				</div>
+				
+				<h2>Cultural Services & Experiences</h2>
+				<div class="services-overview">
+					<div class="service-area">
+						<h3>Cultural Education</h3>
+						<p>Learn traditional Bengali arts, music, and cultural practices from experienced practitioners and artists.</p>
+					</div>
+					<div class="service-area">
+						<h3>Event Planning</h3>
+						<p>Specialized event planning services for Bengali weddings, cultural festivals, and traditional celebrations.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="featured-businesses">
+			<div class="container">
+				<h2>Featured Cultural Businesses in Kolkata</h2>
+				<div class="businesses-grid">
+					{featuredBusinesses.map((business) => (
+						<div class="business-card">
+							<img src={business.image} alt={business.name} loading="lazy" />
+							<div class="business-info">
+								<h3>{business.name}</h3>
+								<p class="category">{business.category}</p>
+								<p class="description">{business.description}</p>
+								<div class="rating">
+									<span class="stars">{"⭐".repeat(Math.floor(business.rating))}</span>
+									<span class="rating-score">{business.rating}</span>
+									<span class="reviews">({business.reviews} reviews)</span>
+								</div>
+								<a href={business.url} class="btn btn-outline">View Menu</a>
+							</div>
+						</div>
+					))}
+				</div>
+				
+				<div class="city-cta">
+					<h3>Experience the Cultural Heart of Bengal</h3>
+					<p>Connect with authentic Bengali businesses and celebrate the rich heritage of the City of Joy.</p>
+					<div class="cta-buttons">
+						<a href="/submit-business" class="btn btn-primary">List Your Business</a>
+						<a href="/directory" class="btn btn-secondary">Browse All Cities</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.city-hero {
+		background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+		color: white;
+		padding: 2rem 0 4rem;
+	}
+	
+	.breadcrumb {
+		margin-bottom: 2rem;
+	}
+	
+	.breadcrumb ol {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		gap: 0.5rem;
+		align-items: center;
+	}
+	
+	.breadcrumb a {
+		color: rgba(255, 255, 255, 0.8);
+		text-decoration: none;
+	}
+	
+	.breadcrumb a:hover {
+		color: white;
+	}
+	
+	.separator {
+		color: rgba(255, 255, 255, 0.6);
+		margin: 0 0.5rem;
+	}
+	
+	.hero-content h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		line-height: 1.2;
+	}
+	
+	.lead {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+		opacity: 0.9;
+		line-height: 1.6;
+	}
+	
+	.city-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.stat-item {
+		text-align: center;
+		background: rgba(255, 255, 255, 0.1);
+		padding: 1.5rem;
+		border-radius: 10px;
+		backdrop-filter: blur(10px);
+	}
+	
+	.stat-item h3 {
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+		color: #fff;
+	}
+	
+	.city-categories {
+		padding: 4rem 0;
+		background: #f8f9fa;
+	}
+	
+	.food-category-card, .crafts-category-card {
+		background: white;
+		border-radius: 15px;
+		padding: 2rem;
+		margin: 2rem 0;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+	
+	.featured-food {
+		margin-top: 1.5rem;
+		padding: 1.5rem;
+		background: #f8f9fa;
+		border-radius: 10px;
+		border-left: 4px solid #00f2fe;
+	}
+	
+	.cuisine-specialties, .craft-highlights {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+		margin-top: 1.5rem;
+	}
+	
+	.specialty-item, .craft-item {
+		padding: 1.5rem;
+		background: #f8f9fa;
+		border-radius: 10px;
+		border-left: 4px solid #00f2fe;
+	}
+	
+	.services-overview {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.service-area {
+		background: white;
+		padding: 2rem;
+		border-radius: 10px;
+		box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	}
+	
+	.featured-businesses {
+		padding: 4rem 0;
+	}
+	
+	.businesses-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+	
+	.business-card {
+		background: white;
+		border-radius: 15px;
+		overflow: hidden;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+	
+	.business-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.business-card img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+	
+	.business-info {
+		padding: 1.5rem;
+	}
+	
+	.business-info h3 {
+		margin-bottom: 0.5rem;
+		color: #333;
+	}
+	
+	.category {
+		color: #00f2fe;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+	
+	.description {
+		color: #666;
+		margin-bottom: 1rem;
+		line-height: 1.5;
+	}
+	
+	.rating {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	
+	.rating-score {
+		font-weight: 600;
+		color: #333;
+	}
+	
+	.reviews {
+		color: #666;
+		font-size: 0.9rem;
+	}
+	
+	.city-cta {
+		text-align: center;
+		background: white;
+		padding: 3rem;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+	
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	
+	.btn {
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		text-align: center;
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+	}
+	
+	.btn-primary {
+		background: #00f2fe;
+		color: white;
+		border-color: #00f2fe;
+	}
+	
+	.btn-primary:hover {
+		background: #00d9e7;
+		border-color: #00d9e7;
+	}
+	
+	.btn-secondary {
+		background: transparent;
+		color: #00f2fe;
+		border-color: #00f2fe;
+	}
+	
+	.btn-secondary:hover {
+		background: #00f2fe;
+		color: white;
+	}
+	
+	.btn-outline {
+		background: transparent;
+		color: #00f2fe;
+		border-color: #00f2fe;
+	}
+	
+	.btn-outline:hover {
+		background: #00f2fe;
+		color: white;
+	}
+	
+	@media (max-width: 768px) {
+		.hero-content h1 {
+			font-size: 2rem;
+		}
+		
+		.city-stats {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		.businesses-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.cuisine-specialties, .craft-highlights {
+			grid-template-columns: 1fr;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>

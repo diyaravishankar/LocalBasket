@@ -1,0 +1,467 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const cityData = {
+	name: 'Mumbai',
+	state: 'Maharashtra',
+	population: '20.4 million',
+	knownFor: 'Financial Capital, Bollywood',
+	businessCount: 95,
+	categories: [
+		{ name: 'Home Services', count: 40, slug: 'services' },
+		{ name: 'Handmade Crafts', count: 35, slug: 'crafts' },
+		{ name: 'Food & Beverages', count: 20, slug: 'food' }
+	]
+};
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	"name": `Home Businesses in ${cityData.name} - LocalBasket`,
+	"description": `Discover verified home-based businesses in ${cityData.name}. Find authentic homemade food, handcrafted items, and professional services.`,
+	"url": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}`,
+	"breadcrumb": {
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://the-local-basket.vercel.app"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": cityData.name,
+				"item": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}`
+			}
+		]
+	}
+};
+
+const breadcrumbs = [
+	{ name: "Home", url: "/" },
+	{ name: cityData.name, url: `/${cityData.name.toLowerCase()}` }
+];
+
+const featuredBusinesses = [
+	{
+		name: "Home Chef Services",
+		category: "Home Services",
+		description: "Professional cooking services with authentic Maharashtrian and pan-Indian cuisine",
+		rating: 4.8,
+		reviews: 156,
+		image: "https://images.pexels.com/photos/4253321/pexels-photo-4253321.jpeg?auto=compress&cs=tinysrgb&w=400",
+		url: "/mumbai/services/home-chef-services"
+	},
+	{
+		name: "Home Tutor Excellence",
+		category: "Home Services",
+		description: "Experienced educators providing personalized tutoring for all academic levels",
+		rating: 4.9,
+		reviews: 89,
+		image: "https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=400",
+		url: "/mumbai/services/home-tutor-excellence"
+	}
+];
+---
+
+<Layout
+	title={`Home Businesses in ${cityData.name} - Verified Local Food, Crafts & Services | LocalBasket`}
+	description={`Discover ${cityData.businessCount}+ verified home-based businesses in ${cityData.name}, India's financial capital. Find authentic homemade food, handcrafted items, and professional services from local entrepreneurs. Support ${cityData.name}'s thriving home business community.`}
+	keywords={`home businesses ${cityData.name}, local food vendors ${cityData.name}, handmade crafts ${cityData.name}, home services ${cityData.name}, verified businesses ${cityData.state}, ${cityData.name} entrepreneurs, local marketplace ${cityData.name}, authentic Maharashtrian food ${cityData.name}, home tutoring ${cityData.name}, beauty services ${cityData.name}, ${cityData.name} artisan crafts, home based business ${cityData.name}, neighborhood services ${cityData.name}`}
+	structuredData={structuredData}
+	breadcrumbs={breadcrumbs}
+	canonicalUrl="/mumbai"
+>
+	<Navigation />
+	
+	<main>
+		<section class="city-hero">
+			<div class="container">
+				<nav aria-label="Breadcrumb" class="breadcrumb">
+					<ol>
+						{breadcrumbs.map((crumb, index) => (
+							<li>
+								{index < breadcrumbs.length - 1 ? (
+									<a href={crumb.url}>{crumb.name}</a>
+								) : (
+									<span aria-current="page">{crumb.name}</span>
+								)}
+								{index < breadcrumbs.length - 1 && <span class="separator">›</span>}
+							</li>
+						))}
+					</ol>
+				</nav>
+				
+				<div class="hero-content">
+					<h1>Verified Home Businesses in Mumbai</h1>
+					<p class="lead">Discover {cityData.businessCount}+ verified home-based businesses in {cityData.name}, the {cityData.knownFor}. Connect with talented entrepreneurs offering professional home services, unique handcrafted items, and authentic culinary experiences in India's commercial hub.</p>
+					
+					<div class="city-stats">
+						<div class="stat-item">
+							<h3>{cityData.businessCount}+</h3>
+							<p>Verified Businesses</p>
+						</div>
+						<div class="stat-item">
+							<h3>{cityData.categories.length}</h3>
+							<p>Categories</p>
+						</div>
+						<div class="stat-item">
+							<h3>4.8⭐</h3>
+							<p>Average Rating</p>
+						</div>
+						<div class="stat-item">
+							<h3>1200+</h3>
+							<p>Happy Customers</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="city-categories">
+			<div class="container">
+				<h2>Professional Home Services in Mumbai</h2>
+				<div class="services-category-card">
+					<p>Experience premium home services delivered by skilled professionals across Mumbai. From personalized cooking and tutoring to beauty and wellness services, find trusted service providers who bring expertise to your doorstep.</p>
+					<div class="featured-services">
+						<div class="service-highlight">
+							<h3>Home Chef Services</h3>
+							<p>Professional cooking services specializing in authentic Maharashtrian and pan-Indian cuisine for special occasions and daily meals.</p>
+							<a href="/mumbai/services/home-chef-services" class="btn btn-primary">Book Service</a>
+						</div>
+						<div class="service-highlight">
+							<h3>Home Tutor Excellence</h3>
+							<p>Experienced educators providing personalized academic support and skill development programs for students of all ages.</p>
+							<a href="/mumbai/services/home-tutor-excellence" class="btn btn-primary">Find Tutor</a>
+						</div>
+					</div>
+				</div>
+				
+				<h2>Unique Handmade Crafts from Mumbai Artisans</h2>
+				<div class="crafts-category-card">
+					<p>Explore Mumbai's vibrant artisan community creating beautiful handcrafted items. From traditional Maharashtrian crafts to contemporary designs, discover unique pieces that reflect the city's creative diversity.</p>
+					<div class="craft-areas">
+						<div class="area-highlight">
+							<h3>Bandra Artisan Quarter</h3>
+							<p>Discover talented craftspeople in Bandra creating beautiful handmade jewelry, textiles, and home décor items.</p>
+							<a href="/mumbai/areas/bandra-handmade-crafts" class="btn btn-secondary">Explore Bandra Crafts</a>
+						</div>
+					</div>
+				</div>
+				
+				<h2>Authentic Food & Culinary Experiences</h2>
+				<div class="food-overview">
+					<div class="cuisine-area">
+						<h3>Maharashtrian Home Food</h3>
+						<p>Experience authentic Maharashtrian flavors prepared using traditional family recipes passed down through generations.</p>
+					</div>
+					<div class="cuisine-area">
+						<h3>Street Food Specialists</h3>
+						<p>Mumbai's famous street food recreated in hygienic home kitchens by experienced local food entrepreneurs.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="featured-businesses">
+			<div class="container">
+				<h2>Featured Home Businesses in Mumbai</h2>
+				<div class="businesses-grid">
+					{featuredBusinesses.map((business) => (
+						<div class="business-card">
+							<img src={business.image} alt={business.name} loading="lazy" />
+							<div class="business-info">
+								<h3>{business.name}</h3>
+								<p class="category">{business.category}</p>
+								<p class="description">{business.description}</p>
+								<div class="rating">
+									<span class="stars">{"⭐".repeat(Math.floor(business.rating))}</span>
+									<span class="rating-score">{business.rating}</span>
+									<span class="reviews">({business.reviews} reviews)</span>
+								</div>
+								<a href={business.url} class="btn btn-outline">View Details</a>
+							</div>
+						</div>
+					))}
+				</div>
+				
+				<div class="city-cta">
+					<h3>Ready to Connect with Mumbai's Best Home Businesses?</h3>
+					<p>Join the LocalBasket community and discover the entrepreneurial spirit of Mumbai.</p>
+					<div class="cta-buttons">
+						<a href="/submit-business" class="btn btn-primary">List Your Business</a>
+						<a href="/directory" class="btn btn-secondary">Browse All Cities</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.city-hero {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+		padding: 2rem 0 4rem;
+	}
+	
+	.breadcrumb {
+		margin-bottom: 2rem;
+	}
+	
+	.breadcrumb ol {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		gap: 0.5rem;
+		align-items: center;
+	}
+	
+	.breadcrumb a {
+		color: rgba(255, 255, 255, 0.8);
+		text-decoration: none;
+	}
+	
+	.breadcrumb a:hover {
+		color: white;
+	}
+	
+	.separator {
+		color: rgba(255, 255, 255, 0.6);
+		margin: 0 0.5rem;
+	}
+	
+	.hero-content h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		line-height: 1.2;
+	}
+	
+	.lead {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+		opacity: 0.9;
+		line-height: 1.6;
+	}
+	
+	.city-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.stat-item {
+		text-align: center;
+		background: rgba(255, 255, 255, 0.1);
+		padding: 1.5rem;
+		border-radius: 10px;
+		backdrop-filter: blur(10px);
+	}
+	
+	.stat-item h3 {
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+		color: #fff;
+	}
+	
+	.city-categories {
+		padding: 4rem 0;
+		background: #f8f9fa;
+	}
+	
+	.services-category-card, .crafts-category-card {
+		background: white;
+		border-radius: 15px;
+		padding: 2rem;
+		margin: 2rem 0;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+	
+	.featured-services {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+		margin-top: 1.5rem;
+	}
+	
+	.service-highlight, .area-highlight {
+		padding: 1.5rem;
+		background: #f8f9fa;
+		border-radius: 10px;
+		border-left: 4px solid #667eea;
+	}
+	
+	.craft-areas {
+		margin-top: 1.5rem;
+	}
+	
+	.food-overview {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.cuisine-area {
+		background: white;
+		padding: 2rem;
+		border-radius: 10px;
+		box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	}
+	
+	.featured-businesses {
+		padding: 4rem 0;
+	}
+	
+	.businesses-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+	
+	.business-card {
+		background: white;
+		border-radius: 15px;
+		overflow: hidden;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+	
+	.business-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.business-card img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+	
+	.business-info {
+		padding: 1.5rem;
+	}
+	
+	.business-info h3 {
+		margin-bottom: 0.5rem;
+		color: #333;
+	}
+	
+	.category {
+		color: #667eea;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+	
+	.description {
+		color: #666;
+		margin-bottom: 1rem;
+		line-height: 1.5;
+	}
+	
+	.rating {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	
+	.rating-score {
+		font-weight: 600;
+		color: #333;
+	}
+	
+	.reviews {
+		color: #666;
+		font-size: 0.9rem;
+	}
+	
+	.city-cta {
+		text-align: center;
+		background: white;
+		padding: 3rem;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+	
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	
+	.btn {
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		text-align: center;
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+	}
+	
+	.btn-primary {
+		background: #667eea;
+		color: white;
+		border-color: #667eea;
+	}
+	
+	.btn-primary:hover {
+		background: #5a67d8;
+		border-color: #5a67d8;
+	}
+	
+	.btn-secondary {
+		background: transparent;
+		color: #667eea;
+		border-color: #667eea;
+	}
+	
+	.btn-secondary:hover {
+		background: #667eea;
+		color: white;
+	}
+	
+	.btn-outline {
+		background: transparent;
+		color: #667eea;
+		border-color: #667eea;
+	}
+	
+	.btn-outline:hover {
+		background: #667eea;
+		color: white;
+	}
+	
+	@media (max-width: 768px) {
+		.hero-content h1 {
+			font-size: 2rem;
+		}
+		
+		.city-stats {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		.businesses-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.featured-services {
+			grid-template-columns: 1fr;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>

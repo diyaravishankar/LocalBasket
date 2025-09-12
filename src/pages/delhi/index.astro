@@ -1,0 +1,444 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const cityData = {
+	name: 'Delhi',
+	state: 'Delhi',
+	population: '32.9 million',
+	knownFor: 'Capital of India, Cultural Heritage',
+	businessCount: 85,
+	categories: [
+		{ name: 'Food & Beverages', count: 35, slug: 'food' },
+		{ name: 'Handmade Crafts', count: 30, slug: 'crafts' },
+		{ name: 'Home Services', count: 20, slug: 'services' }
+	]
+};
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	"name": `Home Businesses in ${cityData.name} - LocalBasket`,
+	"description": `Discover verified home-based businesses in ${cityData.name}. Find authentic homemade food, handcrafted items, and professional services.`,
+	"url": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}`,
+	"breadcrumb": {
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://the-local-basket.vercel.app"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": cityData.name,
+				"item": `https://the-local-basket.vercel.app/${cityData.name.toLowerCase()}`
+			}
+		]
+	}
+};
+
+const breadcrumbs = [
+	{ name: "Home", url: "/" },
+	{ name: cityData.name, url: `/${cityData.name.toLowerCase()}` }
+];
+
+const featuredBusinesses = [
+	{
+		name: "Baker's Delight Home",
+		category: "Food & Beverages",
+		description: "Artisanal baked goods and fresh pastries made with premium ingredients",
+		rating: 4.7,
+		reviews: 98,
+		image: "https://images.pexels.com/photos/3987133/pexels-photo-3987133.jpeg?auto=compress&cs=tinysrgb&w=400",
+		url: "/delhi/food/bakers-delight-home"
+	},
+	{
+		name: "Delhi Handloom Weaving Studio",
+		category: "Handmade Crafts",
+		description: "Traditional handloom textiles with contemporary designs",
+		rating: 4.9,
+		reviews: 67,
+		image: "https://images.pexels.com/photos/6214348/pexels-photo-6214348.jpeg?auto=compress&cs=tinysrgb&w=400",
+		url: "/delhi/crafts/delhi-handloom-weaving"
+	}
+];
+---
+
+<Layout
+	title={`Home Businesses in ${cityData.name} - Verified Local Food, Crafts & Services | LocalBasket`}
+	description={`Discover ${cityData.businessCount}+ verified home-based businesses in ${cityData.name}, India's capital. Find authentic homemade food, handcrafted items, and professional services from local entrepreneurs. Support ${cityData.name}'s vibrant home business community.`}
+	keywords={`home businesses ${cityData.name}, local food vendors ${cityData.name}, handmade crafts ${cityData.name}, home services ${cityData.name}, verified businesses ${cityData.state}, ${cityData.name} entrepreneurs, local marketplace ${cityData.name}, authentic North Indian food ${cityData.name}, homemade sweets ${cityData.name}, traditional crafts ${cityData.name}, Delhi handloom, artisan crafts ${cityData.name}, home based business ${cityData.name}, neighborhood food vendors ${cityData.name}`}
+	structuredData={structuredData}
+	breadcrumbs={breadcrumbs}
+	canonicalUrl="/delhi"
+>
+	<Navigation />
+	
+	<main>
+		<section class="city-hero">
+			<div class="container">
+				<nav aria-label="Breadcrumb" class="breadcrumb">
+					<ol>
+						{breadcrumbs.map((crumb, index) => (
+							<li>
+								{index < breadcrumbs.length - 1 ? (
+									<a href={crumb.url}>{crumb.name}</a>
+								) : (
+									<span aria-current="page">{crumb.name}</span>
+								)}
+								{index < breadcrumbs.length - 1 && <span class="separator">›</span>}
+							</li>
+						))}
+					</ol>
+				</nav>
+				
+				<div class="hero-content">
+					<h1>Verified Home Businesses in Delhi</h1>
+					<p class="lead">Discover {cityData.businessCount}+ verified home-based businesses in {cityData.name}, the {cityData.knownFor}. Connect with local entrepreneurs offering authentic homemade food, unique handcrafted items, and personalized services in India's bustling capital.</p>
+					
+					<div class="city-stats">
+						<div class="stat-item">
+							<h3>{cityData.businessCount}+</h3>
+							<p>Verified Businesses</p>
+						</div>
+						<div class="stat-item">
+							<h3>{cityData.categories.length}</h3>
+							<p>Categories</p>
+						</div>
+						<div class="stat-item">
+							<h3>4.7⭐</h3>
+							<p>Average Rating</p>
+						</div>
+						<div class="stat-item">
+							<h3>800+</h3>
+							<p>Happy Customers</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="city-categories">
+			<div class="container">
+				<h2>Authentic Home Food Vendors in Delhi</h2>
+				<div class="food-category-card">
+					<p>Experience the rich culinary heritage of Delhi through verified home-based food vendors. From traditional North Indian dishes to modern fusion cuisine, discover authentic flavors prepared with love and traditional recipes.</p>
+					<div class="featured-food-business">
+						<h3>Baker's Delight Home</h3>
+						<p>Artisanal baked goods and fresh pastries crafted with premium ingredients. Specializing in custom cakes, fresh bread, and seasonal treats.</p>
+						<a href="/delhi/food/bakers-delight-home" class="btn btn-primary">Visit Business</a>
+					</div>
+				</div>
+				
+				<h2>Traditional Handloom & Crafts from Delhi Artisans</h2>
+				<div class="crafts-category-card">
+					<p>Explore Delhi's rich artisanal heritage through handcrafted textiles, traditional handloom products, and contemporary designs. Support local artisans preserving age-old crafting techniques.</p>
+					<div class="featured-craft-business">
+						<h3>Delhi Handloom Weaving Studio</h3>
+						<p>Traditional handloom textiles with contemporary designs, creating beautiful fabrics that blend heritage with modern aesthetics.</p>
+						<a href="/delhi/crafts/delhi-handloom-weaving" class="btn btn-primary">Visit Studio</a>
+					</div>
+				</div>
+				
+				<h2>Professional Home Services in Delhi</h2>
+				<div class="services-overview">
+					<div class="service-area">
+						<h3>Educational Services</h3>
+						<p>Professional tutoring and educational support services delivered by experienced educators in the comfort of your home.</p>
+					</div>
+					<div class="service-area">
+						<h3>Beauty & Wellness</h3>
+						<p>Certified beauty and wellness professionals offering personalized services at your doorstep across Delhi.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="featured-businesses">
+			<div class="container">
+				<h2>Featured Home Businesses in Delhi</h2>
+				<div class="businesses-grid">
+					{featuredBusinesses.map((business) => (
+						<div class="business-card">
+							<img src={business.image} alt={business.name} loading="lazy" />
+							<div class="business-info">
+								<h3>{business.name}</h3>
+								<p class="category">{business.category}</p>
+								<p class="description">{business.description}</p>
+								<div class="rating">
+									<span class="stars">{"⭐".repeat(Math.floor(business.rating))}</span>
+									<span class="rating-score">{business.rating}</span>
+									<span class="reviews">({business.reviews} reviews)</span>
+								</div>
+								<a href={business.url} class="btn btn-outline">View Details</a>
+							</div>
+						</div>
+					))}
+				</div>
+				
+				<div class="city-cta">
+					<h3>Ready to Discover More Local Businesses?</h3>
+					<p>Join the LocalBasket community and connect with the best home-based businesses in Delhi.</p>
+					<div class="cta-buttons">
+						<a href="/submit-business" class="btn btn-primary">List Your Business</a>
+						<a href="/directory" class="btn btn-secondary">Browse All Cities</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.city-hero {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+		padding: 2rem 0 4rem;
+	}
+	
+	.breadcrumb {
+		margin-bottom: 2rem;
+	}
+	
+	.breadcrumb ol {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		gap: 0.5rem;
+		align-items: center;
+	}
+	
+	.breadcrumb a {
+		color: rgba(255, 255, 255, 0.8);
+		text-decoration: none;
+	}
+	
+	.breadcrumb a:hover {
+		color: white;
+	}
+	
+	.separator {
+		color: rgba(255, 255, 255, 0.6);
+		margin: 0 0.5rem;
+	}
+	
+	.hero-content h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		line-height: 1.2;
+	}
+	
+	.lead {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+		opacity: 0.9;
+		line-height: 1.6;
+	}
+	
+	.city-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.stat-item {
+		text-align: center;
+		background: rgba(255, 255, 255, 0.1);
+		padding: 1.5rem;
+		border-radius: 10px;
+		backdrop-filter: blur(10px);
+	}
+	
+	.stat-item h3 {
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+		color: #fff;
+	}
+	
+	.city-categories {
+		padding: 4rem 0;
+		background: #f8f9fa;
+	}
+	
+	.food-category-card, .crafts-category-card {
+		background: white;
+		border-radius: 15px;
+		padding: 2rem;
+		margin: 2rem 0;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+	
+	.featured-food-business, .featured-craft-business {
+		margin-top: 1.5rem;
+		padding: 1.5rem;
+		background: #f8f9fa;
+		border-radius: 10px;
+		border-left: 4px solid #667eea;
+	}
+	
+	.services-overview {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.service-area {
+		background: white;
+		padding: 2rem;
+		border-radius: 10px;
+		box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	}
+	
+	.featured-businesses {
+		padding: 4rem 0;
+	}
+	
+	.businesses-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+	
+	.business-card {
+		background: white;
+		border-radius: 15px;
+		overflow: hidden;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+	
+	.business-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.business-card img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+	
+	.business-info {
+		padding: 1.5rem;
+	}
+	
+	.business-info h3 {
+		margin-bottom: 0.5rem;
+		color: #333;
+	}
+	
+	.category {
+		color: #667eea;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+	
+	.description {
+		color: #666;
+		margin-bottom: 1rem;
+		line-height: 1.5;
+	}
+	
+	.rating {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	
+	.rating-score {
+		font-weight: 600;
+		color: #333;
+	}
+	
+	.reviews {
+		color: #666;
+		font-size: 0.9rem;
+	}
+	
+	.city-cta {
+		text-align: center;
+		background: white;
+		padding: 3rem;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+	
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	
+	.btn {
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		text-align: center;
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+	}
+	
+	.btn-primary {
+		background: #667eea;
+		color: white;
+		border-color: #667eea;
+	}
+	
+	.btn-primary:hover {
+		background: #5a67d8;
+		border-color: #5a67d8;
+	}
+	
+	.btn-secondary {
+		background: transparent;
+		color: #667eea;
+		border-color: #667eea;
+	}
+	
+	.btn-secondary:hover {
+		background: #667eea;
+		color: white;
+	}
+	
+	.btn-outline {
+		background: transparent;
+		color: #667eea;
+		border-color: #667eea;
+	}
+	
+	.btn-outline:hover {
+		background: #667eea;
+		color: white;
+	}
+	
+	@media (max-width: 768px) {
+		.hero-content h1 {
+			font-size: 2rem;
+		}
+		
+		.city-stats {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		.businesses-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>
